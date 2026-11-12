@@ -45,6 +45,6 @@ SeaRover's regions.
 | Layout, styles, logic | `app/app_template.html` |
 | Build | `build.py` → `dist/watchtower.html` (not committed) |
 | Logo | `assets/logo.svg`, `assets/logo.png` |
-| Weekly refresh procedure | `REFRESH_INSTRUCTIONS.md` |
+| Refresh procedure | `REFRESH_INSTRUCTIONS.md`, run by the scheduled task "WatchTower refresh" (Mon + Thu, about 3:42 am ET, cloud only) |
 | History of changes | `CHANGELOG.md` |
 | Open research queue | `DATA.nextUp` in `app/data.js` |
