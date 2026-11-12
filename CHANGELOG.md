@@ -1,5 +1,9 @@
 # WatchTower changelog
 
+## 2026-11-12 — Schedules and laptop backup
+- Scheduled task "WatchTower refresh" (Mon + Thu, about 3:42 am ET, cloud only).
+- Added tools/make_local_backup.py and the task "WatchTower laptop backup" (Mon + Thu evenings) into C:\New Files\Upstate.
+
 ## 2026-11-12 — Repo created
 - Moved WatchTower into `mtippleroc-prog/watchtower` as the master copy (previously only in the Claude Project "Upstate New York Insights").
 - Added CLAUDE.md (standing rules), REFRESH_INSTRUCTIONS.md (weekly procedure) and build.py.

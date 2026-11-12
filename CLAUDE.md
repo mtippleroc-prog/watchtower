@@ -11,6 +11,9 @@ SeaRover's regions.
   `git config user.name "mtippleroc-prog"` and `git config user.email "mtippleroc-prog@users.noreply.github.com"`.
 - **End of any session that changed files:** commit with a short message and `git push origin main`
   (if rejected: `git pull --rebase origin main`, then push). **Push BEFORE republishing the app.**
+- `C:\New Files\Upstate` on Matt's laptop is a backup and working copy only, refreshed by the scheduled task
+  "WatchTower laptop backup". It may lag behind GitHub; never treat it as newer than the repo, and never copy files
+  from it into the repo without asking Matt.
 - Never commit passcodes, keys or tokens.
 
 ## The live app
@@ -46,5 +49,6 @@ SeaRover's regions.
 | Build | `build.py` → `dist/watchtower.html` (not committed) |
 | Logo | `assets/logo.svg`, `assets/logo.png` |
 | Refresh procedure | `REFRESH_INSTRUCTIONS.md`, run by the scheduled task "WatchTower refresh" (Mon + Thu, about 3:42 am ET, cloud only) |
+| Laptop backups | `C:\New Files\Upstate`: repo files, `WatchTower_offline.html`, and `_backups\` (8 rotating zip slots, `BACKUPS.md`), made by `tools/make_local_backup.py` via the task "WatchTower laptop backup" (Mon + Thu evenings) |
 | History of changes | `CHANGELOG.md` |
 | Open research queue | `DATA.nextUp` in `app/data.js` |
