@@ -1,0 +1,310 @@
+<title>WatchTower</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky masthead (name + region switch with ZIP3 codes) over a tab rail; one reading column, cards only for people and entries. */
+:root{
+  --bg:#f3f5f4; --surface:#ffffff; --ink:#18211f; --muted:#5a6662; --line:#d8dedb; --accent:#1d5b57; --accent-ink:#ffffff;
+  --buf:#2a5aa6; --roc:#9a7210; --cny:#c0521d; --alb:#2f6f45;
+  --dem:#2b5fb4; --rep:#b23a3a; --unk:#7a817e;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111816; --surface:#18211f; --ink:#e6ecea; --muted:#9aa7a2; --line:#2b3633; --accent:#6fc2b8; --accent-ink:#0d1513;
+  --buf:#7ea6ea; --roc:#e0b24a; --cny:#f08a55; --alb:#79c18f; --dem:#7ea2ea; --rep:#ee8080; --unk:#9aa39f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111816; --surface:#18211f; --ink:#e6ecea; --muted:#9aa7a2; --line:#2b3633; --accent:#6fc2b8; --accent-ink:#0d1513;
+  --buf:#7ea6ea; --roc:#e0b24a; --cny:#f08a55; --alb:#79c18f; --dem:#7ea2ea; --rep:#ee8080; --unk:#9aa39f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+a{color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.mast{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px 8px;flex-wrap:wrap}
+h1{font:800 22px/1.1 var(--display);font-stretch:85%;letter-spacing:-.01em;margin:0}
+h1 span{color:var(--accent)}
+.brand{display:flex;align-items:center;gap:8px;min-width:0}
+.logo{width:34px;height:34px;flex:0 0 auto}
+.logo .tw{fill:var(--ink)} .logo .win{fill:var(--surface)} .logo .lamp{fill:#e0b24a} .logo .beam{fill:var(--accent);opacity:.3}
+h1 .tag{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-left:6px;vertical-align:middle}
+.asof{font:12px var(--mono);color:var(--muted)}
+.regions{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+.regions::-webkit-scrollbar{display:none}
+.rchip{flex:0 0 auto;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;text-align:left;font:600 13px var(--body);display:flex;flex-direction:column;gap:1px}
+.rchip small{font:11px var(--mono);color:var(--muted);font-weight:400}
+.rchip[aria-pressed="true"]{border-color:var(--rc,var(--accent));box-shadow:inset 0 -3px 0 var(--rc,var(--accent));background:var(--surface)}
+.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-bottom:-1px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;padding:9px 12px;font:600 14px var(--display);font-stretch:90%;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent}
+.tab[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tab:focus-visible,.rchip:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{padding-block:18px 48px}
+h2{font:700 24px/1.15 var(--display);font-stretch:88%;margin:0 0 4px;text-wrap:balance}
+h3{font:700 16px/1.25 var(--display);font-stretch:92%;margin:0;text-wrap:balance}
+.lede{color:var(--muted);margin:0 0 18px;max-width:65ch}
+.eyebrow{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+section+section{margin-top:28px}
+.sechead{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+/* news */
+.feed{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:76px 1fr;gap:12px;padding-block:12px;border-bottom:1px solid var(--line)}
+.item time{font:12px/1.4 var(--mono);color:var(--muted);padding-top:2px}
+.item .body{min-width:0}
+.item p{margin:4px 0 6px;max-width:68ch}
+.meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--muted)}
+.dot{display:inline-flex;align-items:center;gap:4px;font:11px var(--mono)}
+.dot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.cat{font:500 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;padding:1px 6px;border-radius:4px;border:1px solid var(--line)}
+.src{font-size:12px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.fbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 11px;font:500 13px var(--body);cursor:pointer}
+.fbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+/* officials */
+.search{width:100%;max-width:420px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:15px var(--body);margin-bottom:10px}
+.group{margin-top:18px}
+.group>h3{margin-bottom:8px;display:flex;gap:8px;align-items:baseline}
+.group>h3 .count{font:12px var(--mono);color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.card .top{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
+.party{flex:0 0 auto;font:700 11px var(--mono);border-radius:4px;padding:2px 6px;color:var(--surface);background:var(--unk)}
+.party.D{background:var(--dem)}.party.R{background:var(--rep)}
+.office{font-size:13px;color:var(--muted)}
+.res{font-size:13px;border-left:3px solid var(--accent);padding-left:8px}
+.note{font-size:13px;margin:0}
+.kv{font:12px var(--mono);color:var(--muted)}
+/* business */
+.split{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:760px){.split{grid-template-columns:1.1fr .9fr}}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0;padding:0;list-style:none}
+.tags li{font-size:12.5px;padding:3px 9px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.bars{display:flex;flex-direction:column;gap:5px}
+.bar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;font-size:13px}
+.bar .lbl{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .lbl small{color:var(--muted);margin-left:4px}
+.bar .num{font:12px var(--mono);font-variant-numeric:tabular-nums;color:var(--muted)}
+.bar .track{grid-column:1/-1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar .fill{height:100%;background:var(--rc,var(--accent));border-radius:3px}
+.plain{margin:0;padding-left:18px}.plain li{margin-bottom:4px}
+.fine{font-size:12px;color:var(--muted);margin-top:8px}
+/* faith & history */
+.entries{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
+.lead{font:500 12px var(--mono);color:var(--muted)}
+.thesis{font:400 21px/1.4 var(--serif);max-width:60ch;margin:4px 0 18px;text-wrap:pretty}
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--rc,var(--accent));margin-left:6px}
+.timeline li{position:relative;padding:0 0 16px 18px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--rc,var(--accent))}
+.timeline .when{font:500 12px var(--mono);color:var(--muted)}
+.timeline p{font:16px/1.6 var(--serif);margin:2px 0 0;max-width:66ch}
+.people{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px 18px;margin:0;padding:0;list-style:none}
+.people b{font-family:var(--display);font-stretch:92%}
+.people span{display:block;font-size:13px;color:var(--muted)}
+.story{font:italic 16px/1.6 var(--serif);margin:8px 0;max-width:66ch}
+.regionblock+.regionblock{margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.rtitle{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.rtitle::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--rc)}
+.empty{color:var(--muted);font-style:italic}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:10px}
+.tile{text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;cursor:pointer;color:var(--ink);font:inherit}
+.tile b{font:800 26px/1.1 var(--display);font-stretch:85%;font-variant-numeric:tabular-nums}
+.tile .tsum{font:12px var(--mono);color:var(--muted)}
+.tile[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 -3px 0 var(--accent)}
+.rsplit{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 12px;color:var(--muted)}
+.dtop{display:flex;gap:10px;justify-content:space-between;align-items:flex-start}
+.dtop h3{min-width:0}
+.amt{flex:0 0 auto;font:600 14px var(--mono);font-variant-numeric:tabular-nums;color:var(--accent)}
+.amt.na{color:var(--muted);font-weight:400;font-size:12px}
+.parties{font-size:13px;color:var(--muted);margin-top:2px}
+.who{display:flex;gap:8px;align-items:baseline;margin-top:6px;padding:6px 10px;border-radius:8px;background:var(--bg);border:1px solid var(--line);font-size:13.5px;font-weight:500}
+.who .wl{flex:0 0 auto;font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.who.na{font-weight:400;color:var(--muted)}
+@media (max-width:520px){.item{grid-template-columns:1fr;gap:2px}.thesis{font-size:18px}h2{font-size:21px}}
+@media (prefers-reduced-motion:no-preference){.card,.item{transition:background .15s}}
+</style>
+
+<header>
+  <div class="wrap">
+    <div class="mast"><div class="brand"><svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 11 L46 4 L46 15 Z" class="beam"/><path d="M24 11 L2 4 L2 15 Z" class="beam"/><path d="M19 9 L24 4.5 L29 9 Z" class="tw"/><rect x="20" y="9" width="8" height="5" rx="1" class="tw"/><rect x="22.2" y="10.2" width="3.6" height="2.6" rx=".6" class="lamp"/><rect x="18" y="14" width="12" height="2" rx=".6" class="tw"/><path d="M20 16 L28 16 L31 39 L17 39 Z" class="tw"/><rect x="22.8" y="20" width="2.4" height="3.4" rx="1.2" class="win"/><rect x="22.8" y="28" width="2.4" height="3.4" rx="1.2" class="win"/><rect x="4" y="41" width="9" height="3" rx="1.5" style="fill:var(--buf)"/><rect x="14.5" y="41" width="9" height="3" rx="1.5" style="fill:var(--roc)"/><rect x="25" y="41" width="9" height="3" rx="1.5" style="fill:var(--cny)"/><rect x="35.5" y="41" width="9" height="3" rx="1.5" style="fill:var(--alb)"/></svg><h1>Watch<span>Tower</span> <small class="tag">Upstate New York</small></h1></div><span class="asof" id="asof"></span></div>
+    <div class="regions" id="regions" role="group" aria-label="Region"></div>
+    <nav class="tabs" id="tabs" aria-label="Sections"></nav>
+  </div>
+</header>
+<main class="wrap" id="main"></main>
+
+<script>
+/*DATA*/
+</script>
+<script>
+(function(){
+const R = DATA.regions, RK = Object.keys(R);
+const TABS = [["money","Money in Motion"],["briefing","Briefing"],["politics","Politics"],["officials","Officials"],["business","Business"],["faith","Faith"],["history","History"],["about","Sources"]];
+const LEVELS = ["Federal","Statewide","State Senate","Assembly","County","City","Town","Judiciary"];
+let region = "all";
+try { region = localStorage.getItem("uni-region") || "all"; } catch(e) {}
+if (region !== "all" && !R[region]) region = "all";
+const st = { newsCat: "all", lv: "all", party: "all", q: "", dealT: "all" };
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmtDate = d => { if(d.length===7){ const x=new Date(d+"-15T12:00:00"); return x.toLocaleDateString("en-US",{month:"short",year:"numeric"}); } const x = new Date(d+"T12:00:00"); return x.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); };
+const inR = arr => region === "all" || (arr||[]).includes(region);
+const rc = k => `var(--${k})`;
+const dots = arr => (arr||[]).map(k => `<span class="dot" style="--c:${rc(k)}">${esc(R[k].short)}</span>`).join("");
+const srcLink = u => u ? `<a class="src" href="${esc(u)}" target="_blank" rel="noopener">Source</a>` : "";
+const regionsShown = () => region === "all" ? RK : [region];
+const catName = {gov:"Government",biz:"Business",faith:"Faith"};
+
+document.getElementById("asof").textContent = "Research as of " + fmtDate(DATA.asOf);
+
+function renderRegions(){
+  const el = document.getElementById("regions");
+  const chips = [["all","All upstate","4 regions"]].concat(RK.map(k=>[k,R[k].name,"ZIP " + R[k].zip3]));
+  el.innerHTML = chips.map(([k,n,z]) => `<button class="rchip" id="r-${k}" aria-pressed="${region===k}" style="--rc:${k==='all'?'var(--accent)':rc(k)}" data-r="${k}">${esc(n)}<small>${esc(z)}</small></button>`).join("");
+  el.querySelectorAll("button").forEach(b => b.onclick = () => { region = b.dataset.r; try{localStorage.setItem("uni-region",region)}catch(e){} renderRegions(); render(); });
+}
+function view(){ const h = location.hash.slice(1); return TABS.some(t=>t[0]===h) ? h : "briefing"; }
+function renderTabs(){
+  const v = view();
+  document.getElementById("tabs").innerHTML = TABS.map(([k,n]) => `<a class="tab" href="#${k}" ${v===k?'aria-current="page"':''}>${n}</a>`).join("");
+}
+
+function newsList(items){
+  if(!items.length) return `<p class="empty">No items for this region yet.</p>`;
+  return `<div class="feed">` + items.map(n => `<article class="item"><time datetime="${n.d}">${fmtDate(n.d)}</time><div class="body"><h3>${esc(n.h)}</h3><p>${esc(n.s)}</p><div class="meta"><span class="cat">${catName[n.cat]}</span>${dots(n.r)}${srcLink(n.src)}</div></div></article>`).join("") + `</div>`;
+}
+function filterBtns(group, opts, cur){
+  return `<div class="filters" role="group">` + opts.map(([k,n]) => `<button class="fbtn" id="f-${group}-${k.replace(/\W/g,'')}" data-g="${group}" data-v="${esc(k)}" aria-pressed="${cur===k}">${esc(n)}</button>`).join("") + `</div>`;
+}
+function bindFilters(){
+  document.querySelectorAll(".fbtn,.tile").forEach(b => b.onclick = () => { st[b.dataset.g] = (b.classList.contains("tile") && st[b.dataset.g]===b.dataset.v) ? "all" : b.dataset.v; render(); });
+}
+function scopeLabel(){ return region==="all" ? "all four regions" : R[region].name; }
+
+function vBriefing(){
+  const items = DATA.news.filter(n => inR(n.r) && (st.newsCat==="all" || n.cat===st.newsCat)).sort((a,b)=>b.d.localeCompare(a.d));
+  const fresh = DATA.officials.filter(o => inR(o.r) && /\(elect\)|Too close|leads|Flipped|flip/i.test((o.o||"")+" "+(o.res||"")));
+  return `<section><div class="sechead"><div><span class="eyebrow">Briefing · ${esc(scopeLabel())}</span><h2>What's moving</h2></div></div>
+  <p class="lede">Government, business and faith news from the last few months, newest first. Every item links to its source.</p>
+  ${filterBtns("newsCat",[["all","All"],["gov","Government"],["biz","Business"],["faith","Faith"]],st.newsCat)}
+  ${newsList(items)}</section>
+  <section><div class="sechead"><div><span class="eyebrow">After Nov 3, 2026</span><h2>Seats changing hands or still open</h2></div><a href="#officials">All officials →</a></div>
+  ${fresh.length? `<div class="cards">${fresh.map(card).join("")}</div>` : `<p class="empty">No changes recorded for this region.</p>`}</section>`;
+}
+
+function card(o){
+  const p = o.p || "";
+  const pl = p==="D"?"Dem":p==="R"?"Rep":p==="?"?"Pending":"";
+  return `<div class="card"><div class="top"><h3>${esc(o.n)}</h3>${pl?`<span class="party ${p}">${pl}</span>`:""}</div>
+  <div class="office">${esc(o.o)}</div>
+  ${o.res?`<div class="res">${esc(o.res)}</div>`:""}
+  ${o.note?`<p class="note">${esc(o.note)}</p>`:""}
+  <div class="meta">${o.since?`<span class="kv">In office since ${esc(o.since)}</span>`:""}${dots(o.r)}${srcLink(o.src)}</div></div>`;
+}
+
+function vPolitics(){
+  const offs = DATA.officials.filter(o => inR(o.r));
+  const fed = offs.filter(o=>o.lv==="Federal" && o.o.startsWith("U.S. House"));
+  const sen = offs.filter(o=>o.lv==="State Senate");
+  const cnt = (arr,p)=>arr.filter(o=>o.p===p).length;
+  const news = DATA.news.filter(n=>n.cat==="gov" && inR(n.r)).sort((a,b)=>b.d.localeCompare(a.d)).slice(0,6);
+  const donors = DATA.donors.filter(d=>inR(d.r));
+  return `<section><span class="eyebrow">Politics · ${esc(scopeLabel())}</span><h2>Who holds power</h2>
+  <p class="lede">House seats touching ${region==="all"?"upstate":"this region"}: ${cnt(fed,"D")} Democratic, ${cnt(fed,"R")} Republican. State Senate seats tracked: ${cnt(sen,"D")} D, ${cnt(sen,"R")} R${cnt(sen,"?")?`, ${cnt(sen,"?")} uncalled`:""}. Statewide, Democrats regained a two-thirds Senate supermajority on Nov 3.</p>
+  <div class="sechead"><h3>Members of Congress</h3><a href="#officials">Full officials directory →</a></div>
+  <div class="cards">${fed.map(card).join("")}</div></section>
+  <section><h3 style="margin-bottom:8px">Recent political news</h3>${newsList(news)}</section>
+  <section><div class="sechead"><div><span class="eyebrow">Money & influence</span><h3>Politically active donors</h3></div></div>
+  <p class="lede">A starting set from public reporting. Filings on the NYS Board of Elections and FEC sites are the next layer.</p>
+  ${donors.length?`<div class="entries">${donors.map(d=>`<div class="card"><div class="top"><h3>${esc(d.n)}</h3></div><div class="lead">${esc(d.lean)}</div><p class="note">${esc(d.t)}</p><div class="meta">${dots(d.r)}${srcLink(d.src)}</div></div>`).join("")}</div>`:`<p class="empty">None recorded for this region yet.</p>`}</section>`;
+}
+
+function vOfficials(){
+  const q = st.q.trim().toLowerCase();
+  const list = DATA.officials.filter(o => inR(o.r) && (st.lv==="all"||o.lv===st.lv) && (st.party==="all"||o.p===st.party) && (!q || (o.n+" "+o.o+" "+(o.note||"")+" "+(o.res||"")).toLowerCase().includes(q)));
+  const groups = LEVELS.map(l=>[l,list.filter(o=>o.lv===l)]).filter(g=>g[1].length);
+  return `<section><span class="eyebrow">Directory · ${esc(scopeLabel())}</span><h2>Officials</h2>
+  <p class="lede">Congress, statewide offices, state legislators, county and city executives, town supervisors and judges, with party, time in seat and 2026 results.</p>
+  <input class="search" id="q" type="search" placeholder="Search name, office or district" value="${esc(st.q)}" aria-label="Search officials">
+  ${filterBtns("lv",[["all","All levels"]].concat(LEVELS.map(l=>[l,l])),st.lv)}
+  ${filterBtns("party",[["all","Any party"],["D","Democrat"],["R","Republican"],["?","Pending"]],st.party)}
+  ${groups.length? groups.map(([l,arr])=>`<div class="group"><h3>${l}<span class="count">${arr.length}</span></h3><div class="cards">${arr.map(card).join("")}</div></div>`).join("") : `<p class="empty">No officials match these filters.</p>`}
+  </section>`;
+}
+
+function vBusiness(){
+  return regionsShown().map(k=>{
+    const b = DATA.business[k]; const max = Math.max(...b.employers.map(e=>e[1]||0));
+    const news = DATA.news.filter(n=>n.cat==="biz" && n.r.includes(k)).sort((a,b)=>b.d.localeCompare(a.d));
+    return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">Business</span></div><h2>${esc(R[k].name)}</h2>
+    <div class="split"><div style="min-width:0"><p class="lede" style="margin-bottom:0">${esc(b.summary)}</p><ul class="tags">${b.industries.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
+    <h3 style="margin:18px 0 6px">Recent business news</h3>${newsList(news)}<p class="fine"><a href="#money">Deals, gifts and property trades in Money in Motion →</a></p></div>
+    <div style="min-width:0"><h3 style="margin-bottom:8px">Largest employers</h3>
+    ${max? `<div class="bars">${b.employers.map(e=>`<div class="bar"><span class="lbl">${esc(e[0])}<small>${esc(e[2])}</small></span><span class="num">${e[1]?e[1].toLocaleString():"–"}</span><div class="track"><div class="fill" style="width:${(e[1]||0)/max*100}%"></div></div></div>`).join("")}</div>`
+    : `<ul class="plain">${b.employers.map(e=>`<li>${esc(e[0])} <span class="fine">· ${esc(e[2])}</span></li>`).join("")}</ul>`}
+    <p class="fine">${esc(b.empNote)} ${srcLink(b.empSrc)}</p></div></div></div>`;
+  }).join("");
+}
+
+const DT = {ma:["M&A","Acquisitions and sales of companies"],cap:["Capital & expansion","Plants, fabs and big investments"],phil:["Philanthropy","Major gifts and grants"],cre:["Real estate","Commercial property trades"]};
+const fmtAmt = m => m==null ? "Undisclosed" : m>=1000 ? "$"+(m/1000).toLocaleString(undefined,{maximumFractionDigits:2})+"B" : m>=1 ? "$"+m.toLocaleString(undefined,{maximumFractionDigits:2})+"M" : "$"+Math.round(m*1000)+"K";
+const WHO_DEFAULT = {ma:"Sellers",cre:"Seller",phil:"Donors",cap:"Funding"};
+const whoLine = x => { const w = x.who || {l:WHO_DEFAULT[x.t], t:"Not yet identified."}; const muted = /^(Not named|Not yet|Anonymous)/.test(w.t); return `<div class="who${muted?' na':''}"><span class="wl">${esc(w.l)}</span><span>${esc(w.t)}${w.src?` <a class="src" href="${esc(w.src)}" target="_blank" rel="noopener">Source</a>`:""}</span></div>`; };
+function vMoney(){
+  const all = DATA.deals.filter(x=>inR(x.r));
+  const list = all.filter(x=>st.dealT==="all"||x.t===st.dealT).sort((a,b)=>b.d.localeCompare(a.d));
+  const tiles = Object.keys(DT).map(k=>{ const a=all.filter(x=>x.t===k&&!x.listing); const sum=a.reduce((t,x)=>t+(x.amt||0),0);
+    return `<button class="tile" id="t-${k}" data-g="dealT" data-v="${k}" aria-pressed="${st.dealT===k}"><span class="eyebrow">${DT[k][0]}</span><b>${a.length}</b><span class="tsum">${sum?fmtAmt(sum)+" disclosed":"Terms undisclosed"}</span></button>`; }).join("");
+  const byR = region==="all" ? `<div class="rsplit">${RK.map(k=>{const n=all.filter(x=>x.r.includes(k)).length; return `<span class="dot" style="--c:${rc(k)}">${esc(R[k].short)} · ${n}</span>`}).join("")}</div>` : "";
+  return `<section><span class="eyebrow">Money in Motion · ${esc(scopeLabel())} · 2026</span><h2>Where capital is moving</h2>
+  <p class="lede">A running record of M&A, major capital projects, philanthropy and commercial real estate across upstate. It continues the Money in Motion digest, which tracks middle-market deals, owner transitions and private-equity add-ons, big gifts, and property trades. Every entry names who sold or who gave, or says so when public reports do not. Tap a category to filter.</p>
+  <div class="tiles">${tiles}</div>${byR}
+  ${filterBtns("dealT",[["all","All deals"]].concat(Object.keys(DT).map(k=>[k,DT[k][0]])),st.dealT)}
+  ${list.length?`<div class="feed">${list.map(x=>`<article class="item deal"><time datetime="${x.d}">${fmtDate(x.d)}</time><div class="body"><div class="dtop"><h3>${esc(x.h)}</h3><span class="amt${x.amt==null?' na':''}">${fmtAmt(x.amt)}${x.listing?' ask':''}</span></div><div class="parties">${esc(x.p)}</div>${whoLine(x)}<p>${esc(x.s)}</p><div class="meta"><span class="cat">${DT[x.t][0]}</span>${dots(x.r)}${srcLink(x.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No deals recorded for this region and category yet.</p>`}
+  </section>`;
+}
+
+function vFaith(){
+  return regionsShown().map(k=>{
+    const news = DATA.news.filter(n=>n.cat==="faith" && n.r.includes(k));
+    return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">Faith communities</span></div><h2>${esc(R[k].name)}</h2>
+    ${[["Major faith bodies & historic sites",DATA.faith[k].filter(f=>f.g!=="asian")],["Indian, Hindu & other Asian communities",DATA.faith[k].filter(f=>f.g==="asian")]].filter(g=>g[1].length).map(([t,arr])=>`<h3 style="margin:14px 0 8px">${t}</h3>
+    <div class="entries">${arr.map(f=>`<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div><p class="note">${esc(f.t)}</p>${f.src?`<div class="meta">${srcLink(f.src)}</div>`:""}</div>`).join("")}</div>`).join("")}
+    ${news.length?`<h3 style="margin:18px 0 6px">Recent news</h3>${newsList(news)}`:""}</div>`;
+  }).join("");
+}
+
+function vHistory(){
+  return regionsShown().map(k=>{
+    const h = DATA.history[k];
+    return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">History · ${esc(R[k].places)}</span></div><h2>${esc(R[k].name)}</h2>
+    <p class="thesis">${esc(h.thesis)}</p>
+    <ol class="timeline">${h.eras.map(e=>`<li><div class="when">${esc(e[0])}</div><p>${esc(e[1])}</p></li>`).join("")}</ol>
+    <h3 style="margin:10px 0 10px">Key figures</h3><ul class="people">${h.figures.map(f=>`<li><b>${esc(f[0])}</b><span>${esc(f[1])}</span></li>`).join("")}</ul>
+    <h3 style="margin:18px 0 4px">Stories</h3>${h.stories.map(s=>`<p class="story">${esc(s)}</p>`).join("")}</div>`;
+  }).join("");
+}
+
+function vAbout(){
+  return `<section><span class="eyebrow">Method</span><h2>Sources and scope</h2>
+  <p class="lede">Regions follow SeaRover's ZIP3 map, so Ithaca, Elmira and Corning sit with Rochester, and Seneca Falls, Auburn, Utica and Binghamton sit with Central NY. Content is public information only: news outlets, government pages, court and election records. Dated items link to their source; history sections are summaries of well-documented events. Election results from Nov 3, 2026 are unofficial until certified.</p>
+  <h3 style="margin-bottom:8px">Regions</h3><ul class="plain">${RK.map(k=>`<li><b>${esc(R[k].name)}</b> (ZIP ${esc(R[k].zip3)}): ${esc(R[k].places)}</li>`).join("")}</ul></section>
+  <section><h3 style="margin-bottom:8px">Next research pass</h3><ul class="plain">${DATA.nextUp.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></section>`;
+}
+
+function render(){
+  renderTabs();
+  const v = view();
+  const fn = {money:vMoney,briefing:vBriefing,politics:vPolitics,officials:vOfficials,business:vBusiness,faith:vFaith,history:vHistory,about:vAbout}[v];
+  document.getElementById("main").innerHTML = fn();
+  bindFilters();
+  const q = document.getElementById("q");
+  if(q){ q.oninput = () => { st.q = q.value; const pos=q.selectionStart; render(); const n=document.getElementById("q"); n.focus(); n.setSelectionRange(pos,pos); }; }
+}
+window.addEventListener("hashchange", ()=>{ render(); window.scrollTo(0,0); });
+renderRegions(); render();
+})();
+</script>
