@@ -106,6 +106,7 @@ section+section{margin-top:28px}
 .people b{font-family:var(--display);font-stretch:92%}
 .people span{display:block;font-size:13px;color:var(--muted)}
 .story{font:italic 16px/1.6 var(--serif);margin:8px 0;max-width:66ch}
+section+.regionblock{margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
 .regionblock+.regionblock{margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
 .rtitle{display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .rtitle::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--rc)}
@@ -150,7 +151,7 @@ const LEVELS = ["Federal","Statewide","State Senate","Assembly","County","City",
 let region = "all";
 try { region = localStorage.getItem("uni-region") || "all"; } catch(e) {}
 if (region !== "all" && !R[region]) region = "all";
-const st = { newsCat: "all", lv: "all", party: "all", q: "", dealT: "all" };
+const st = { newsCat: "all", lv: "all", party: "all", q: "", dealT: "all", fk: "all", sk: "all" };
 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const fmtDate = d => { if(d.length===7){ const x=new Date(d+"-15T12:00:00"); return x.toLocaleDateString("en-US",{month:"short",year:"numeric"}); } const x = new Date(d+"T12:00:00"); return x.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); };
@@ -238,8 +239,25 @@ function vOfficials(){
   </section>`;
 }
 
+const FK = {results:"Results",deal:"Deals",people:"People",capital:"Capital",gov:"Proxy & governance"};
+const SK = {warn:"WARN notices",ida:"IDA incentives",honor:"Honors & lists"};
+function vPublic(){
+  const cos = (DATA.pubcos||[]).filter(c=>inR(c.r));
+  const fl = (DATA.filings||[]).filter(f=>inR(f.r) && (st.fk==="all"||f.k===st.fk)).sort((a,b)=>b.d.localeCompare(a.d));
+  const tkName = Object.fromEntries((DATA.pubcos||[]).map(c=>[c.tk,c.n]));
+  const sg = (DATA.signals||[]).filter(x=>inR(x.r) && (st.sk==="all"||x.t===st.sk)).sort((a,b)=>b.d.localeCompare(a.d));
+  return `<section><div class="sechead"><div><span class="eyebrow">Business · ${esc(scopeLabel())}</span><h2>Public companies</h2></div></div>
+  <p class="lede">SEC filings and releases from public companies headquartered here: results, deals, executive changes and proxy statements. Newest first.</p>
+  ${cos.length?`<ul class="tags" style="margin:0 0 12px">${cos.map(c=>`<li title="${esc(c.ind)} · HQ ${esc(c.hq)}"><b>${esc(c.tk)}</b> ${esc(c.n)} <span class="fine">· ${esc(c.hq)}</span></li>`).join("")}</ul>`:""}
+  ${filterBtns("fk",[["all","All filings"]].concat(Object.entries(FK)),st.fk)}
+  ${fl.length?`<div class="feed">${fl.map(f=>`<article class="item"><time datetime="${f.d}">${fmtDate(f.d)}</time><div class="body"><h3>${esc(f.h)}</h3><p>${esc(f.s)}</p><div class="meta"><span class="cat">${esc(f.form)}</span><span class="cat">${esc(FK[f.k]||f.k)}</span><span class="kv">${esc(f.tk)}${tkName[f.tk]?" · "+esc(tkName[f.tk]):""}</span>${dots(f.r)}${srcLink(f.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No filings recorded for this region yet.</p>`}</section>
+  <section><div class="sechead"><div><span class="eyebrow">Ahead of the news</span><h2>Early signals</h2></div></div>
+  <p class="lede">State WARN notices (layoffs and closures, filed 90 days ahead), IDA incentive applications and agendas (projects before groundbreaking), and the major honors lists.</p>
+  ${filterBtns("sk",[["all","All signals"]].concat(Object.entries(SK)),st.sk)}
+  ${sg.length?`<div class="feed">${sg.map(x=>`<article class="item"><time datetime="${x.d}">${fmtDate(x.d)}</time><div class="body"><h3>${esc(x.h)}</h3><p>${esc(x.s)}</p><div class="meta"><span class="cat">${esc(SK[x.t]||x.t)}</span>${dots(x.r)}${srcLink(x.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No signals recorded for this region yet.</p>`}</section>`;
+}
 function vBusiness(){
-  return regionsShown().map(k=>{
+  return vPublic() + regionsShown().map(k=>{
     const b = DATA.business[k]; const max = Math.max(...b.employers.map(e=>e[1]||0));
     const news = DATA.news.filter(n=>n.cat==="biz" && n.r.includes(k)).sort((a,b)=>b.d.localeCompare(a.d));
     return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">Business</span></div><h2>${esc(R[k].name)}</h2>

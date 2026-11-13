@@ -18,6 +18,30 @@ Search each region separately; a combined query returns thin results.
 - For every deal fill `who` (sellers or donors by name, or say they're not named), and where they are named add `bg`:
   public professional background (companies, roles, boards, prior gifts) with a source. Never add personal contact details. Amounts in $ millions; `null` if undisclosed.
 
+**Public companies (`DATA.pubcos`, `DATA.filings`) — Business tab.**
+- Watchlist = public companies headquartered in the four regions (`pubcos`: `n`, `tk`, `ex`, `hq`, `r`, `ind`, `src` = a recent filing
+  showing the HQ address). Add a company only after a filing or release confirms the HQ is in-region; drop one that moves out
+  (e.g. Columbus McKinnon moved to Charlotte in 2022). Candidates waiting for confirmation are listed in `nextUp`.
+- For each watchlist company, search `"<company> 8-K <month year>"` and open the sec.gov filing (or the company's IR release).
+  Add a `filings` entry for material items only: quarterly/annual results (`k: "results"`, two or three key numbers),
+  acquisitions, sales, spin-offs, big financings (`deal`), CEO/CFO/COO/director changes (`people`), major plants or
+  capital plans (`capital`), and proxy statements (`gov`: annual meeting date, director changes, and directors' local
+  nonprofit/board roles as stated in the proxy). Skip routine items (dividend-only notices, Form 4s, 13G/A, note programs).
+- `filings` fields: `d`, `tk`, `form` ("8-K", "10-Q", "DEF 14A", "Release"), `k`, `r`, `h`, `s`, `src`. Numbers exactly as filed.
+  Keep about 12 months; when a deal also has named sellers or donors in-region, add it to Money in Motion as well.
+
+**Early signals (`DATA.signals`) — Business tab. Significant items only.**
+- `warn`: NY WARN notices for in-region sites (closures, or layoffs of about 25+). Check the NYS DOL WARN page and trackers
+  (warnact.io, layoffnext.com, kadoa.com) plus local news; prefer the DOL listing as `src` when it opens. Note any link to a
+  sale, merger or transfer.
+- `ida`: IDA agendas and approvals with real projects (inducement/incentive resolutions about $5M+ of investment, or
+  notable housing/downtown projects): ECIDA (ecidany.com board agendas/packages), COMIDA/Imagine Monroe, Onondaga CIDA,
+  Albany County and Saratoga County IDAs, Tompkins County IDA. Include an "Upcoming:" item for the next board meeting only if
+  its agenda is posted.
+- `honor`: only the major lists (RBJ Icon Honors and Forty Under 40, Buffalo Business First Power 250, City & State Upstate
+  Power 100, Albany Business Review and CNY Business Journal equivalents). One item per list, not every honoree.
+- Fields: `d`, `t`, `r`, `h`, `s`, `src`. Keep about 6 months (upcoming items until they pass).
+
 **Briefing (`DATA.news`)**: government/political (`gov`), business (`biz`), faith (`faith`) and culture (`culture`) items worth knowing.
 
 **Officials (`DATA.officials`)**: resolve pending races (`"p": "?"`), record resignations, appointments, new judges,
