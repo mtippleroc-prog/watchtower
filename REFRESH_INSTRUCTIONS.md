@@ -15,7 +15,8 @@ Search each region separately; a combined query returns thin results.
 - Capital & expansion (`cap`): new plants, fabs, HQ moves, large incentive-backed investments.
 - Philanthropy (`phil`): gifts and pledges of about $1M+ and notable foundation grant rounds.
 - Real estate (`cre`): commercial and multifamily sales of about $5M+; big listings get `"listing": true`.
-- For every deal fill `who` (sellers or donors by name, or say they're not named). Amounts in $ millions; `null` if undisclosed.
+- For every deal fill `who` (sellers or donors by name, or say they're not named), and where they are named add `bg`:
+  public professional background (companies, roles, boards, prior gifts) with a source. Never add personal contact details. Amounts in $ millions; `null` if undisclosed.
 
 **Briefing (`DATA.news`)**: government/political (`gov`), business (`biz`), faith (`faith`) and culture (`culture`) items worth knowing.
 

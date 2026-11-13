@@ -267,7 +267,7 @@ function vMoney(){
   return `<section><div class="eyebrow" style="margin-bottom:10px">Money in Motion · ${esc(scopeLabel())} · 2026</div>
   <div class="tiles">${tiles}</div>${byR}
   ${filterBtns("dealT",[["all","All deals"]].concat(Object.keys(DT).map(k=>[k,DT[k][0]])),st.dealT)}
-  ${list.length?`<div class="feed">${list.map(x=>`<article class="item deal"><time datetime="${x.d}">${fmtDate(x.d)}</time><div class="body"><div class="dtop"><h3>${esc(x.h)}</h3><span class="amt${x.amt==null?' na':''}">${fmtAmt(x.amt)}${x.listing?' ask':''}</span></div><div class="parties">${esc(x.p)}</div>${whoLine(x)}<p>${esc(x.s)}</p><div class="meta"><span class="cat">${DT[x.t][0]}</span>${dots(x.r)}${srcLink(x.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No deals recorded for this region and category yet.</p>`}
+  ${list.length?`<div class="feed">${list.map(x=>`<article class="item deal"><time datetime="${x.d}">${fmtDate(x.d)}</time><div class="body"><div class="dtop"><h3>${esc(x.h)}</h3><span class="amt${x.amt==null?' na':''}">${fmtAmt(x.amt)}${x.listing?' ask':''}</span></div><div class="parties">${esc(x.p)}</div>${whoLine(x)}${(x.bg||[]).map(b=>`<div class="who bg"><span class="wl">Background</span><span><b>${esc(b.n)}</b>. ${esc(b.t)} ${b.web?`<a class="web" href="${esc(b.web)}" target="_blank" rel="noopener">Website ↗</a> `:""}${srcLink(b.src)}</span></div>`).join("")}<p>${esc(x.s)}</p><div class="meta"><span class="cat">${DT[x.t][0]}</span>${dots(x.r)}${srcLink(x.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No deals recorded for this region and category yet.</p>`}
   </section>`;
 }
 

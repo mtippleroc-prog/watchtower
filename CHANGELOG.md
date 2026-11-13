@@ -1,5 +1,10 @@
 # WatchTower changelog
 
+## 2026-11-12 — Money in Motion: seller and donor background
+- 13 deals now carry a "Background" line on the named sellers or donors: public professional background (companies,
+  roles, boards, prior gifts), with the source and, where confirmed, the company or firm website. Personal contact
+  details (home addresses, personal phones or emails) are deliberately not collected.
+
 ## 2026-11-12 — Who to know, public data, faith connections
 - Business tab: "Who to know" per region (chamber, economic development agency, community foundation, United Way, major
   foundations, business paper) with current leaders, websites and sources; "Public data & records" per region (NYS DOL

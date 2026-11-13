@@ -34,6 +34,8 @@ SeaRover's regions.
 4. Election results are unofficial until certified; mark races still being counted as pending (`"p": "?"`).
 5. Political content stays factual and even-handed: who holds office, party, results, what they've said and done.
 6. Nothing about Matt's own meetings, contacts, outreach or relationships goes into the app.
+7. No personal contact details (home addresses, personal phones or emails) for sellers, donors or other private people.
+   Public professional background and organization websites only.
 
 ## Scope
 - **Regions (by ZIP3, same as SeaRover):** `buf` Buffalo/Niagara & West 140–143,147 · `roc` Rochester & Area 144–146,148
