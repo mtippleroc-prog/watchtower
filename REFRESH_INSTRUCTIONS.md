@@ -28,6 +28,8 @@ when they change, firm mergers, and each August's Best Lawyers "Lawyer of the Ye
 Buffalo, Rochester, Syracuse and Albany. Fill entries marked "not confirmed this pass" when a public source names them.
 For thin cities, check the local offices of the multi-office firms (office leader, and their lawyers listed by city in
 each firm's Best Lawyers release). Refresh `providers.chambers` when Chambers USA publishes (around June).
+"Leading individuals" come only from Chambers rankings, Best Lawyers Lawyer of the Year or long Best Lawyers tenure;
+"Next generation" only from Best Lawyers: Ones to Watch and Chambers "Up and Coming". Every firm card carries `web`.
 Rankings only from named sources (Best Lawyers, Chambers USA, Cause IQ nonprofit client counts); never call a firm "top"
 on your own judgment.
 

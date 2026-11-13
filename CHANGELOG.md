@@ -1,5 +1,15 @@
 # WatchTower changelog
 
+## 2026-11-12 — Service Providers: leading individuals, next generation, websites
+- New "Leading individuals" per region: Chambers USA 2026 Upstate NY Corporate/M&A ranked lawyers (with bands) and Best
+  Lawyers 2027 Lawyers of the Year, plus long-listed practitioners such as Gordon E. Forth (Best Lawyers since 2001) and
+  Gerry Stack (since 1997). Brian Bocketti is Chambers Band 2.
+- New "Next generation": Best Lawyers: Ones to Watch 2027 (M&A, corporate, trusts & estates, tax) and Chambers "Up and Coming".
+- Added Insero (Rochester CPA firm; CEO Nancy Catarisano) and Couch White (Albany law firm); Dannible & McKee noted as CNY's
+  No. 1 CPA firm by CPAs (CNYBJ 2025 Book of Lists).
+- Every firm card now links the firm's website (opened or found on the firm's own domain); MMB+CO's site isn't confirmed yet.
+  98 entries in all.
+
 ## 2026-11-12 — Service Providers tab
 - New tab after Business: law firms and CPA firms in each region with their current leaders, M&A/corporate and trusts &
   estates attorneys (Best Lawyers 2027 Lawyers of the Year and listed lawyers, Chambers USA 2026 Upstate NY), and nonprofit

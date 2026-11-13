@@ -280,8 +280,8 @@ function vCulture(){
   }).join("");
 }
 
-const PK = ["Law firms","Office leaders at multi-office firms","CPA firms","M&A and corporate attorneys","Trusts & estates attorneys","Nonprofit CPAs"];
-const provCard = f => `<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div><p class="note">${esc(f.t)}</p><div class="meta">${f.web?`<a class="web" href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>`:""}${f.src?srcLink(f.src):""}</div></div>`;
+const PK = ["Law firms","Office leaders at multi-office firms","CPA firms","Leading individuals","M&A and corporate attorneys","Trusts & estates attorneys","Nonprofit CPAs","Next generation"];
+const provCard = f => `<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div><p class="note">${esc(f.t)}</p><div class="meta">${f.web?`<a class="web" href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>`:(f.webNote?`<span class="kv">${esc(f.webNote)}</span>`:"")}${f.src?srcLink(f.src):""}${f.src2?srcLink(f.src2):""}</div></div>`;
 function vProviders(){
   const P = DATA.providers||{};
   const ch = P.chambers;
