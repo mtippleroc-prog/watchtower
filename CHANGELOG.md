@@ -1,5 +1,13 @@
 # WatchTower changelog
 
+## 2026-11-12 — Service Providers tab
+- New tab after Business: law firms and CPA firms in each region with their current leaders, M&A/corporate and trusts &
+  estates attorneys (Best Lawyers 2027 Lawyers of the Year and listed lawyers, Chambers USA 2026 Upstate NY), and nonprofit
+  CPA practices with Cause IQ nonprofit client counts. 44 entries, each with a source.
+- Not yet found: Albany-area M&A and trusts & estates Lawyers of the Year, Syracuse M&A Lawyer of the Year, and the
+  managing partners of Lumsden McCormick, MMB+CO, Grossman St. Amour, Teal Becker & Chiaramonte and Whiteman Osterman & Hanna.
+- Tabs tightened slightly so all ten fit on a laptop screen.
+
 ## 2026-11-12 — Websites on Faith cards
 - Official website on 23 of 36 Faith cards (faith bodies and historic sites): 18 opened and confirmed, 5 found through a directory, redirect or newspaper but not opened (marked on the card).
 - 13 cards have no link: 5 are community profiles (no single website), 5 have no public site found, 3 not confirmed this pass (Jewish Federation of Greater Rochester, Islamic Center of Rochester, Our Lady of Martyrs Shrine).

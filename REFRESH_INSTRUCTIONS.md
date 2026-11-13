@@ -22,6 +22,13 @@ Search each region separately; a combined query returns thin results.
 **Officials (`DATA.officials`)**: resolve pending races (`"p": "?"`), record resignations, appointments, new judges,
 leadership changes. Update `res`/`note`, never delete history silently.
 
+**Service Providers (`DATA.providers`)**: law and CPA firms by region (`k`: "Law firms", "CPA firms",
+"M&A and corporate attorneys", "Trusts & estates attorneys", "Nonprofit CPAs"). Update managing partners and office leaders
+when they change, firm mergers, and each August's Best Lawyers "Lawyer of the Year" for M&A and Trusts and Estates in
+Buffalo, Rochester, Syracuse and Albany. Fill entries marked "not confirmed this pass" when a public source names them.
+Rankings only from named sources (Best Lawyers, Chambers USA, Cause IQ nonprofit client counts); never call a firm "top"
+on your own judgment.
+
 **Faith (`DATA.faith`)**: leadership changes, settlements, closures/mergers, new temples or congregations.
 Every Faith card carries `web` (official site, opened to confirm) or a `webNote` saying why not ("Community profile; no
 single website", "No public website found", "Website not confirmed this pass"). Fill in unconfirmed ones when you can.

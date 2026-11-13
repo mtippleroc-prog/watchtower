@@ -412,7 +412,341 @@ const DATA = {
     }
   },
 
+  providers: {
+   "note": "Leaders as named by each firm or local business press in 2026. Individual attorneys are drawn from Best Lawyers 2027 (released Aug. 2026), where \"Lawyer of the Year\" goes to one lawyer per practice per metro, and from Chambers USA 2026 Upstate New York. Nonprofit client counts are Cause IQ's tallies from IRS filings that name the auditor.",
+   "buf": [
+    {
+     "k": "Law firms",
+     "n": "Hodgson Russ LLP",
+     "lead": "Nathan W. G. Berti, Managing Partner (since Feb. 1, 2026)",
+     "t": "Buffalo-founded firm with U.S. and Canadian offices. Berti, a trusts and estates lawyer, succeeded Benjamin M. Zuffranieri Jr., who stays on as co-chair through 2026. 97 attorneys ranked in Best Lawyers 2027.",
+     "web": "https://www.hodgsonruss.com",
+     "src": "https://www.hodgsonruss.com/newsroom/news/hodgson-russ-llp-appoints-nathan-w-g-berti-as-managing-partner-to-lead-continued-growth-in-the-u-s-and-canada"
+    },
+    {
+     "k": "Law firms",
+     "n": "Phillips Lytle LLP",
+     "lead": "Douglas W. Dimitroff, Managing Partner",
+     "t": "Buffalo-based firm expanding into Chicago in 2026; Chad W. Flansburg leads the Rochester office (named May 2026). 84 attorneys recognized by Best Lawyers 2027.",
+     "web": "https://phillipslytle.com",
+     "src": "https://phillipslytle.com/news-events/buffalo-business-first-2026-power-250-douglas-dimitroff/"
+    },
+    {
+     "k": "Law firms",
+     "n": "Lippes Mathias LLP",
+     "lead": "Kevin J. Cross, Chairman and Managing Partner",
+     "t": "Buffalo-based; entered the 200 largest U.S. firms by attorney headcount in the 2026 NLJ 500, having grown through a series of law-firm mergers. 115 attorneys in Best Lawyers 2027.",
+     "web": "https://www.lippes.com",
+     "src": "https://www.lippes.com/insights/lippes-mathias-managing-partner-and-chairman-kevin-j-cross-named-to-city-state-new-york-s-2026-upstate-power-100-3178.pdf"
+    },
+    {
+     "k": "CPA firms",
+     "n": "Withum (formerly Freed Maxick)",
+     "lead": "Rich Wright, Partner-in-Charge, Buffalo, Rochester and Batavia",
+     "t": "Buffalo's Freed Maxick combined its practice with national firm Withum in August 2025.",
+     "web": "https://www.withum.com",
+     "src": "https://www.withum.com/resources/rich-wright-named-to-western-new-york-business-leader-power-lists/"
+    },
+    {
+     "k": "CPA firms",
+     "n": "Lumsden McCormick",
+     "lead": "Managing partner not confirmed this pass",
+     "t": "Buffalo CPA firm. Cause IQ lists 308 nonprofit clients, including Olean General Hospital, St. Bonaventure University, Niagara Falls Memorial Medical Center and D'Youville University.",
+     "src": "https://www.causeiq.com/vendors/lumsden-and-mccormick-llp,4471154511294728674"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "David J. Murray",
+     "lead": "Phillips Lytle",
+     "t": "Best Lawyers 2027 Lawyer of the Year, Buffalo, for Mergers and Acquisitions Law (also Health Care Law).",
+     "src": "https://phillipslytle.com/news-events/eighty-four-phillips-lytle-attorneys-earn-national-recognition-from-best-lawyers/press-releases-best-lawyers-2027-desktop/"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Phillip A. Delmont",
+     "lead": "Harter Secrest & Emery (Buffalo)",
+     "t": "Best Lawyers 2027 Lawyer of the Year, Buffalo, Business Organizations; ranked in Chambers USA 2026 Upstate NY Corporate/M&A.",
+     "src": "https://hselaw.com/news-and-information/press-releases/eleven-harter-secrest-emery-attorneys-recognized-as-2027-lawyer-of-the-year-by-best-lawyers/"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Christopher J. Milne · Edmund J. Russell III",
+     "lead": "Hodgson Russ",
+     "t": "Listed in Best Lawyers 2027 for Mergers and Acquisitions Law. Firm colleague Paul J. Vallone was named 2027 Lawyer of the Year for Corporate Law.",
+     "src": "https://www.hodgsonruss.com/newsroom/news/97-hodgson-russ-llp-attorneys-ranked-in-2027-edition-of-best-lawyers-in-america"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Brian J. Bocketti · John J. Koeppel · Paul A. Mitchell · Brendan J. Rich · Paul J. Schulz",
+     "lead": "Lippes Mathias (Buffalo)",
+     "t": "Listed in Best Lawyers 2027 for Mergers and Acquisitions Law.",
+     "src": "https://www.lippes.com/insights/115-lippes-mathias-attorneys-recognized-in-the-2027-edition-of-the-best-lawyers-in-america-3193"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Sharon L. Wick",
+     "lead": "Phillips Lytle",
+     "t": "Best Lawyers 2027 Lawyer of the Year, Buffalo, for Trusts and Estates and for Litigation - Trusts and Estates.",
+     "src": "https://phillipslytle.com/news-events/eighty-four-phillips-lytle-attorneys-earn-national-recognition-from-best-lawyers/press-releases-best-lawyers-2027-desktop/"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Nathan W. G. Berti",
+     "lead": "Hodgson Russ (Managing Partner)",
+     "t": "Trusts and estates lawyer advising high-net-worth clients on multi-jurisdictional estate planning and administration.",
+     "src": "https://www.hodgsonruss.com/newsroom/news/hodgson-russ-llp-appoints-nathan-w-g-berti-as-managing-partner-to-lead-continued-growth-in-the-u-s-and-canada"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Courtney Donahue Tasner · Charles E. Telford III",
+     "lead": "Lippes Mathias (Buffalo)",
+     "t": "Listed in Best Lawyers 2027 for Trusts and Estates (Tasner also for Trusts and Estates litigation).",
+     "src": "https://www.lippes.com/insights/115-lippes-mathias-attorneys-recognized-in-the-2027-edition-of-the-best-lawyers-in-america-3193"
+    },
+    {
+     "k": "Nonprofit CPAs",
+     "n": "Lumsden McCormick",
+     "lead": "308 nonprofit clients (Cause IQ)",
+     "t": "Largest nonprofit client count found for a Buffalo-based firm this pass; clients include hospitals and colleges across Western New York.",
+     "src": "https://www.causeiq.com/vendors/lumsden-and-mccormick-llp,4471154511294728674"
+    }
+   ],
+   "roc": [
+    {
+     "k": "Law firms",
+     "n": "Harter Secrest & Emery LLP",
+     "lead": "Craig S. Wittlin, Managing Partner (since 2016)",
+     "t": "Rochester-based; led Upstate New York firms in the Chambers USA 2026 rankings, with 27 attorneys ranked. Eleven of its attorneys were 2027 Best Lawyers Lawyers of the Year.",
+     "web": "https://hselaw.com",
+     "src": "https://hselaw.com/news-and-information/press-releases/harter-secrest-emery-leads-in-chambers-usa-2026-ranking-among-upstate-new-york-law-firms/"
+    },
+    {
+     "k": "Law firms",
+     "n": "Nixon Peabody LLP (Rochester office)",
+     "lead": "Matthew V. Carrigg, Rochester Office Managing Partner (since Feb. 2026)",
+     "t": "Carrigg, an affordable housing and real estate lawyer, succeeded Jared Lusk, who led the office for nine years. Six Rochester lawyers were 2027 Lawyers of the Year.",
+     "web": "https://www.nixonpeabody.com",
+     "src": "https://www.nixonpeabody.com/about/media/2026/02/04/nixon-peabody-selects-matthew-carrigg-to-lead-firms-rochester-office"
+    },
+    {
+     "k": "Law firms",
+     "n": "Woods Oviatt Gilman LLP",
+     "lead": "Mitchell S. Nusbaum, Managing Partner",
+     "t": "Rochester-based firm; Nusbaum has led it for eight years per RBJ's 2026 Power 100.",
+     "src": "https://rbj.net/2026/07/17/mitchell-s-nusbaum-10/"
+    },
+    {
+     "k": "Law firms",
+     "n": "Harris Beach Murtha",
+     "lead": "Chris Jagel, CEO; Thomas Garry, Management Committee Chair (July 2026)",
+     "t": "Formed in 2025 from Harris Beach PLLC and Murtha Cullina LLP; has since added Boston's Peabody & Arnold.",
+     "web": "https://www.harrisbeachmurtha.com",
+     "src": "https://www.harrisbeachmurtha.com/news/harris-beach-murtha-names-thomas-garry-new-leader-of-firms-management-committee/"
+    },
+    {
+     "k": "CPA firms",
+     "n": "The Bonadio Group",
+     "lead": "Bruce Zicari, CEO and Managing Partner; Aimee Jozic, Rochester Regional Managing Partner (2026)",
+     "t": "Rochester-based Accounting Today Top 100 firm, planning a new headquarters in Perinton. Jozic succeeds Nancy Snyder, who retires in May 2026.",
+     "web": "https://www.bonadio.com",
+     "src": "https://www.bonadio.com/news/the-bonadio-group-announces-key-leadership-changes/"
+    },
+    {
+     "k": "CPA firms",
+     "n": "EFPR Group (a Springline company)",
+     "lead": "Jim Marasco, Managing Partner",
+     "t": "Rochester CPA firm that partnered with Texas-based Springline Advisory in 2025. Cause IQ lists 223 nonprofit clients, including Keuka College and Arnot Ogden Medical Center.",
+     "web": "https://efpradvisory.com",
+     "src": "https://efpradvisory.com/news/efpr-a-springline-company-announces-promotion-of-three-new-partners/"
+    },
+    {
+     "k": "CPA firms",
+     "n": "MMB+CO (Mengel Metzger Barr)",
+     "lead": "Managing partner not confirmed this pass",
+     "t": "Rochester CPA firm. Cause IQ lists 512 nonprofit clients, many of them New York City charter schools.",
+     "src": "https://www.causeiq.com:443/vendors/mengel-metzger-barr-and-co-llp,4470345261686715505"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Tyler J. Savage",
+     "lead": "Nixon Peabody",
+     "t": "Best Lawyers 2027 Lawyer of the Year, Rochester, for Mergers and Acquisitions Law. Colleague Richard A. McGuirk was named for Mergers and Acquisitions litigation.",
+     "src": "https://www.nixonpeabody.com/about/media/2026/08/20/the-best-lawyers-in-america-recognizes-285-nixon-peabody-attorneys-12-as-lawyer-of-the-year"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Craig S. Wittlin",
+     "lead": "Harter Secrest & Emery (Managing Partner)",
+     "t": "Best Lawyers 2027 Lawyer of the Year, Rochester, Business Organizations; Chambers USA 2026 Eminent Practitioner, Upstate NY Corporate/M&A.",
+     "src": "https://hselaw.com/news-and-information/press-releases/eleven-harter-secrest-emery-attorneys-recognized-as-2027-lawyer-of-the-year-by-best-lawyers/"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Steven Y. Solomon",
+     "lead": "Harter Secrest & Emery",
+     "t": "Best Lawyers 2027 Lawyer of the Year, Rochester, for Corporate Law.",
+     "src": "https://hselaw.com/news-and-information/press-releases/eleven-harter-secrest-emery-attorneys-recognized-as-2027-lawyer-of-the-year-by-best-lawyers/"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Thomas R. Anderson · Joseph G. Casion · Matthew A. Eldred · Alexander R. McClean",
+     "lead": "Harter Secrest & Emery",
+     "t": "Ranked in Chambers USA 2026, Upstate New York Corporate/M&A.",
+     "src": "https://hselaw.com/news-and-information/press-releases/harter-secrest-emery-leads-in-chambers-usa-2026-ranking-among-upstate-new-york-law-firms/"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Jeremy J. Wolk",
+     "lead": "Lippes Mathias (Rochester)",
+     "t": "Listed in Best Lawyers 2027 for Mergers and Acquisitions Law.",
+     "src": "https://www.lippes.com/insights/115-lippes-mathias-attorneys-recognized-in-the-2027-edition-of-the-best-lawyers-in-america-3193"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Stephanie T. Seiffert",
+     "lead": "Nixon Peabody",
+     "t": "Best Lawyers 2027 Lawyer of the Year, Rochester, for Trusts and Estates.",
+     "src": "https://www.nixonpeabody.com/about/media/2026/08/20/the-best-lawyers-in-america-recognizes-285-nixon-peabody-attorneys-12-as-lawyer-of-the-year"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Rachelle Nuhfer · Lisa Arrington",
+     "lead": "Barclay Damon (Rochester)",
+     "t": "Both listed for Trusts and Estates in Best Lawyers 2027; Nuhfer was Lawyer of the Year for Closely Held Companies and Family Businesses Law, Arrington for Elder Law.",
+     "src": "https://www.barclaydamon.com/press-releases/184-barclay-damon-attorneys-listed-in-2027-editions-of-the-best-lawyers-in-america-and-the-best-lawyers-ones-to-watch-in-america"
+    },
+    {
+     "k": "Nonprofit CPAs",
+     "n": "The Bonadio Group",
+     "lead": "Not-for-profit contacts: Thomas Gianatasio (Regional Managing Partner, Capital Region) and Jeffrey Paille",
+     "t": "Cause IQ lists 1,601 nonprofit clients under Bonadio & Co..",
+     "src": "https://causeiq.com/vendors/bonadio-and-co-llp,4470344930181886080"
+    },
+    {
+     "k": "Nonprofit CPAs",
+     "n": "MMB+CO · EFPR Group",
+     "lead": "512 and 223 nonprofit clients (Cause IQ)",
+     "t": "Rochester's other large nonprofit audit practices by client count.",
+     "src": "https://causeiq.com/vendors/efpr-group-cpas-pllc,4480984402521025685"
+    }
+   ],
+   "cny": [
+    {
+     "k": "Law firms",
+     "n": "Bond, Schoeneck & King PLLC",
+     "lead": "Brian J. Butler, Chair (since 2024)",
+     "t": "Syracuse-based. Butler, a litigator, succeeded Kevin M. Bernstein and was named to City & State's 2026 Upstate Power 100.",
+     "web": "https://www.bsk.com",
+     "src": "https://www.bsk.com/news-events-videos/brian-j-butler-named-to-2026-upstate-power-100-by-city-and-state-new-york"
+    },
+    {
+     "k": "Law firms",
+     "n": "Barclay Damon LLP",
+     "lead": "M. Cornelia (Connie) Cahill, Managing Partner; David Burch, Deputy Managing Partner",
+     "t": "Syracuse-rooted firm with offices including Boston and New Haven. 184 attorneys listed in Best Lawyers 2027.",
+     "web": "https://www.barclaydamon.com",
+     "src": "https://www.barclaydamon.com/press-releases/barclay-damon-announces-2026-changes-to-leadership-teams"
+    },
+    {
+     "k": "Law firms",
+     "n": "Hancock Estabrook, LLP",
+     "lead": "Timothy P. Murphy, Managing Partner (since 2018)",
+     "t": "Syracuse firm; 32 attorneys in Best Lawyers 2027. Added Ithaca's Barney, Grossman & Dubow.",
+     "web": "https://www.hancocklaw.com",
+     "src": "https://www.hancocklaw.com/people/timothy-p-murphy/"
+    },
+    {
+     "k": "CPA firms",
+     "n": "Dannible & McKee, LLP",
+     "lead": "Victor W. Vaccaro Jr., Managing Partner (from July 1, 2026)",
+     "t": "Syracuse CPA firm with 140+ professionals in Syracuse, Auburn, Binghamton, Schenectady and Tampa. Vaccaro succeeded the retiring Christopher Didio.",
+     "src": "https://capitalregionchamber.com/news/dannible-mckee-names-victor-w-vaccaro-jr-managing-partner-to-lead-firms-next-chapter-of-growth/"
+    },
+    {
+     "k": "CPA firms",
+     "n": "Grossman St. Amour CPAs",
+     "lead": "Managing partner not confirmed this pass",
+     "t": "Syracuse CPA firm. Cause IQ lists 142 nonprofit clients, including Munson-Williams-Proctor Arts Institute and ProLiteracy Worldwide.",
+     "src": "https://www.causeiq.com/vendors/grossman-st-amour-cpas-pllc,4470347585330333886/"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Philip S. Bousquet",
+     "lead": "Bousquet Holstein PLLC",
+     "t": "Carries a Best Lawyers 2027 Lawyer of the Year badge in Syracuse; listed for Corporate Law.",
+     "src": "https://www.bestlawyers.com/united-states/new-york/syracuse"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Zachary R. Benjamin",
+     "lead": "Costello, Cooney & Fearon",
+     "t": "Listed in Best Lawyers 2027 for Mergers and Acquisitions Law, Syracuse.",
+     "src": "https://www.ccf-law.com/costello-cooney-fearon-proudly-announces-attorneys-named-2027-best-lawyers/"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Cora A. Alsante",
+     "lead": "Hancock Estabrook",
+     "t": "Best Lawyers 2027 Lawyer of the Year, Syracuse, for Trusts and Estates.",
+     "src": "https://www.hancocklaw.com/news/32-hancock-estabrook-attorneys-recognized-by-the-best-lawyers-in-america-2027/"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Robert W. Connolly",
+     "lead": "Costello, Cooney & Fearon",
+     "t": "Listed in Best Lawyers 2027 for Trusts and Estates litigation, Syracuse.",
+     "src": "https://www.ccf-law.com/costello-cooney-fearon-proudly-announces-attorneys-named-2027-best-lawyers/"
+    },
+    {
+     "k": "Nonprofit CPAs",
+     "n": "Grossman St. Amour CPAs",
+     "lead": "142 nonprofit clients (Cause IQ)",
+     "t": "Largest nonprofit client count found for a Central New York firm this pass; Dannible & McKee's count wasn't available.",
+     "src": "https://www.causeiq.com/vendors/grossman-st-amour-cpas-pllc,4470347585330333886/"
+    }
+   ],
+   "alb": [
+    {
+     "k": "Law firms",
+     "n": "Whiteman Osterman & Hanna LLP",
+     "lead": "Managing partner not confirmed this pass",
+     "t": "Albany firm; 23 attorneys across 17 practice areas named to Best Lawyers 2027.",
+     "web": "https://woh.com",
+     "src": "https://www.woh.com/news/3400/23-Whiteman-Osterman-Hanna-Attorneys-Named-to-Best-Lawyers-Lists-for-2027/"
+    },
+    {
+     "k": "CPA firms",
+     "n": "BST Gallagher Flynn",
+     "lead": "Ron Guzior (BST & Co.) and Jason Hamilton (Gallagher, Flynn & Co.), managing partners of the merging firms",
+     "t": "Latham's BST & Co. CPAs, which turned 50 in 2026, merged with South Burlington, Vt.-based Gallagher, Flynn & Co. in August 2026. Leadership of the combined firm wasn't stated.",
+     "src": "https://www.cpapracticeadvisor.com/2026/08/19/bst-co-and-gallagher-flynn-merge-to-form-bst-gallagher-flynn/188762/"
+    },
+    {
+     "k": "CPA firms",
+     "n": "Teal Becker & Chiaramonte, CPAs",
+     "lead": "Managing partner not confirmed this pass",
+     "t": "Albany CPA firm. Cause IQ lists 167 nonprofit clients, including the New York State Sheriffs' Association.",
+     "src": "https://www.causeiq.com/vendors/teal-becker-and-chiaramonte-cpas-pc,4471153040164304194"
+    },
+    {
+     "k": "CPA firms",
+     "n": "The Bonadio Group (Capital Region)",
+     "lead": "Thomas Gianatasio, Regional Managing Partner, Capital Region",
+     "t": "Gianatasio is also a named contact for Bonadio's not-for-profit practice.",
+     "web": "https://www.bonadio.com",
+     "src": "https://www.bonadio.com/industries/public-sector-not-for-profit/not-for-profit/"
+    },
+    {
+     "k": "Nonprofit CPAs",
+     "n": "Teal Becker & Chiaramonte · Bonadio (Capital Region)",
+     "lead": "167 nonprofit clients (Teal Becker, Cause IQ)",
+     "t": "Bonadio's statewide nonprofit book (1,601 clients) is led in part from its Capital Region office.",
+     "src": "https://www.causeiq.com/vendors/teal-becker-and-chiaramonte-cpas-pc,4471153040164304194"
+    }
+   ]
+  },
   nextUp: [
+    "Service Providers: Albany M&A and trusts & estates attorneys; managing partners at Lumsden McCormick, MMB+CO, Grossman St. Amour, Teal Becker and Whiteman Osterman & Hanna; Dannible & McKee and BST nonprofit client counts",
     "Rochester-area and Capital Region Assembly results (2026) and Monroe County Legislature",
     "Pending calls: SD-43, AD-126, AD-143, Erie County Clerk, Webster supervisor",
     "Political donors from NYS Board of Elections and FEC filings, by region",

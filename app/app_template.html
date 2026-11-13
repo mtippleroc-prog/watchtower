@@ -38,9 +38,9 @@ h1 .tag{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.08em;
 .rchip{flex:0 0 auto;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;text-align:left;font:600 13px var(--body);display:flex;flex-direction:column;gap:1px}
 .rchip small{font:11px var(--mono);color:var(--muted);font-weight:400}
 .rchip[aria-pressed="true"]{border-color:var(--rc,var(--accent));box-shadow:inset 0 -3px 0 var(--rc,var(--accent));background:var(--surface)}
-.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-bottom:-1px;padding-top:4px;align-items:flex-end}
+.tabs{display:flex;gap:3px;overflow-x:auto;scrollbar-width:none;margin-bottom:-1px;padding-top:4px;align-items:flex-end}
 .tabs::-webkit-scrollbar{display:none}
-.tab{flex:0 0 auto;padding:8px 14px 7px;font:600 14px var(--display);font-stretch:90%;color:var(--muted);text-decoration:none;background:var(--tabbg);border:1px solid var(--line);border-bottom:none;border-radius:9px 9px 0 0;transition:background .15s,color .15s}
+.tab{flex:0 0 auto;padding:8px 9px 7px;font:600 14px var(--display);font-stretch:90%;color:var(--muted);text-decoration:none;background:var(--tabbg);border:1px solid var(--line);border-bottom:none;border-radius:9px 9px 0 0;transition:background .15s,color .15s}
 .tab:hover{color:var(--ink);background:var(--tabhover)}
 .tab[aria-current="page"]{color:var(--ink);background:var(--bg);padding-bottom:9px;box-shadow:inset 0 3px 0 var(--accent);position:relative;z-index:1}
 .tab:focus-visible,.rchip:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -145,7 +145,7 @@ section+section{margin-top:28px}
 <script>
 (function(){
 const R = DATA.regions, RK = Object.keys(R);
-const TABS = [["money","Money in Motion"],["briefing","General Briefings"],["business","Business"],["faith","Faith"],["culture","Culture"],["history","History"],["politics","Politics"],["officials","Officials"],["about","Sources"]];
+const TABS = [["money","Money in Motion"],["briefing","General Briefings"],["business","Business"],["providers","Service Providers"],["faith","Faith"],["culture","Culture"],["history","History"],["politics","Politics"],["officials","Officials"],["about","Sources"]];
 const LEVELS = ["Federal","Statewide","State Senate","Assembly","County","City","Town","Judiciary"];
 let region = "all";
 try { region = localStorage.getItem("uni-region") || "all"; } catch(e) {}
@@ -280,6 +280,17 @@ function vCulture(){
   }).join("");
 }
 
+const PK = ["Law firms","CPA firms","M&A and corporate attorneys","Trusts & estates attorneys","Nonprofit CPAs"];
+const provCard = f => `<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div><p class="note">${esc(f.t)}</p><div class="meta">${f.web?`<a class="web" href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>`:""}${f.src?srcLink(f.src):""}</div></div>`;
+function vProviders(){
+  const P = DATA.providers||{};
+  return `<p class="lede">${esc(P.note||"")}</p>` + regionsShown().map(k=>{
+    const all = P[k]||[];
+    return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">Service providers · law & accounting</span></div><h2>${esc(R[k].name)}</h2>
+    ${PK.map(c=>[c,all.filter(e=>e.k===c)]).map(([c,arr])=>`<h3 style="margin:16px 0 8px">${esc(c)}</h3>${arr.length?`<div class="entries">${arr.map(provCard).join("")}</div>`:`<p class="empty">None confirmed for this region yet.</p>`}`).join("")}</div>`;
+  }).join("");
+}
+
 function vFaith(){
   return regionsShown().map(k=>{
     const news = DATA.news.filter(n=>n.cat==="faith" && n.r.includes(k));
@@ -311,7 +322,7 @@ function vAbout(){
 function render(){
   renderTabs();
   const v = view();
-  const fn = {money:vMoney,briefing:vBriefing,politics:vPolitics,officials:vOfficials,business:vBusiness,faith:vFaith,culture:vCulture,history:vHistory,about:vAbout}[v];
+  const fn = {money:vMoney,briefing:vBriefing,politics:vPolitics,officials:vOfficials,business:vBusiness,providers:vProviders,faith:vFaith,culture:vCulture,history:vHistory,about:vAbout}[v];
   document.getElementById("main").innerHTML = fn();
   bindFilters();
   const q = document.getElementById("q");
