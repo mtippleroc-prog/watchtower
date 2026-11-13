@@ -1,5 +1,10 @@
 # WatchTower changelog
 
+## 2026-11-12 — Sizes and websites in Culture
+- Students per school (NCES private school data or the school's own figures), seats per theater and hall, and annual revenue from IRS Form 990 for clubs (member counts are not published).
+- Official website on 57 of 63 cards; 52 opened and confirmed, 5 taken from a directory listing. 6 clubs have no public website.
+- Corrected heads: Canisius (Fr. David Ciancimino, S.J.), Aquinas (David Eustis); added George Eastman Museum director Bruce Barnes.
+
 ## 2026-11-12 — Private schools and clubs in Culture
 - Added 19 private schools (heads of school, type, founding) and 21 golf, city and yacht clubs across the four regions, plus 3 news items.
 

@@ -29,6 +29,8 @@ major museums, professional theaters, major festivals): leadership changes, big 
 season announcements of note, closures or mergers. Update the institution's `lead` line when its leaders change.
 Also cover private schools (new heads of school, campaigns, mergers or closures, enrollment news) and private golf, city
 and yacht clubs (major championships hosted, new clubhouses or renovations, sales or closures). No membership lists.
+Every Culture card carries `web` (official site, opened to confirm) and, where available, `size` + `sizeSrc`:
+students for schools, seats for venues, latest Form 990 revenue for clubs. Refresh these when newer figures appear.
 
 Good sources: Rochester Business Journal, Rochester Beacon, WXXI, Buffalo News, Buffalo Business First, Buffalo Niagara
 Partnership, WKBW/WIVB/WGRZ, Investigative Post, CNY Central, Syracuse.com, CNY Business Journal, Central Current, WRVO,
