@@ -39,12 +39,12 @@ SeaRover's regions.
 - **Regions (by ZIP3, same as SeaRover):** `buf` Buffalo/Niagara & West 140–143,147 · `roc` Rochester & Area 144–146,148
   (incl. Ithaca, Elmira, Corning) · `cny` Central NY 130–139,149 (incl. Seneca Falls, Auburn, Utica, Binghamton, Watertown) ·
   `alb` Albany & North 120–123,128,129. Everything else (Hudson Valley, NYC, ZIP3 127) is out.
-- Tabs, left to right: Money in Motion, Briefing (default view), Politics, Officials, Business, Faith, History, Sources.
+- Tabs, left to right: Money in Motion, General Briefings (default view), Business, Faith, Culture, History, Politics, Officials, Sources.
 
 ## Where things live
 | What | Where |
 |---|---|
-| All content (news, deals, officials, donors, business, faith, history, research queue) | `app/data.js` |
+| All content (news, deals, officials, donors, business, faith, culture, history, research queue) | `app/data.js` |
 | Layout, styles, logic | `app/app_template.html` |
 | Build | `build.py` → `dist/watchtower.html` (not committed) |
 | Logo | `assets/logo.svg`, `assets/logo.png` |

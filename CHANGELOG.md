@@ -1,5 +1,9 @@
 # WatchTower changelog
 
+## 2026-11-12 — Culture tab and new tab order
+- New Culture tab: 25 music and arts institutions across the four regions (orchestras, museums, theaters, festivals) with current leaders, plus 9 culture news items.
+- Tab order: Money in Motion, General Briefings, Business, Faith, Culture, History, Politics, Officials, Sources. Tabs restyled as folder tabs.
+
 ## 2026-11-12 — Schedules and laptop backup
 - Scheduled task "WatchTower refresh" (Mon + Thu, about 3:42 am ET, cloud only).
 - Added tools/make_local_backup.py and the task "WatchTower laptop backup" (Mon + Thu evenings) into C:\New Files\Upstate.

@@ -35,6 +35,16 @@ const DATA = {
     { d: "2026-09-11", cat: "biz", r: ["buf"], h: "Copart to buy ACV Auctions for $1.9B", s: "All-cash, $10.50 per share (about a 45% premium) for Buffalo's best-known startup; expected to close by year-end 2026.", src: "https://www.irishtimes.com/business/2026/09/11/online-auto-auctioneer-copart-to-buy-acv-auctions-in-19-billion-deal/" },
     { d: "2026-07-09", cat: "biz", r: ["cny"], h: "Micron pours first foundations in Clay", s: "After a January 2026 groundbreaking, concrete work began on the first fab at White Pine Commerce Park; Bechtel is EPC contractor. The plan is up to $100B over four fabs and 4,500+ peak construction jobs.", src: "https://www.enr.com/articles/63307-foundation-work-begins-on-microns-100b-new-york-semiconductor-megafab" },
     { d: "2026-01-14", cat: "biz", r: ["roc"], h: "Cornell restores federal funding, keeps cutting costs", s: "A settlement restored frozen research funding, but President Michael Kotlikoff warned of continuing headwinds; the \"Resilient Cornell\" plan includes layoffs where attrition falls short.", src: "https://www.fingerlakes1.com/2026/01/14/cornell-faces-financial-and-political-strain/" },
+    // culture
+    { d: "2026-11-11", cat: "culture", r: ["roc"], h: "Geva's artistic director leaves; Mark Cuddy returns as interim", s: "Elizabeth Williamson departs in January for the American Conservatory Theater in San Francisco. Artistic director emeritus Mark Cuddy, who led Geva from 1995 to 2022, steps in alongside Executive Director James Haskins while a search runs.", src: "https://rochesterbeacon.com/2026/11/11/cuddy-to-return-as-geva-interim-artistic-director" },
+    { d: "2026-11-09", cat: "culture", r: ["buf"], h: "Shea's $34.5M expansion hits a milestone", s: "President and CEO Brian Higgins laid the final block of the new elevator and stair tower. The four-story, 25,000 sq ft addition on Pearl Street is due at the end of 2027, in the theater's centennial era.", src: "https://www.buffalorising.com/2026/11/sheas-expansion-hits-milestone/" },
+    { d: "2026-11-05", cat: "culture", r: ["alb"], h: "Proctors CEO Philip Morris to retire; Jean Leonard named successor", s: "Morris, CEO since 2002, retires March 29, 2027. President Jean Leonard takes over the Collaborative, which runs Proctors, Capital Rep, Universal Preservation Hall and the American Theatre in Troy, now under construction.", src: "https://berkshireonstage.blog/2026/11/05/philip-morris-to-retire-as-ceo-of-proctors-collaborative-jean-leonard-to-become-president-and-ceo/" },
+    { d: "2026-09-23", cat: "culture", r: ["roc"], h: "RPO names a new president and extends Andreas Delfs", s: "Tonya McBride-Robles is the Rochester Philharmonic's new president; Music Director Andreas Delfs received a three-year extension.", src: "https://www.whec.com/top-news/rpo-announces-2026-27-season-new-president-and-contract-extension-for-music-director/" },
+    { d: "2026-07-24", cat: "culture", r: ["buf"], h: "Buffalo AKG splits leadership between two directors", s: "Deputy Director Jillian Jones becomes executive director and Chief Curator Cathleen Chaffee artistic director on Nov. 1, succeeding Janne Sirén, who led the museum from 2013 and its $230M expansion campaign.", src: "https://www.btpm.org/local/2026-07-24/akg-announces-new-leadership-names-co-directors-for-first-time" },
+    { d: "2026-07-06", cat: "culture", r: ["cny"], h: "Syracuse Stage's Robert Hupp to step down in 2027", s: "Artistic director since 2016, Hupp leaves after the 2026-27 season, ending with Les Misérables. A national search is underway.", src: "https://news.syr.edu/2026/07/06/robert-hupp-to-step-down-as-syracuse-stage-artistic-director-in-summer-2027/" },
+    { d: "2026-05-14", cat: "culture", r: ["alb"], h: "SPAC marks 60 years and a decade under Elizabeth Sobol", s: "Home to New York City Ballet and The Philadelphia Orchestra in summer, SPAC draws about 500,000 visitors a year and runs a $17.5M Four Seasons Campaign.", src: "https://spac.org/press/press-release-saratoga-performing-arts-center-reflects-on-spacs-evolution-as-it-celebrates-its-60th-anniversary-and-a-decade-of-leadership-from-ceo-elizabeth-sobol/" },
+    { d: "2026-02-10", cat: "culture", r: ["buf"], h: "BPO's 2026-27 season: Lang Lang and a world premiere", s: "JoAnn Falletta's orchestra opened with Lang Lang and premiered Richard Danielpour's oratorio Francis in October.", src: "https://bpo.org/wp-content/uploads/2026/02/BPO-Announces-2026-27-Concert-Season.pdf" },
+    { d: "2026-02", cat: "culture", r: ["roc"], h: "Corning Museum of Glass gets a new president in its 75th year", s: "Jessica Levin Martinez, formerly director of Cornell's Johnson Museum of Art, succeeded Karol Wright.", src: "https://pureoldies941.com/news/258852-cornell-director-to-become-cmog-president-in-february" },
     // faith
     { d: "2026-11-03", cat: "faith", r: ["buf"], h: "Episcopal Diocese of WNY opens nominations for its 12th bishop", s: "The diocesan profile \"Called Together\" was released; an electing convention is planned for May 1, 2027, with consecration targeted for September 2027.", src: "https://episcopalwny.org/bishop-search/" },
     { d: "2026-04-15", cat: "faith", r: ["buf"], h: "Buffalo diocese revises parish share of $150M abuse settlement", s: "Bishop Michael Fisher dropped the 80% ask for merging parishes and raised the diocese's own contribution from $30M to $40M. The settlement resolves 800+ claims.", src: "https://www.bishop-accountability.org/2026/04/diocese-revises-parish-contributions/" },
@@ -271,6 +281,44 @@ const DATA = {
     ]
   },
 
+  // ---------------- CULTURE (music & arts institutions of substance) ----------------
+  // k: Music | Museums & visual arts | Theater & performing arts | Festivals & summer
+  culture: {
+    buf: [
+      {"k": "Music", "n": "Buffalo Philharmonic Orchestra", "lead": "Music Director JoAnn Falletta (contract through 2029)", "t": "Plays at Kleinhans Music Hall, the 1940 Saarinen-designed hall. The 2026-27 season opened with Lang Lang and a Danielpour world premiere.", "src": "https://www.opus3artists.com/buffalo-philharmonic-orchestra-extends-joann-fallettas-contract-as-music-director-through-2029/"},
+      {"k": "Museums & visual arts", "n": "Buffalo AKG Art Museum", "lead": "Jillian Jones, executive director · Cathleen Chaffee, artistic director (from Nov 1, 2026)", "t": "One of the country's leading modern and contemporary collections. Janne Sirén led it 2013–2026, through the $230M campaign behind the 2023 expansion.", "src": "https://www.btpm.org/local/2026-07-24/akg-announces-new-leadership-names-co-directors-for-first-time"},
+      {"k": "Museums & visual arts", "n": "Burchfield Penney Art Center", "lead": "Buffalo State", "t": "Devoted to the art of Western New York and painter Charles Burchfield."},
+      {"k": "Theater & performing arts", "n": "Shea's Performing Arts Center", "lead": "President & CEO Brian Higgins", "t": "The 1926 movie palace hosts Broadway tours. A $34.5M addition is due at the end of 2027.", "src": "https://www.buffalorising.com/2026/11/sheas-expansion-hits-milestone/"},
+      {"k": "Festivals & summer", "n": "Chautauqua Institution", "lead": "Chautauqua County", "t": "A nine-week summer season of orchestra, opera, theater, dance and lectures since 1874."}
+    ],
+    roc: [
+      {"k": "Music", "n": "Eastman School of Music", "lead": "University of Rochester", "t": "Founded by George Eastman in 1921 and one of the leading U.S. conservatories; Kodak Hall at Eastman Theatre is the region's main concert hall."},
+      {"k": "Music", "n": "Rochester Philharmonic Orchestra", "lead": "Music Director Andreas Delfs · President Tonya McBride-Robles", "t": "Delfs received a three-year extension in September 2026.", "src": "https://www.whec.com/top-news/rpo-announces-2026-27-season-new-president-and-contract-extension-for-music-director/"},
+      {"k": "Festivals & summer", "n": "Rochester International Jazz Festival", "lead": "Downtown Rochester, June", "t": "Nine days of ticketed and free shows; one of the largest jazz festivals in North America.", "src": "https://rochesterbeacon.com/2026/06/20/a-borderless-start-to-the-2026-jazz-fest/"},
+      {"k": "Museums & visual arts", "n": "Memorial Art Gallery", "lead": "University of Rochester", "t": "Rochester's art museum, now building an endowment to make admission free, helped by a $2M gift in 2026.", "src": "https://rbj.net/2026/03/12/memorial-art-gallery-2m-free-admission-gift/"},
+      {"k": "Museums & visual arts", "n": "George Eastman Museum", "lead": "East Avenue", "t": "The world's oldest photography museum and a major film archive, in George Eastman's mansion."},
+      {"k": "Museums & visual arts", "n": "Strong National Museum of Play", "lead": "President & CEO Steve Dubnik", "t": "Home of the National Toy Hall of Fame and the World Video Game Hall of Fame; opened a bigger play area at the airport in August 2026.", "src": "https://www.monroecounty.gov/news-2026-08-31-play"},
+      {"k": "Museums & visual arts", "n": "Corning Museum of Glass", "lead": "President Jessica Levin Martinez (since Feb 2026)", "t": "The world's leading glass museum, marking its 75th year in 2026.", "src": "https://www.craftinamerica.org/blog/corning-museum-of-glass-celebrates-75-years-with-events-throughout-2026/"},
+      {"k": "Theater & performing arts", "n": "Geva Theatre", "lead": "Executive Director James Haskins · interim Artistic Director Mark Cuddy (from Jan 2027)", "t": "Rochester's largest professional theater; searching for a new artistic director.", "src": "https://rochesterbeacon.com/2026/11/11/cuddy-to-return-as-geva-interim-artistic-director"}
+    ],
+    cny: [
+      {"k": "Music", "n": "The Syracuse Orchestra (formerly Symphoria)", "lead": "Music director search", "t": "Lawrence Loh, its first music director (2014–2025), left for the Waco Symphony. No successor was confirmed in the sources found.", "src": "https://www.cnybj.com/syracuse-orchestra-music-director-to-conclude-his-tenure-following-2024-25-season/"},
+      {"k": "Festivals & summer", "n": "The Glimmerglass Festival", "lead": "Cooperstown", "t": "One of the country's leading summer opera festivals, now in its second half-century.", "src": "https://glimmerglass.org/festivals/2026-festival/"},
+      {"k": "Museums & visual arts", "n": "Everson Museum of Art", "lead": "Syracuse", "t": "I.M. Pei's first museum building (1968), known for its American ceramics collection."},
+      {"k": "Museums & visual arts", "n": "Munson", "lead": "Utica", "t": "The Munson-Williams-Proctor Arts Institute combines an art museum, an art school and a performing arts series."},
+      {"k": "Theater & performing arts", "n": "Syracuse Stage", "lead": "Artistic Director Robert Hupp (to summer 2027) · Managing Director Carly DiFulvio Allen", "t": "Central New York's professional theater, run with Syracuse University's drama department.", "src": "https://news.syr.edu/2026/07/06/robert-hupp-to-step-down-as-syracuse-stage-artistic-director-in-summer-2027/"},
+      {"k": "Theater & performing arts", "n": "Landmark Theatre", "lead": "Syracuse", "t": "A restored 1928 movie palace hosting Broadway tours and concerts."}
+    ],
+    alb: [
+      {"k": "Music", "n": "Albany Symphony", "lead": "Music Director David Alan Miller", "t": "Nationally known for new American music. The 2026-27 season has premieres by Viet Cuong and others, with Emanuel Ax, at the Palace, Troy Music Hall and EMPAC.", "src": "https://www.dailygazette.com/thespot518/music/albany-symphony-orchestra-ready-to-travel-across-time-and-space-with-2026-2027-season/article_2165bff3-5c51-4567-904a-b6c4e34cf9d9.html"},
+      {"k": "Music", "n": "Troy Savings Bank Music Hall", "lead": "Troy", "t": "An 1875 concert hall prized for its acoustics."},
+      {"k": "Festivals & summer", "n": "Saratoga Performing Arts Center (SPAC)", "lead": "President & CEO Elizabeth Sobol (since 2016)", "t": "Founded 1966; summer home of New York City Ballet, The Philadelphia Orchestra and the Chamber Music Society of Lincoln Center. About 500,000 visitors a year.", "src": "https://spac.org/press/press-release-saratoga-performing-arts-center-reflects-on-spacs-evolution-as-it-celebrates-its-60th-anniversary-and-a-decade-of-leadership-from-ceo-elizabeth-sobol/"},
+      {"k": "Theater & performing arts", "n": "Proctors Collaborative", "lead": "CEO Philip Morris (to Mar 2027) · President Jean Leonard (CEO from Mar 2027)", "t": "Runs Proctors in Schenectady, Capital Rep in Albany, Universal Preservation Hall in Saratoga Springs and the American Theatre in Troy (under construction).", "src": "https://berkshireonstage.blog/2026/11/05/philip-morris-to-retire-as-ceo-of-proctors-collaborative-jean-leonard-to-become-president-and-ceo/"},
+      {"k": "Museums & visual arts", "n": "The Hyde Collection", "lead": "Glens Falls", "t": "Old Masters and modern art in a 1912 Florentine-style villa."},
+      {"k": "Museums & visual arts", "n": "Tang Teaching Museum", "lead": "Skidmore College, Saratoga Springs", "t": "A teaching museum known for interdisciplinary contemporary exhibitions."}
+    ]
+  },
+
   // ---------------- HISTORY ----------------
   history: {
     buf: {
@@ -331,6 +379,7 @@ const DATA = {
     "Asian communities, second layer: Korean, Filipino and Pakistani congregations; Jain and Sikh detail in Buffalo and Albany",
     "Utica, Binghamton, Watertown and North Country business detail",
     "Money in Motion: Capital Region real estate and M&A (thin in public sources), and merge deals from the earlier PDF digests",
+    "Culture: confirm the Syracuse Orchestra's next music director; add Buffalo and Albany theater companies, Everson and Munson leadership",
     "Book list per region (histories and biographies)"
   ]
 };

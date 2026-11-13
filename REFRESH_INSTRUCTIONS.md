@@ -17,12 +17,16 @@ Search each region separately; a combined query returns thin results.
 - Real estate (`cre`): commercial and multifamily sales of about $5M+; big listings get `"listing": true`.
 - For every deal fill `who` (sellers or donors by name, or say they're not named). Amounts in $ millions; `null` if undisclosed.
 
-**Briefing (`DATA.news`)**: government/political (`gov`), business (`biz`) and faith (`faith`) items worth knowing.
+**Briefing (`DATA.news`)**: government/political (`gov`), business (`biz`), faith (`faith`) and culture (`culture`) items worth knowing.
 
 **Officials (`DATA.officials`)**: resolve pending races (`"p": "?"`), record resignations, appointments, new judges,
 leadership changes. Update `res`/`note`, never delete history silently.
 
 **Faith (`DATA.faith`)**: leadership changes, settlements, closures/mergers, new temples or congregations.
+
+**Culture (`DATA.culture`, plus `culture` items in `DATA.news`)**: music and arts institutions of substance (orchestras,
+major museums, professional theaters, major festivals): leadership changes, big gifts or campaigns, building projects,
+season announcements of note, closures or mergers. Update the institution's `lead` line when its leaders change.
 
 Good sources: Rochester Business Journal, Rochester Beacon, WXXI, Buffalo News, Buffalo Business First, Buffalo Niagara
 Partnership, WKBW/WIVB/WGRZ, Investigative Post, CNY Central, Syracuse.com, CNY Business Journal, Central Current, WRVO,
