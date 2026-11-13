@@ -26,6 +26,8 @@ leadership changes. Update `res`/`note`, never delete history silently.
 "M&A and corporate attorneys", "Trusts & estates attorneys", "Nonprofit CPAs"). Update managing partners and office leaders
 when they change, firm mergers, and each August's Best Lawyers "Lawyer of the Year" for M&A and Trusts and Estates in
 Buffalo, Rochester, Syracuse and Albany. Fill entries marked "not confirmed this pass" when a public source names them.
+For thin cities, check the local offices of the multi-office firms (office leader, and their lawyers listed by city in
+each firm's Best Lawyers release). Refresh `providers.chambers` when Chambers USA publishes (around June).
 Rankings only from named sources (Best Lawyers, Chambers USA, Cause IQ nonprofit client counts); never call a firm "top"
 on your own judgment.
 

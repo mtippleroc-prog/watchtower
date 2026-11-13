@@ -7,6 +7,10 @@
 - Not yet found: Albany-area M&A and trusts & estates Lawyers of the Year, Syracuse M&A Lawyer of the Year, and the
   managing partners of Lumsden McCormick, MMB+CO, Grossman St. Amour, Teal Becker & Chiaramonte and Whiteman Osterman & Hanna.
 - Tabs tightened slightly so all ten fit on a laptop screen.
+- Same day, second pass: added office leaders of multi-office firms in each city (Barclay Damon, Bond, Hodgson Russ,
+  Phillips Lytle, Lippes Mathias, Harris Beach Murtha), their Albany/Syracuse/Rochester/Buffalo corporate and trusts &
+  estates lawyers from Best Lawyers 2027, UHY (largest Capital Region CPA firm by CPAs), and Chambers USA's Upstate NY
+  Corporate/M&A firm bands. 69 entries in all.
 
 ## 2026-11-12 — Websites on Faith cards
 - Official website on 23 of 36 Faith cards (faith bodies and historic sites): 18 opened and confirmed, 5 found through a directory, redirect or newspaper but not opened (marked on the card).

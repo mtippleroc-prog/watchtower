@@ -509,6 +509,27 @@ const DATA = {
      "lead": "308 nonprofit clients (Cause IQ)",
      "t": "Largest nonprofit client count found for a Buffalo-based firm this pass; clients include hospitals and colleges across Western New York.",
      "src": "https://www.causeiq.com/vendors/lumsden-and-mccormick-llp,4471154511294728674"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Harris Beach Murtha · Buffalo",
+     "lead": "Melanie C. Marotto and Robert G. Murray, Co-Managing Partners (named July 2025)",
+     "t": "Marotto practices commercial real estate.",
+     "src": "https://www.harrisbeachmurtha.com/news/media-outlets-cover-new-capital-region-and-buffalo-office-managing-partners/"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Rich Day · Herb Glose · Chris Greene · Gary Maas · Ray McCabe · Mike Moore · Gary Mucci · Andy Oppenheimer · Robert Portin",
+     "lead": "Barclay Damon (Buffalo)",
+     "t": "Listed in Best Lawyers 2027 for Corporate Law (McCabe and Oppenheimer also for Tax Law).",
+     "src": "https://www.barclaydamon.com/press-releases/184-barclay-damon-attorneys-listed-in-2027-editions-of-the-best-lawyers-in-america-and-the-best-lawyers-ones-to-watch-in-america"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Victoria D'Angelo · Jen Flannery · David Luzon · Cathy Wettlaufer",
+     "lead": "Barclay Damon (Buffalo)",
+     "t": "Listed in Best Lawyers 2027 for Trusts and Estates.",
+     "src": "https://www.barclaydamon.com/press-releases/184-barclay-damon-attorneys-listed-in-2027-editions-of-the-best-lawyers-in-america-and-the-best-lawyers-ones-to-watch-in-america"
     }
    ],
    "roc": [
@@ -628,6 +649,41 @@ const DATA = {
      "lead": "512 and 223 nonprofit clients (Cause IQ)",
      "t": "Rochester's other large nonprofit audit practices by client count.",
      "src": "https://causeiq.com/vendors/efpr-group-cpas-pllc,4480984402521025685"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Phillips Lytle · Rochester",
+     "lead": "Chad W. Flansburg, Rochester Office Leader (May 2026)",
+     "t": "Named as the firm expanded its Rochester office.",
+     "src": "https://www.greaterrochesterchamber.com/2026/05/20/phillips-lytle-names-chad-w-flansburg-rochester-office-leader-building-on-strategic-office-expansion/"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Hodgson Russ · Rochester",
+     "lead": "Joshua Agins, Managing Partner of the downtown Rochester office",
+     "t": "Per the firm's announcement.",
+     "src": "https://www.hodgsonruss.com/newsroom/news/hodgson-russ-llp-names-joshua-agins-as-managing-partner-of-the-firms-downtown-rochester-office"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Lippes Mathias · Rochester",
+     "lead": "Michael R. Overmyer, first Rochester Office Leader (Dec. 2025)",
+     "t": "Banking and financial transactions lawyer.",
+     "src": "https://www.lippes.com/insights/lippes-mathias-announces-new-office-leaders-across-established-national-footprint-2989"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Bob Latella · Tim Muck · Nick Scarfone · Karen Schaefer",
+     "lead": "Barclay Damon (Rochester)",
+     "t": "Listed in Best Lawyers 2027 for Corporate Law (Muck, Scarfone and Schaefer also for Trusts and Estates).",
+     "src": "https://www.barclaydamon.com/press-releases/184-barclay-damon-attorneys-listed-in-2027-editions-of-the-best-lawyers-in-america-and-the-best-lawyers-ones-to-watch-in-america"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Terry Emmens · Tim Muck · Nick Scarfone · Karen Schaefer",
+     "lead": "Barclay Damon (Rochester)",
+     "t": "Listed in Best Lawyers 2027 for Trusts and Estates.",
+     "src": "https://www.barclaydamon.com/press-releases/184-barclay-damon-attorneys-listed-in-2027-editions-of-the-best-lawyers-in-america-and-the-best-lawyers-ones-to-watch-in-america"
     }
    ],
    "cny": [
@@ -703,6 +759,49 @@ const DATA = {
      "lead": "142 nonprofit clients (Cause IQ)",
      "t": "Largest nonprofit client count found for a Central New York firm this pass; Dannible & McKee's count wasn't available.",
      "src": "https://www.causeiq.com/vendors/grossman-st-amour-cpas-pllc,4470347585330333886/"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Barclay Damon · Syracuse",
+     "lead": "David Burch, Syracuse Office Managing Director (also firm Deputy Managing Partner)",
+     "t": "Commercial litigator and white-collar defense lawyer.",
+     "src": "https://www.barclaydamon.com/press-releases/barclay-damon-elects-deputy-managing-partner"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Lippes Mathias · Syracuse",
+     "lead": "Michael J. Compagni, Office Leader",
+     "t": "Listed among Lippes Mathias office leaders in December 2025.",
+     "src": "https://www.lippes.com/insights/lippes-mathias-announces-new-office-leaders-across-established-national-footprint-2989"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Will Barclay · Chris Bonner · Jim Canfield · John Kelepurovski · Lynn Smith",
+     "lead": "Barclay Damon (Syracuse)",
+     "t": "Listed in Best Lawyers 2027 for Corporate Law.",
+     "src": "https://www.barclaydamon.com/press-releases/184-barclay-damon-attorneys-listed-in-2027-editions-of-the-best-lawyers-in-america-and-the-best-lawyers-ones-to-watch-in-america"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Roderick C. McDonald",
+     "lead": "Bond, Schoeneck & King",
+     "t": "A named contact for Bond's M&A practice (Syracuse phone); the firm is ranked in Chambers USA's Upstate NY Corporate/M&A Band 2.",
+     "src": "https://www.bsk.com/uploads/Mergers-Acquisitions-2026.pdf"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Gerry Stack",
+     "lead": "Barclay Damon (Syracuse)",
+     "t": "Listed in Best Lawyers 2027 for Trusts and Estates, Tax Law and Corporate Law.",
+     "src": "https://www.barclaydamon.com/press-releases/184-barclay-damon-attorneys-listed-in-2027-editions-of-the-best-lawyers-in-america-and-the-best-lawyers-ones-to-watch-in-america"
+    },
+    {
+     "k": "CPA firms",
+     "n": "The Bonadio Group · Syracuse",
+     "lead": "Office leader not re-verified this pass",
+     "t": "Bonadio added Syracuse-based T. Gschwender & Associates, a credit risk management firm for banks, in August 2026.",
+     "web": "https://www.bonadio.com",
+     "src": "https://www.cpapracticeadvisor.com/2026/08/06/credit-risk-management-firm-joins-the-bonadio-group/188098/"
     }
    ],
    "alb": [
@@ -710,7 +809,7 @@ const DATA = {
      "k": "Law firms",
      "n": "Whiteman Osterman & Hanna LLP",
      "lead": "Managing partner not confirmed this pass",
-     "t": "Albany firm; 23 attorneys across 17 practice areas named to Best Lawyers 2027.",
+     "t": "Albany firm; 23 attorneys across 17 practice areas named to Best Lawyers 2027. Ranked Band 4 in Chambers USA Upstate NY Corporate/M&A.",
      "web": "https://woh.com",
      "src": "https://www.woh.com/news/3400/23-Whiteman-Osterman-Hanna-Attorneys-Named-to-Best-Lawyers-Lists-for-2027/"
     },
@@ -742,11 +841,111 @@ const DATA = {
      "lead": "167 nonprofit clients (Teal Becker, Cause IQ)",
      "t": "Bonadio's statewide nonprofit book (1,601 clients) is led in part from its Capital Region office.",
      "src": "https://www.causeiq.com/vendors/teal-becker-and-chiaramonte-cpas-pc,4471153040164304194"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Barclay Damon · Albany",
+     "lead": "Melissa M. Zambri, Albany Office Managing Director",
+     "t": "Health care lawyer who has run the Albany office since 2018. Barclay Damon ranked No. 2 of 90 on the Albany Business Review's 2026 list of largest Albany-area law firms, with 42 Capital Region attorneys.",
+     "src": "https://www.barclaydamon.com/news/barclay-damon-ranked-second-in-albany-business-review-largest-law-firms-in-the-albany-area-list-for-2026"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Hodgson Russ · Albany",
+     "lead": "Thomas J. Collura, Albany Office Managing Partner",
+     "t": "Collura is also listed in Best Lawyers 2027 for Trusts and Estates.",
+     "src": "https://www.hodgsonruss.com/contact/albany-office"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Bond, Schoeneck & King · Albany",
+     "lead": "Jennifer M. Boll, Albany Managing Member; Robert F. Manfredo, Deputy (named Jan. 2023)",
+     "t": "Boll's practice covers corporate, tax, M&A and estate and business succession planning.",
+     "src": "https://www.bsk.com/news-events-videos/bond-names-new-leadership-for-its-albany-office"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Phillips Lytle · Albany",
+     "lead": "Jeffrey B. Schwartz, Albany Office Leader",
+     "t": "The office added a trusts and estates senior associate and a banking associate in July 2026.",
+     "src": "https://phillipslytle.com/news-events/two-new-attorneys-join-phillips-lytles-albany-office/"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Lippes Mathias · Albany and Saratoga Springs",
+     "lead": "Leigh A. Hoffman (Albany); Karl J. Sleight (Saratoga Springs)",
+     "t": "Named December 2025; Hoffman succeeded Keith R. Jacques. The Albany office moved to 677 Broadway.",
+     "src": "https://www.lippes.com/insights/lippes-mathias-announces-new-office-leaders-across-established-national-footprint-2989"
+    },
+    {
+     "k": "Office leaders at multi-office firms",
+     "n": "Harris Beach Murtha · Albany and Saratoga Springs",
+     "lead": "Mathew P. Barry, Office Managing Partner (named July 2025)",
+     "t": "Co-leads the firm's financial institutions team.",
+     "src": "https://www.harrisbeachmurtha.com/news/media-outlets-cover-new-capital-region-and-buffalo-office-managing-partners/"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Jennifer M. Boll",
+     "lead": "Bond, Schoeneck & King (Albany Managing Member)",
+     "t": "Advises privately held companies and individuals on mergers and acquisitions, financial transactions and succession.",
+     "src": "https://www.bsk.com/news-events-videos/bond-names-new-leadership-for-its-albany-office"
+    },
+    {
+     "k": "M&A and corporate attorneys",
+     "n": "Melissa Bennett",
+     "lead": "Barclay Damon (Albany)",
+     "t": "Listed in Best Lawyers 2027 for Corporate Law.",
+     "src": "https://www.barclaydamon.com/press-releases/184-barclay-damon-attorneys-listed-in-2027-editions-of-the-best-lawyers-in-america-and-the-best-lawyers-ones-to-watch-in-america"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Thomas J. Collura",
+     "lead": "Hodgson Russ (Albany Office Managing Partner)",
+     "t": "Listed in Best Lawyers 2027 for Trusts and Estates.",
+     "src": "https://www.hodgsonruss.com/newsroom/news/97-hodgson-russ-llp-attorneys-ranked-in-2027-edition-of-best-lawyers-in-america"
+    },
+    {
+     "k": "Trusts & estates attorneys",
+     "n": "Neil Breslin · Meaghan Murphy",
+     "lead": "Barclay Damon (Albany)",
+     "t": "Listed in Best Lawyers 2027 for Trusts and Estates.",
+     "src": "https://www.barclaydamon.com/press-releases/184-barclay-damon-attorneys-listed-in-2027-editions-of-the-best-lawyers-in-america-and-the-best-lawyers-ones-to-watch-in-america"
+    },
+    {
+     "k": "CPA firms",
+     "n": "UHY",
+     "lead": "Albany office leader not confirmed this pass",
+     "t": "Named the Capital Region's largest accounting firm by number of CPAs on the Albany Business Review's list (March 2025); in the list's top five since 2016.",
+     "web": "https://uhy-us.com",
+     "src": "https://uhy-us.com/newsroom/2025/march/uhy-named-top-accounting-firm-in-capital-region-by-albany-business-review"
     }
-   ]
+   ],
+   "chambers": {
+    "h": "Chambers USA: Corporate/M&A, New York Upstate",
+    "src": "https://chambers.com/legal-rankings/corporate-ma-new-york-upstate-5:354:17820:1",
+    "bands": [
+     [
+      "Band 1",
+      "Harter Secrest & Emery · Hodgson Russ · Nixon Peabody"
+     ],
+     [
+      "Band 2",
+      "Barclay Damon · Bond, Schoeneck & King · Lippes Mathias · Phillips Lytle"
+     ],
+     [
+      "Band 3",
+      "Akerman · Woods Oviatt Gilman · Harris Beach Murtha"
+     ],
+     [
+      "Band 4",
+      "Couch White · Whiteman Osterman & Hanna"
+     ]
+    ]
+   }
   },
   nextUp: [
-    "Service Providers: Albany M&A and trusts & estates attorneys; managing partners at Lumsden McCormick, MMB+CO, Grossman St. Amour, Teal Becker and Whiteman Osterman & Hanna; Dannible & McKee and BST nonprofit client counts",
+    "Service Providers: Albany and Syracuse Best Lawyers M&A Lawyers of the Year; managing partners at Lumsden McCormick, MMB+CO, Grossman St. Amour, Teal Becker and Whiteman Osterman & Hanna; Dannible & McKee and BST nonprofit client counts",
     "Rochester-area and Capital Region Assembly results (2026) and Monroe County Legislature",
     "Pending calls: SD-43, AD-126, AD-143, Erie County Clerk, Webster supervisor",
     "Political donors from NYS Board of Elections and FEC filings, by region",

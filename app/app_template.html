@@ -280,11 +280,13 @@ function vCulture(){
   }).join("");
 }
 
-const PK = ["Law firms","CPA firms","M&A and corporate attorneys","Trusts & estates attorneys","Nonprofit CPAs"];
+const PK = ["Law firms","Office leaders at multi-office firms","CPA firms","M&A and corporate attorneys","Trusts & estates attorneys","Nonprofit CPAs"];
 const provCard = f => `<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div><p class="note">${esc(f.t)}</p><div class="meta">${f.web?`<a class="web" href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>`:""}${f.src?srcLink(f.src):""}</div></div>`;
 function vProviders(){
   const P = DATA.providers||{};
-  return `<p class="lede">${esc(P.note||"")}</p>` + regionsShown().map(k=>{
+  const ch = P.chambers;
+  const chT = ch ? `<div class="card" style="margin-bottom:18px"><h3>${esc(ch.h)}</h3><ul class="plain">${ch.bands.map(b=>`<li><b>${esc(b[0])}</b> · ${esc(b[1])}</li>`).join("")}</ul><div class="meta">${srcLink(ch.src)}</div></div>` : "";
+  return `<p class="lede">${esc(P.note||"")}</p>${chT}` + regionsShown().map(k=>{
     const all = P[k]||[];
     return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">Service providers · law & accounting</span></div><h2>${esc(R[k].name)}</h2>
     ${PK.map(c=>[c,all.filter(e=>e.k===c)]).map(([c,arr])=>`<h3 style="margin:16px 0 8px">${esc(c)}</h3>${arr.length?`<div class="entries">${arr.map(provCard).join("")}</div>`:`<p class="empty">None confirmed for this region yet.</p>`}`).join("")}</div>`;
