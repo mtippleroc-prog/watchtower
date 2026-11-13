@@ -1,0 +1,14 @@
+# Tickers to check for an Upstate HQ (the daily SEC job reports each one's business address and region).
+# Move confirmed in-region companies into DATA.pubcos in app/data.js, then delete them here.
+ROCK   # Gibraltar Industries
+GHM    # Graham Corp
+TRNS   # Transcat
+MNRO   # Monro
+VUZI   # Vuzix
+SENEA  # Seneca Foods
+FISI   # Financial Institutions
+CBU    # Community Financial System
+NBTB   # NBT Bancorp
+TRST   # TrustCo Bank
+AROW   # Arrow Financial
+CHMG   # Chemung Financial
