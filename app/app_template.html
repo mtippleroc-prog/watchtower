@@ -188,8 +188,8 @@ function scopeLabel(){ return region==="all" ? "all four regions" : R[region].na
 function vBriefing(){
   const items = DATA.news.filter(n => inR(n.r) && (st.newsCat==="all" || n.cat===st.newsCat)).sort((a,b)=>b.d.localeCompare(a.d));
   const fresh = DATA.officials.filter(o => inR(o.r) && /\(elect\)|Too close|leads|Flipped|flip/i.test((o.o||"")+" "+(o.res||"")));
-  return `<section><div class="sechead"><div><span class="eyebrow">Briefing · ${esc(scopeLabel())}</span><h2>What's moving</h2></div></div>
-  <p class="lede">Government, business and faith news from the last few months, newest first. Every item links to its source.</p>
+  return `<section><div class="sechead"><div><span class="eyebrow">Briefing · ${esc(scopeLabel())}</span></div></div>
+  <p class="lede">Government, business, faith and culture news from the last few months, newest first. Every item links to its source.</p>
   ${filterBtns("newsCat",[["all","All"],["gov","Government"],["biz","Business"],["faith","Faith"],["culture","Culture"]],st.newsCat)}
   ${newsList(items)}</section>
   <section><div class="sechead"><div><span class="eyebrow">After Nov 3, 2026</span><h2>Seats changing hands or still open</h2></div><a href="#officials">All officials →</a></div>
@@ -260,8 +260,7 @@ function vMoney(){
   const tiles = Object.keys(DT).map(k=>{ const a=all.filter(x=>x.t===k&&!x.listing); const sum=a.reduce((t,x)=>t+(x.amt||0),0);
     return `<button class="tile" id="t-${k}" data-g="dealT" data-v="${k}" aria-pressed="${st.dealT===k}"><span class="eyebrow">${DT[k][0]}</span><b>${a.length}</b><span class="tsum">${sum?fmtAmt(sum)+" disclosed":"Terms undisclosed"}</span></button>`; }).join("");
   const byR = region==="all" ? `<div class="rsplit">${RK.map(k=>{const n=all.filter(x=>x.r.includes(k)).length; return `<span class="dot" style="--c:${rc(k)}">${esc(R[k].short)} · ${n}</span>`}).join("")}</div>` : "";
-  return `<section><span class="eyebrow">Money in Motion · ${esc(scopeLabel())} · 2026</span><h2>Where capital is moving</h2>
-  <p class="lede">A running record of M&A, major capital projects, philanthropy and commercial real estate across upstate. It continues the Money in Motion digest, which tracks middle-market deals, owner transitions and private-equity add-ons, big gifts, and property trades. Every entry names who sold or who gave, or says so when public reports do not. Tap a category to filter.</p>
+  return `<section><div class="eyebrow" style="margin-bottom:10px">Money in Motion · ${esc(scopeLabel())} · 2026</div>
   <div class="tiles">${tiles}</div>${byR}
   ${filterBtns("dealT",[["all","All deals"]].concat(Object.keys(DT).map(k=>[k,DT[k][0]])),st.dealT)}
   ${list.length?`<div class="feed">${list.map(x=>`<article class="item deal"><time datetime="${x.d}">${fmtDate(x.d)}</time><div class="body"><div class="dtop"><h3>${esc(x.h)}</h3><span class="amt${x.amt==null?' na':''}">${fmtAmt(x.amt)}${x.listing?' ask':''}</span></div><div class="parties">${esc(x.p)}</div>${whoLine(x)}<p>${esc(x.s)}</p><div class="meta"><span class="cat">${DT[x.t][0]}</span>${dots(x.r)}${srcLink(x.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No deals recorded for this region and category yet.</p>`}
