@@ -43,7 +43,7 @@ single website", "No public website found", "Website not confirmed this pass"). 
 
 **Culture (`DATA.culture`, plus `culture` items in `DATA.news`)**: music and arts institutions of substance (orchestras,
 major museums, professional theaters, major festivals): leadership changes, big gifts or campaigns, building projects,
-season announcements of note, closures or mergers. Update the institution's `lead` line when its leaders change.
+season announcements of note, closures or mergers. Update the institution's `lead` line when its leaders change. Major gifts and campaigns go in the card's `rel` list (`{n, note, web?, src}`, shown as "Backers").
 Also cover private schools (new heads of school, campaigns, mergers or closures, enrollment news) and private golf, city
 and yacht clubs (major championships hosted, new clubhouses or renovations, sales or closures). No membership lists.
 Every Culture card carries `web` (official site, opened to confirm) and, where available, `size` + `sizeSrc`:
@@ -53,6 +53,9 @@ Good sources: Rochester Business Journal, Rochester Beacon, WXXI, Buffalo News, 
 Partnership, WKBW/WIVB/WGRZ, Investigative Post, CNY Central, Syracuse.com, CNY Business Journal, Central Current, WRVO,
 Times Union, Albany Business Review, WAMC, Spectrum News, Ithaca Voice, FingerLakes1, governor.ny.gov, ESD, SEC EDGAR,
 university and hospital newsrooms, diocesan sites.
+
+**History (`DATA.history[r].legacy`)**: `[name, description, src]` for the families and fortunes behind each region; update when
+leadership or ownership changes (sales, mergers). Sourced facts only.
 
 ## 3. Edit
 - Add new items at the top of their arrays with `d` (YYYY-MM-DD, or YYYY-MM if only the month is known), `r` (regions), `src`.

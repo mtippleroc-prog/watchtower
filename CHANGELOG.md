@@ -1,5 +1,12 @@
 # WatchTower changelog
 
+## 2026-11-12 — Culture backers, family fortunes
+- Culture: "Backers" lines on the BPO (Kleinhans $18M campaign and its $1M+ funders), Buffalo AKG (Gundlach $42.5M, 2016),
+  RPO (RPO 100, $50M goal), Everson (Phillips and Sullivan $4.8M) and SPAC (Four Seasons $17.5M, Dake family $1M lead).
+- Leaders: BPO President & Executive Director Jennifer Barbee (from Sept 1, 2026); SPAC CEO Elizabeth Sobol and President
+  Christopher Shiley; Ralph C. Wilson Jr. Foundation President & CEO David Egner.
+- History: new "Families & fortunes" per region (Rich, Knox, Wegman, Sands, Byrne, Congel, Golub, Dake), each sourced.
+
 ## 2026-11-12 — Money in Motion: seller and donor background
 - 13 deals now carry a "Background" line on the named sellers or donors: public professional background (companies,
   roles, boards, prior gifts), with the source and, where confirmed, the company or firm website. Personal contact

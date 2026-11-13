@@ -272,7 +272,7 @@ function vMoney(){
 }
 
 const CK = ["Music","Festivals & summer","Theater & performing arts","Museums & visual arts","Private schools","Clubs: golf, city & yacht"];
-const cultureCard = f => `<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div>${f.size?`<div class="size">${esc(f.size)}${f.sizeSrc?` <a class="src" href="${esc(f.sizeSrc)}" target="_blank" rel="noopener">Source</a>`:""}</div>`:""}<p class="note">${esc(f.t)}</p><div class="meta">${f.web?`<a class="web" href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>${f.webNote?`<span class="kv">${esc(f.webNote)}</span>`:""}`:`<span class="kv">No public website found</span>`}${f.src?srcLink(f.src):""}</div></div>`;
+const cultureCard = f => `<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div>${f.size?`<div class="size">${esc(f.size)}${f.sizeSrc?` <a class="src" href="${esc(f.sizeSrc)}" target="_blank" rel="noopener">Source</a>`:""}</div>`:""}<p class="note">${esc(f.t)}</p>${(f.rel||[]).map(x=>`<div class="who"><span class="wl">Backers</span><span><b>${esc(x.n)}</b>. ${esc(x.note)} ${x.web?`<a class="web" href="${esc(x.web)}" target="_blank" rel="noopener">Website ↗</a> `:""}${srcLink(x.src)}</span></div>`).join("")}<div class="meta">${f.web?`<a class="web" href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>${f.webNote?`<span class="kv">${esc(f.webNote)}</span>`:""}`:`<span class="kv">No public website found</span>`}${f.src?srcLink(f.src):""}${f.src2?srcLink(f.src2):""}</div></div>`;
 function vCulture(){
   return regionsShown().map(k=>{
     const all = DATA.culture[k]||[]; const news = DATA.news.filter(n=>n.cat==="culture" && n.r.includes(k)).sort((a,b)=>b.d.localeCompare(a.d));
@@ -312,7 +312,7 @@ function vHistory(){
     <p class="thesis">${esc(h.thesis)}</p>
     <ol class="timeline">${h.eras.map(e=>`<li><div class="when">${esc(e[0])}</div><p>${esc(e[1])}</p></li>`).join("")}</ol>
     <h3 style="margin:10px 0 10px">Key figures</h3><ul class="people">${h.figures.map(f=>`<li><b>${esc(f[0])}</b><span>${esc(f[1])}</span></li>`).join("")}</ul>
-    <h3 style="margin:18px 0 4px">Stories</h3>${h.stories.map(s=>`<p class="story">${esc(s)}</p>`).join("")}</div>`;
+    ${(h.legacy||[]).length?`<h3 style="margin:18px 0 10px">Families & fortunes</h3><ul class="people">${h.legacy.map(f=>`<li><b>${esc(f[0])}</b><span>${esc(f[1])} ${srcLink(f[2])}</span></li>`).join("")}</ul>`:""}<h3 style="margin:18px 0 4px">Stories</h3>${h.stories.map(s=>`<p class="story">${esc(s)}</p>`).join("")}</div>`;
   }).join("");
 }
 
