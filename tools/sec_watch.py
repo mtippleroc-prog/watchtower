@@ -8,11 +8,11 @@
   last 120 days (8-K with item codes, 10-K, 10-Q, proxies, S-1/S-4, merger and tender filings, 13D).
 The Mon/Thu WatchTower refresh reads this file first and writes up what matters (see REFRESH_INSTRUCTIONS.md).
 """
-import datetime, json, os, re, time, urllib.request
+import datetime, gzip, json, os, re, time, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-UA = {"User-Agent": "WatchTower research mtippleroc-prog@users.noreply.github.com"}
+UA = {"User-Agent": os.environ.get("SEC_UA") or "WatchTower Research mtippleroc-prog@users.noreply.github.com", "Accept-Encoding": "gzip, deflate"}
 TODAY = datetime.date.today()
 SINCE = (TODAY - datetime.timedelta(days=120)).isoformat()
 FORMS = {"8-K", "8-K/A", "10-K", "10-Q", "DEF 14A", "DEFA14A", "PRE 14A", "DEFM14A", "S-1", "S-4", "425",
@@ -35,7 +35,9 @@ def get(url):
     for i in range(3):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
-                return json.loads(r.read())
+                raw = r.read()
+                if r.headers.get("Content-Encoding") == "gzip": raw = gzip.decompress(raw)
+                return json.loads(raw)
         except Exception:
             if i == 2: raise
             time.sleep(2 * (i + 1))
