@@ -33,6 +33,9 @@ each firm's Best Lawyers release). Refresh `providers.chambers` when Chambers US
 Rankings only from named sources (Best Lawyers, Chambers USA, Cause IQ nonprofit client counts); never call a firm "top"
 on your own judgment.
 
+**Business (`DATA.business[r].who` and `.data`)**: refresh "Who to know" leaders (chambers, economic development,
+community foundations, United Ways, major foundations) when they change; fill missing websites once confirmed.
+
 **Faith (`DATA.faith`)**: leadership changes, settlements, closures/mergers, new temples or congregations.
 Every Faith card carries `web` (official site, opened to confirm) or a `webNote` saying why not ("Community profile; no
 single website", "No public website found", "Website not confirmed this pass"). Fill in unconfirmed ones when you can.

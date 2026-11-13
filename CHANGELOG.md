@@ -1,5 +1,15 @@
 # WatchTower changelog
 
+## 2026-11-12 — Who to know, public data, faith connections
+- Business tab: "Who to know" per region (chamber, economic development agency, community foundation, United Way, major
+  foundations, business paper) with current leaders, websites and sources; "Public data & records" per region (NYS DOL
+  regional labor statistics, Census QuickFacts, county IDA).
+- Sources tab: statewide public data sites (ABO IDA project data, Comptroller local government data, REDC/CFA awards,
+  Open NY, campaign finance, corporation search, DOL labor briefings).
+- Faith tab: "Related" lines on 11 cards (charities, foundations, owners) with named benefactors where public records name
+  them (e.g., Benderson and Holland Cohn at the Buffalo JCC; the Adams family at OLV; Chautauqua's Promise Campaign).
+- MMB+CO managing partner: Mark Kovaleski.
+
 ## 2026-11-12 — Service Providers: leading individuals, next generation, websites
 - New "Leading individuals" per region: Chambers USA 2026 Upstate NY Corporate/M&A ranked lawyers (with bands) and Best
   Lawyers 2027 Lawyers of the Year, plus long-listed practitioners such as Gordon E. Forth (Best Lawyers since 2001) and
