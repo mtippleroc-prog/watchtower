@@ -7,7 +7,7 @@
 - New "Next generation": Best Lawyers: Ones to Watch 2027 (M&A, corporate, trusts & estates, tax) and Chambers "Up and Coming".
 - Added Insero (Rochester CPA firm; CEO Nancy Catarisano) and Couch White (Albany law firm); Dannible & McKee noted as CNY's
   No. 1 CPA firm by CPAs (CNYBJ 2025 Book of Lists).
-- Every firm card now links the firm's website (opened or found on the firm's own domain); MMB+CO's site isn't confirmed yet.
+- Every firm card now links the firm's website (opened or found on the firm's own domain).
   98 entries in all.
 
 ## 2026-11-12 — Service Providers tab

@@ -721,9 +721,9 @@ const DATA = {
      "k": "CPA firms",
      "n": "MMB+CO (Mengel Metzger Barr)",
      "lead": "Managing partner not confirmed this pass",
-     "t": "Rochester CPA firm with offices in Canandaigua, Elmira, Latham and Queensbury. Cause IQ lists 512 nonprofit clients, many of them New York City charter schools.",
+     "t": "Rochester-area CPA firm (Fairport) with offices in Canandaigua, Elmira, Latham and Queensbury. Cause IQ lists 512 nonprofit clients, many of them New York City charter schools.",
      "src": "https://www.causeiq.com:443/vendors/mengel-metzger-barr-and-co-llp,4470345261686715505",
-     "webNote": "Website not confirmed this pass"
+     "web": "https://www.mmbaccounting.com"
     },
     {
      "k": "CPA firms",
@@ -760,7 +760,8 @@ const DATA = {
      "n": "MMB+CO · EFPR Group",
      "lead": "512 and 223 nonprofit clients (Cause IQ)",
      "t": "Rochester's other large nonprofit audit practices by client count.",
-     "src": "https://causeiq.com/vendors/efpr-group-cpas-pllc,4480984402521025685"
+     "src": "https://causeiq.com/vendors/efpr-group-cpas-pllc,4480984402521025685",
+     "web": "https://www.mmbaccounting.com"
     },
     {
      "k": "Office leaders at multi-office firms",
@@ -880,7 +881,7 @@ const DATA = {
      "n": "Dannible & McKee, LLP",
      "lead": "Victor W. Vaccaro Jr., Managing Partner (from July 1, 2026)",
      "t": "Syracuse CPA firm with 140+ professionals in Syracuse, Auburn, Binghamton, Schenectady and Tampa. Vaccaro succeeded the retiring Christopher Didio. Named Central New York's No. 1 CPA firm by number of CPAs in the CNY Business Journal's 2025 Book of Lists.",
-    "src2": "https://www.dmcpas.com/news/dannible-mckee-secures-top-spot-as-1-cpa-firm-in-central-new-york-for-second-consecutive-year/",
+     "src2": "https://www.dmcpas.com/news/dannible-mckee-secures-top-spot-as-1-cpa-firm-in-central-new-york-for-second-consecutive-year/",
      "src": "https://capitalregionchamber.com/news/dannible-mckee-names-victor-w-vaccaro-jr-managing-partner-to-lead-firms-next-chapter-of-growth/",
      "web": "https://www.dmcpas.com"
     },
