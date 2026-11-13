@@ -1,5 +1,8 @@
 # WatchTower changelog
 
+## 2026-11-12 — Private schools and clubs in Culture
+- Added 19 private schools (heads of school, type, founding) and 21 golf, city and yacht clubs across the four regions, plus 3 news items.
+
 ## 2026-11-12 — Culture tab and new tab order
 - New Culture tab: 25 music and arts institutions across the four regions (orchestras, museums, theaters, festivals) with current leaders, plus 9 culture news items.
 - Tab order: Money in Motion, General Briefings, Business, Faith, Culture, History, Politics, Officials, Sources. Tabs restyled as folder tabs.

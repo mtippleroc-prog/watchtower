@@ -36,6 +36,9 @@ const DATA = {
     { d: "2026-07-09", cat: "biz", r: ["cny"], h: "Micron pours first foundations in Clay", s: "After a January 2026 groundbreaking, concrete work began on the first fab at White Pine Commerce Park; Bechtel is EPC contractor. The plan is up to $100B over four fabs and 4,500+ peak construction jobs.", src: "https://www.enr.com/articles/63307-foundation-work-begins-on-microns-100b-new-york-semiconductor-megafab" },
     { d: "2026-01-14", cat: "biz", r: ["roc"], h: "Cornell restores federal funding, keeps cutting costs", s: "A settlement restored frozen research funding, but President Michael Kotlikoff warned of continuing headwinds; the \"Resilient Cornell\" plan includes layoffs where attrition falls short.", src: "https://www.fingerlakes1.com/2026/01/14/cornell-faces-financial-and-political-strain/" },
     // culture
+    { d: "2026-07-07", cat: "culture", r: ["alb"], h: "Glens Falls Country Club hosts the NYS Men's Amateur", s: "The 103rd championship ran July 7–9 on the Donald Ross course.", src: "https://nysga.org/communications-news/preview-2026-nys-mens-amateur-championship-at-glens-falls" },
+    { d: "2026-07-01", cat: "culture", r: ["alb"], h: "Michael Turner takes over at Albany Academy", s: "Turner, formerly at The Shipley School near Philadelphia, succeeds Chris Lauricella as head of school.", src: "https://www.albanyacademy.org/p/~board/general-news/post/welcome-mr-turner-albany-academys-new-head-of-school" },
+    { d: "2026-03-04", cat: "culture", r: ["buf"], h: "Nichols School mourns Head of School Chris Burner", s: "Burner led Nichols for seven years. Rochester native Scott Reisinger, formerly head of Trevor Day School in New York City, became interim head on July 1.", src: "https://www.btpm.org/local/2026-03-04/nichols-school-in-mourning-following-passing-of-its-head-of-school" },
     { d: "2026-11-11", cat: "culture", r: ["roc"], h: "Geva's artistic director leaves; Mark Cuddy returns as interim", s: "Elizabeth Williamson departs in January for the American Conservatory Theater in San Francisco. Artistic director emeritus Mark Cuddy, who led Geva from 1995 to 2022, steps in alongside Executive Director James Haskins while a search runs.", src: "https://rochesterbeacon.com/2026/11/11/cuddy-to-return-as-geva-interim-artistic-director" },
     { d: "2026-11-09", cat: "culture", r: ["buf"], h: "Shea's $34.5M expansion hits a milestone", s: "President and CEO Brian Higgins laid the final block of the new elevator and stair tower. The four-story, 25,000 sq ft addition on Pearl Street is due at the end of 2027, in the theater's centennial era.", src: "https://www.buffalorising.com/2026/11/sheas-expansion-hits-milestone/" },
     { d: "2026-11-05", cat: "culture", r: ["alb"], h: "Proctors CEO Philip Morris to retire; Jean Leonard named successor", s: "Morris, CEO since 2002, retires March 29, 2027. President Jean Leonard takes over the Collaborative, which runs Proctors, Capital Rep, Universal Preservation Hall and the American Theatre in Troy, now under construction.", src: "https://berkshireonstage.blog/2026/11/05/philip-morris-to-retire-as-ceo-of-proctors-collaborative-jean-leonard-to-become-president-and-ceo/" },
@@ -281,15 +284,26 @@ const DATA = {
     ]
   },
 
-  // ---------------- CULTURE (music & arts institutions of substance) ----------------
-  // k: Music | Museums & visual arts | Theater & performing arts | Festivals & summer
+  // ---------------- CULTURE (arts institutions, private schools, clubs) ----------------
+  // k: Music | Festivals & summer | Theater & performing arts | Museums & visual arts | Private schools | Clubs: golf, city & yacht
   culture: {
     buf: [
       {"k": "Music", "n": "Buffalo Philharmonic Orchestra", "lead": "Music Director JoAnn Falletta (contract through 2029)", "t": "Plays at Kleinhans Music Hall, the 1940 Saarinen-designed hall. The 2026-27 season opened with Lang Lang and a Danielpour world premiere.", "src": "https://www.opus3artists.com/buffalo-philharmonic-orchestra-extends-joann-fallettas-contract-as-music-director-through-2029/"},
       {"k": "Museums & visual arts", "n": "Buffalo AKG Art Museum", "lead": "Jillian Jones, executive director · Cathleen Chaffee, artistic director (from Nov 1, 2026)", "t": "One of the country's leading modern and contemporary collections. Janne Sirén led it 2013–2026, through the $230M campaign behind the 2023 expansion.", "src": "https://www.btpm.org/local/2026-07-24/akg-announces-new-leadership-names-co-directors-for-first-time"},
       {"k": "Museums & visual arts", "n": "Burchfield Penney Art Center", "lead": "Buffalo State", "t": "Devoted to the art of Western New York and painter Charles Burchfield."},
       {"k": "Theater & performing arts", "n": "Shea's Performing Arts Center", "lead": "President & CEO Brian Higgins", "t": "The 1926 movie palace hosts Broadway tours. A $34.5M addition is due at the end of 2027.", "src": "https://www.buffalorising.com/2026/11/sheas-expansion-hits-milestone/"},
-      {"k": "Festivals & summer", "n": "Chautauqua Institution", "lead": "Chautauqua County", "t": "A nine-week summer season of orchestra, opera, theater, dance and lectures since 1874."}
+      {"k": "Festivals & summer", "n": "Chautauqua Institution", "lead": "Chautauqua County", "t": "A nine-week summer season of orchestra, opera, theater, dance and lectures since 1874."},
+      {"k": "Private schools", "n": "Nichols School", "lead": "Interim Head Scott Reisinger (from July 2026)", "t": "Coed day school founded in 1892. Head of School Chris Burner died in March 2026 after seven years; a search for a permanent head runs over the next one to two years.", "src": "https://www.nicholsschool.org/news-detail?pk=1627010"},
+      {"k": "Private schools", "n": "Buffalo Seminary", "lead": "Head of School Blair Parker (since 2024)", "t": "Girls' day school founded in 1851.", "src": "https://www.audacy.com/wben/news/local/buffalo-seminary-names-new-head-of-school"},
+      {"k": "Private schools", "n": "Elmwood Franklin School", "lead": "Head of School Johnathan Letcher (16th head, 2026)", "t": "Coed elementary and middle school in North Buffalo.", "src": "https://www.elmwoodfranklin.org/school-leadership.html"},
+      {"k": "Private schools", "n": "Canisius High School", "lead": "Jesuit · Buffalo", "t": "Jesuit college-prep school for boys, founded in 1870."},
+      {"k": "Private schools", "n": "St. Joseph's Collegiate Institute", "lead": "Christian Brothers · Tonawanda", "t": "Catholic college-prep school for boys."},
+      {"k": "Private schools", "n": "Nardin Academy", "lead": "Catholic · Buffalo", "t": "Catholic school with a coed elementary program and a girls' high school."},
+      {"k": "Clubs: golf, city & yacht", "n": "The Buffalo Club", "lead": "Delaware Avenue", "t": "The city's oldest private club, founded in 1867; Millard Fillmore was its first president."},
+      {"k": "Clubs: golf, city & yacht", "n": "Saturn Club", "lead": "Delaware Avenue", "t": "Social club founded in 1885."},
+      {"k": "Clubs: golf, city & yacht", "n": "The Park Country Club", "lead": "Amherst", "t": "Founded 1903, with a Colt & Alison course; hosted the 1934 PGA Championship.", "src": "https://en.wikipedia.org/wiki/The_Park_Country_Club"},
+      {"k": "Clubs: golf, city & yacht", "n": "Country Club of Buffalo", "lead": "Williamsville", "t": "One of the region's oldest private golf clubs."},
+      {"k": "Clubs: golf, city & yacht", "n": "Buffalo Yacht Club", "lead": "Buffalo waterfront", "t": "One of the oldest yacht clubs in the U.S."}
     ],
     roc: [
       {"k": "Music", "n": "Eastman School of Music", "lead": "University of Rochester", "t": "Founded by George Eastman in 1921 and one of the leading U.S. conservatories; Kodak Hall at Eastman Theatre is the region's main concert hall."},
@@ -299,7 +313,18 @@ const DATA = {
       {"k": "Museums & visual arts", "n": "George Eastman Museum", "lead": "East Avenue", "t": "The world's oldest photography museum and a major film archive, in George Eastman's mansion."},
       {"k": "Museums & visual arts", "n": "Strong National Museum of Play", "lead": "President & CEO Steve Dubnik", "t": "Home of the National Toy Hall of Fame and the World Video Game Hall of Fame; opened a bigger play area at the airport in August 2026.", "src": "https://www.monroecounty.gov/news-2026-08-31-play"},
       {"k": "Museums & visual arts", "n": "Corning Museum of Glass", "lead": "President Jessica Levin Martinez (since Feb 2026)", "t": "The world's leading glass museum, marking its 75th year in 2026.", "src": "https://www.craftinamerica.org/blog/corning-museum-of-glass-celebrates-75-years-with-events-throughout-2026/"},
-      {"k": "Theater & performing arts", "n": "Geva Theatre", "lead": "Executive Director James Haskins · interim Artistic Director Mark Cuddy (from Jan 2027)", "t": "Rochester's largest professional theater; searching for a new artistic director.", "src": "https://rochesterbeacon.com/2026/11/11/cuddy-to-return-as-geva-interim-artistic-director"}
+      {"k": "Theater & performing arts", "n": "Geva Theatre", "lead": "Executive Director James Haskins · interim Artistic Director Mark Cuddy (from Jan 2027)", "t": "Rochester's largest professional theater; searching for a new artistic director.", "src": "https://rochesterbeacon.com/2026/11/11/cuddy-to-return-as-geva-interim-artistic-director"},
+      {"k": "Private schools", "n": "McQuaid Jesuit", "lead": "President Stephen Salluzzo", "t": "Jesuit school for boys, grades 6–12, founded 1954 in Brighton. 745 students; 2025–26 tuition $18,265.", "src": "https://mcquaid.org/wp-content/uploads/2025/09/2025-2026-profile-E-Version.pdf"},
+      {"k": "Private schools", "n": "Allendale Columbia School", "lead": "Head of School Shannon Baudo", "t": "Coed independent day school, PreK–12, in Pittsford.", "src": "https://www.allendalecolumbia.org/about/school-leadership"},
+      {"k": "Private schools", "n": "The Harley School", "lead": "Head of School Ryan Kimmet (Harley '95)", "t": "Coed independent day school, nursery–12, in Brighton.", "src": "https://www.harleyschool.org/?p=61682"},
+      {"k": "Private schools", "n": "Aquinas Institute", "lead": "President Anthony Cook (since 2020; not re-verified this pass)", "t": "Catholic coed school, grades 6–12, founded 1902.", "src": "https://www.wxxinews.org/post/aquinas-institute-names-new-president"},
+      {"k": "Private schools", "n": "Our Lady of Mercy School for Young Women", "lead": "Brighton", "t": "Catholic girls' school, grades 6–12."},
+      {"k": "Private schools", "n": "Bishop Kearney", "lead": "Irondequoit", "t": "Catholic coed school, grades 6–12."},
+      {"k": "Clubs: golf, city & yacht", "n": "Oak Hill Country Club", "lead": "President Ron Billitier · Pittsford", "t": "Host of four PGA Championships, most recently in 2023, and named host of a fifth in 2035.", "src": "https://rochesterbiz.com/oak-hill-country-club-will-host-a-fifth-pga-championship-in-2035/"},
+      {"k": "Clubs: golf, city & yacht", "n": "Country Club of Rochester", "lead": "Brighton/Pittsford", "t": "Founded by Genesee Valley Club members; Donald Ross course. Hosted the first USGA Women's Open (1953) and the 1973 Women's Open.", "src": "https://en.wikipedia.org/wiki/Country_Club_of_Rochester"},
+      {"k": "Clubs: golf, city & yacht", "n": "Monroe Golf Club", "lead": "Pittsford", "t": "Donald Ross course opened 1924; home of the Monroe Invitational amateur since 1937, where a 17-year-old Tiger Woods reached the 1993 semifinals.", "src": "https://en.wikipedia.org/wiki/Monroe_Golf_Club"},
+      {"k": "Clubs: golf, city & yacht", "n": "Genesee Valley Club", "lead": "East Avenue", "t": "Rochester's leading downtown social club, founded in 1885."},
+      {"k": "Clubs: golf, city & yacht", "n": "Rochester Yacht Club", "lead": "Charlotte", "t": "Lake Ontario yacht club founded in 1877; hosts major regattas."}
     ],
     cny: [
       {"k": "Music", "n": "The Syracuse Orchestra (formerly Symphoria)", "lead": "Music director search", "t": "Lawrence Loh, its first music director (2014–2025), left for the Waco Symphony. No successor was confirmed in the sources found.", "src": "https://www.cnybj.com/syracuse-orchestra-music-director-to-conclude-his-tenure-following-2024-25-season/"},
@@ -307,7 +332,13 @@ const DATA = {
       {"k": "Museums & visual arts", "n": "Everson Museum of Art", "lead": "Syracuse", "t": "I.M. Pei's first museum building (1968), known for its American ceramics collection."},
       {"k": "Museums & visual arts", "n": "Munson", "lead": "Utica", "t": "The Munson-Williams-Proctor Arts Institute combines an art museum, an art school and a performing arts series."},
       {"k": "Theater & performing arts", "n": "Syracuse Stage", "lead": "Artistic Director Robert Hupp (to summer 2027) · Managing Director Carly DiFulvio Allen", "t": "Central New York's professional theater, run with Syracuse University's drama department.", "src": "https://news.syr.edu/2026/07/06/robert-hupp-to-step-down-as-syracuse-stage-artistic-director-in-summer-2027/"},
-      {"k": "Theater & performing arts", "n": "Landmark Theatre", "lead": "Syracuse", "t": "A restored 1928 movie palace hosting Broadway tours and concerts."}
+      {"k": "Theater & performing arts", "n": "Landmark Theatre", "lead": "Syracuse", "t": "A restored 1928 movie palace hosting Broadway tours and concerts."},
+      {"k": "Private schools", "n": "Manlius Pebble Hill School", "lead": "Head of School David McCusker Jr. (since 2019; not re-verified this pass)", "t": "Coed independent day school, PreK–12, in DeWitt.", "src": "https://www.mphschool.org/?p=8252"},
+      {"k": "Private schools", "n": "Christian Brothers Academy", "lead": "President Matt Keough (first lay president, since 2020)", "t": "Catholic coed school, grades 7–12, in DeWitt.", "src": "https://cbasyracuse.org/cba-announces-new-president"},
+      {"k": "Clubs: golf, city & yacht", "n": "Onondaga Golf & Country Club", "lead": "Fayetteville", "t": "Syracuse's best-known private golf club."},
+      {"k": "Clubs: golf, city & yacht", "n": "Century Club of Syracuse", "lead": "James Street", "t": "Downtown social club."},
+      {"k": "Clubs: golf, city & yacht", "n": "Skaneateles Country Club", "lead": "Skaneateles", "t": "Private lakeside golf club on Skaneateles Lake."},
+      {"k": "Clubs: golf, city & yacht", "n": "Yahnundasis Golf Club", "lead": "New Hartford (Utica)", "t": "Private club with a Donald Ross-designed course."}
     ],
     alb: [
       {"k": "Music", "n": "Albany Symphony", "lead": "Music Director David Alan Miller", "t": "Nationally known for new American music. The 2026-27 season has premieres by Viet Cuong and others, with Emanuel Ax, at the Palace, Troy Music Hall and EMPAC.", "src": "https://www.dailygazette.com/thespot518/music/albany-symphony-orchestra-ready-to-travel-across-time-and-space-with-2026-2027-season/article_2165bff3-5c51-4567-904a-b6c4e34cf9d9.html"},
@@ -315,7 +346,17 @@ const DATA = {
       {"k": "Festivals & summer", "n": "Saratoga Performing Arts Center (SPAC)", "lead": "President & CEO Elizabeth Sobol (since 2016)", "t": "Founded 1966; summer home of New York City Ballet, The Philadelphia Orchestra and the Chamber Music Society of Lincoln Center. About 500,000 visitors a year.", "src": "https://spac.org/press/press-release-saratoga-performing-arts-center-reflects-on-spacs-evolution-as-it-celebrates-its-60th-anniversary-and-a-decade-of-leadership-from-ceo-elizabeth-sobol/"},
       {"k": "Theater & performing arts", "n": "Proctors Collaborative", "lead": "CEO Philip Morris (to Mar 2027) · President Jean Leonard (CEO from Mar 2027)", "t": "Runs Proctors in Schenectady, Capital Rep in Albany, Universal Preservation Hall in Saratoga Springs and the American Theatre in Troy (under construction).", "src": "https://berkshireonstage.blog/2026/11/05/philip-morris-to-retire-as-ceo-of-proctors-collaborative-jean-leonard-to-become-president-and-ceo/"},
       {"k": "Museums & visual arts", "n": "The Hyde Collection", "lead": "Glens Falls", "t": "Old Masters and modern art in a 1912 Florentine-style villa."},
-      {"k": "Museums & visual arts", "n": "Tang Teaching Museum", "lead": "Skidmore College, Saratoga Springs", "t": "A teaching museum known for interdisciplinary contemporary exhibitions."}
+      {"k": "Museums & visual arts", "n": "Tang Teaching Museum", "lead": "Skidmore College, Saratoga Springs", "t": "A teaching museum known for interdisciplinary contemporary exhibitions."},
+      {"k": "Private schools", "n": "Emma Willard School", "lead": "Head of School Karen Lassey", "t": "Girls' boarding and day school in Troy, founded by Emma Willard in 1814.", "src": "https://www.emmawillard.org/about/leadership"},
+      {"k": "Private schools", "n": "Albany Academy", "lead": "Head of School Michael G. Turner (from July 2026)", "t": "Founded 1813. Turner, formerly at The Shipley School, succeeded Chris Lauricella.", "src": "https://www.albanyacademy.org/p/~board/general-news/post/welcome-mr-turner-albany-academys-new-head-of-school"},
+      {"k": "Private schools", "n": "Doane Stuart School", "lead": "Rensselaer", "t": "Coed day school formed in 1975 from an Episcopal and a Catholic school, the first such merger in the U.S."},
+      {"k": "Private schools", "n": "Christian Brothers Academy", "lead": "Colonie", "t": "Catholic school for boys."},
+      {"k": "Private schools", "n": "Northwood School", "lead": "Head of School Gino Riffle · Lake Placid", "t": "Coed boarding school known for hockey and skiing programs.", "src": "https://northwoodschool.org/about/head-of-school-welcome/"},
+      {"k": "Clubs: golf, city & yacht", "n": "Fort Orange Club", "lead": "Washington Avenue, Albany", "t": "The capital's leading private club, founded in 1880."},
+      {"k": "Clubs: golf, city & yacht", "n": "Schuyler Meadows Club", "lead": "Loudonville", "t": "Private golf club north of Albany.", "src": "https://www.schuylermeadows.com/golf"},
+      {"k": "Clubs: golf, city & yacht", "n": "Mohawk Golf Club", "lead": "Schenectady", "t": "Private golf club."},
+      {"k": "Clubs: golf, city & yacht", "n": "Saratoga Golf & Polo Club", "lead": "Saratoga Springs", "t": "Member-owned private club.", "src": "https://www.saratoga.com/business/saratoga-golf-and-polo-club-5928/"},
+      {"k": "Clubs: golf, city & yacht", "n": "Glens Falls Country Club", "lead": "Queensbury", "t": "Donald Ross course begun in 1912; host of the 103rd NYS Men's Amateur in July 2026.", "src": "https://nysga.org/communications-news/preview-2026-nys-mens-amateur-championship-at-glens-falls"}
     ]
   },
 
@@ -379,7 +420,7 @@ const DATA = {
     "Asian communities, second layer: Korean, Filipino and Pakistani congregations; Jain and Sikh detail in Buffalo and Albany",
     "Utica, Binghamton, Watertown and North Country business detail",
     "Money in Motion: Capital Region real estate and M&A (thin in public sources), and merge deals from the earlier PDF digests",
-    "Culture: confirm the Syracuse Orchestra's next music director; add Buffalo and Albany theater companies, Everson and Munson leadership",
+    "Culture: confirm the Syracuse Orchestra's next music director; add Buffalo and Albany theater companies, Everson and Munson leadership; confirm heads at Canisius, St. Joe's, MPH and Aquinas; add club presidents and founding dates where clubs publish them",
     "Book list per region (histories and biographies)"
   ]
 };

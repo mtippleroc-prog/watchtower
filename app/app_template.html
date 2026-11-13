@@ -268,11 +268,11 @@ function vMoney(){
   </section>`;
 }
 
-const CK = ["Music","Festivals & summer","Theater & performing arts","Museums & visual arts"];
+const CK = ["Music","Festivals & summer","Theater & performing arts","Museums & visual arts","Private schools","Clubs: golf, city & yacht"];
 function vCulture(){
   return regionsShown().map(k=>{
     const all = DATA.culture[k]||[]; const news = DATA.news.filter(n=>n.cat==="culture" && n.r.includes(k)).sort((a,b)=>b.d.localeCompare(a.d));
-    return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">Culture · music & the arts</span></div><h2>${esc(R[k].name)}</h2>
+    return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">Culture · arts, schools & clubs</span></div><h2>${esc(R[k].name)}</h2>
     ${news.length?`<h3 style="margin:10px 0 6px">Recent news</h3>${newsList(news)}`:""}
     ${CK.map(c=>[c,all.filter(e=>e.k===c)]).filter(g=>g[1].length).map(([c,arr])=>`<h3 style="margin:16px 0 8px">${esc(c)}</h3><div class="entries">${arr.map(f=>`<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div><p class="note">${esc(f.t)}</p>${f.src?`<div class="meta">${srcLink(f.src)}</div>`:""}</div>`).join("")}</div>`).join("")}</div>`;
   }).join("");

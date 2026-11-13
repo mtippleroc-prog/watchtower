@@ -27,6 +27,8 @@ leadership changes. Update `res`/`note`, never delete history silently.
 **Culture (`DATA.culture`, plus `culture` items in `DATA.news`)**: music and arts institutions of substance (orchestras,
 major museums, professional theaters, major festivals): leadership changes, big gifts or campaigns, building projects,
 season announcements of note, closures or mergers. Update the institution's `lead` line when its leaders change.
+Also cover private schools (new heads of school, campaigns, mergers or closures, enrollment news) and private golf, city
+and yacht clubs (major championships hosted, new clubhouses or renovations, sales or closures). No membership lists.
 
 Good sources: Rochester Business Journal, Rochester Beacon, WXXI, Buffalo News, Buffalo Business First, Buffalo Niagara
 Partnership, WKBW/WIVB/WGRZ, Investigative Post, CNY Central, Syracuse.com, CNY Business Journal, Central Current, WRVO,
