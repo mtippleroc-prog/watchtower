@@ -195,6 +195,7 @@ function vBriefing(){
   <p class="lede">Government, business, faith and culture news from the last few months, newest first. Every item links to its source.</p>
   ${filterBtns("newsCat",[["all","All"],["gov","Government"],["biz","Business"],["faith","Faith"],["culture","Culture"]],st.newsCat)}
   ${newsList(items)}</section>
+  ${vPublic()}
   <section><div class="sechead"><div><span class="eyebrow">After Nov 3, 2026</span><h2>Seats changing hands or still open</h2></div><a href="#officials">All officials →</a></div>
   ${fresh.length? `<div class="cards">${fresh.map(card).join("")}</div>` : `<p class="empty">No changes recorded for this region.</p>`}</section>`;
 }
@@ -246,18 +247,18 @@ function vPublic(){
   const fl = (DATA.filings||[]).filter(f=>inR(f.r) && (st.fk==="all"||f.k===st.fk)).sort((a,b)=>b.d.localeCompare(a.d));
   const tkName = Object.fromEntries((DATA.pubcos||[]).map(c=>[c.tk,c.n]));
   const sg = (DATA.signals||[]).filter(x=>inR(x.r) && (st.sk==="all"||x.t===st.sk)).sort((a,b)=>b.d.localeCompare(a.d));
-  return `<section><div class="sechead"><div><span class="eyebrow">Business · ${esc(scopeLabel())}</span><h2>Public companies</h2></div></div>
+  return `<section><div class="sechead"><div><span class="eyebrow">Public companies · ${esc(scopeLabel())}</span><h2>SEC filings</h2></div></div>
   <p class="lede">SEC filings and releases from public companies headquartered here: results, deals, executive changes and proxy statements. Newest first.</p>
   ${cos.length?`<ul class="tags" style="margin:0 0 12px">${cos.map(c=>`<li title="${esc(c.ind)} · HQ ${esc(c.hq)}"><b>${esc(c.tk)}</b> ${esc(c.n)} <span class="fine">· ${esc(c.hq)}</span></li>`).join("")}</ul>`:""}
   ${filterBtns("fk",[["all","All filings"]].concat(Object.entries(FK)),st.fk)}
   ${fl.length?`<div class="feed">${fl.map(f=>`<article class="item"><time datetime="${f.d}">${fmtDate(f.d)}</time><div class="body"><h3>${esc(f.h)}</h3><p>${esc(f.s)}</p><div class="meta"><span class="cat">${esc(f.form)}</span><span class="cat">${esc(FK[f.k]||f.k)}</span><span class="kv">${esc(f.tk)}${tkName[f.tk]?" · "+esc(tkName[f.tk]):""}</span>${dots(f.r)}${srcLink(f.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No filings recorded for this region yet.</p>`}</section>
   <section><div class="sechead"><div><span class="eyebrow">Ahead of the news</span><h2>Early signals</h2></div></div>
-  <p class="lede">State WARN notices (layoffs and closures, filed 90 days ahead), IDA incentive applications and agendas (projects before groundbreaking), and the major honors lists.</p>
+  <p class="lede">State WARN notices (layoffs and closures, filed 90 days ahead), IDA incentive approvals (projects before groundbreaking), and the major honors lists.</p>
   ${filterBtns("sk",[["all","All signals"]].concat(Object.entries(SK)),st.sk)}
   ${sg.length?`<div class="feed">${sg.map(x=>`<article class="item"><time datetime="${x.d}">${fmtDate(x.d)}</time><div class="body"><h3>${esc(x.h)}</h3><p>${esc(x.s)}</p><div class="meta"><span class="cat">${esc(SK[x.t]||x.t)}</span>${dots(x.r)}${srcLink(x.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No signals recorded for this region yet.</p>`}</section>`;
 }
 function vBusiness(){
-  return vPublic() + regionsShown().map(k=>{
+  return regionsShown().map(k=>{
     const b = DATA.business[k]; const max = Math.max(...b.employers.map(e=>e[1]||0));
     const news = DATA.news.filter(n=>n.cat==="biz" && n.r.includes(k)).sort((a,b)=>b.d.localeCompare(a.d));
     return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">Business</span></div><h2>${esc(R[k].name)}</h2>
