@@ -285,7 +285,7 @@ function vFaith(){
     const news = DATA.news.filter(n=>n.cat==="faith" && n.r.includes(k));
     return `<div class="regionblock" style="--rc:${rc(k)}"><div class="rtitle"><span class="eyebrow">Faith communities</span></div><h2>${esc(R[k].name)}</h2>
     ${[["Major faith bodies & historic sites",DATA.faith[k].filter(f=>f.g!=="asian")],["Indian, Hindu & other Asian communities",DATA.faith[k].filter(f=>f.g==="asian")]].filter(g=>g[1].length).map(([t,arr])=>`<h3 style="margin:14px 0 8px">${t}</h3>
-    <div class="entries">${arr.map(f=>`<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div><p class="note">${esc(f.t)}</p>${f.src?`<div class="meta">${srcLink(f.src)}</div>`:""}</div>`).join("")}</div>`).join("")}
+    <div class="entries">${arr.map(f=>`<div class="card"><h3>${esc(f.n)}</h3><div class="lead">${esc(f.lead)}</div><p class="note">${esc(f.t)}</p><div class="meta">${f.web?`<a class="web" href="${esc(f.web)}" target="_blank" rel="noopener">Website ↗</a>${f.webNote?`<span class="kv">${esc(f.webNote)}</span>`:""}`:`<span class="kv">${esc(f.webNote||"No public website found")}</span>`}${f.src?srcLink(f.src):""}</div></div>`).join("")}</div>`).join("")}
     ${news.length?`<h3 style="margin:18px 0 6px">Recent news</h3>${newsList(news)}`:""}</div>`;
   }).join("");
 }

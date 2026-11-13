@@ -23,6 +23,8 @@ Search each region separately; a combined query returns thin results.
 leadership changes. Update `res`/`note`, never delete history silently.
 
 **Faith (`DATA.faith`)**: leadership changes, settlements, closures/mergers, new temples or congregations.
+Every Faith card carries `web` (official site, opened to confirm) or a `webNote` saying why not ("Community profile; no
+single website", "No public website found", "Website not confirmed this pass"). Fill in unconfirmed ones when you can.
 
 **Culture (`DATA.culture`, plus `culture` items in `DATA.news`)**: music and arts institutions of substance (orchestras,
 major museums, professional theaters, major festivals): leadership changes, big gifts or campaigns, building projects,

@@ -1,5 +1,9 @@
 # WatchTower changelog
 
+## 2026-11-12 — Websites on Faith cards
+- Official website on 23 of 36 Faith cards (faith bodies and historic sites): 16 opened and confirmed, 7 found through a directory, redirect or newspaper but not opened (marked on the card).
+- 13 cards have no link: 5 are community profiles (no single website), 5 have no public site found, 3 not confirmed this pass (Jewish Federation of Greater Rochester, Islamic Center of Rochester, Our Lady of Martyrs Shrine).
+
 ## 2026-11-12 — Sizes and websites in Culture
 - Students per school (NCES private school data or the school's own figures), seats per theater and hall, and annual revenue from IRS Form 990 for clubs (member counts are not published).
 - Official website on 57 of 63 cards; 52 opened and confirmed, 5 taken from a directory listing. 6 clubs have no public website.
