@@ -1,5 +1,5 @@
 Traceback (most recent call last):
-  File "/home/runner/work/watchtower/watchtower/tools/sec_watch.py", line 50, in <module>
+  File "/home/runner/work/watchtower/watchtower/tools/sec_watch.py", line 52, in <module>
     tick = get("https://www.sec.gov/files/company_tickers.json")
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/watchtower/watchtower/tools/sec_watch.py", line 37, in get
