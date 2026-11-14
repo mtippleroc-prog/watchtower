@@ -1,0 +1,1301 @@
+{
+ "updated": "2026-11-14",
+ "since": "2026-07-17",
+ "companies": {
+  "MTB": {
+   "status": "watch",
+   "cik": "0000036270",
+   "name": "M&T BANK CORP",
+   "city": "BUFFALO",
+   "state": "NY",
+   "zip": "14203",
+   "region": "buf",
+   "inRegion": true
+  },
+  "MOG.A": {
+   "status": "watch",
+   "cik": "0000067887",
+   "name": "MOOG INC.",
+   "city": "EAST AURORA",
+   "state": "NY",
+   "zip": "14052",
+   "region": "buf",
+   "inRegion": true
+  },
+  "NFG": {
+   "status": "watch",
+   "cik": "0000070145",
+   "name": "NATIONAL FUEL GAS CO",
+   "city": "WILLIAMSVILLE",
+   "state": "NY",
+   "zip": "14221",
+   "region": "buf",
+   "inRegion": true
+  },
+  "STZ": {
+   "status": "watch",
+   "cik": "0000016918",
+   "name": "CONSTELLATION BRANDS, INC.",
+   "city": "ROCHESTER",
+   "state": "NY",
+   "zip": "14614",
+   "region": "roc",
+   "inRegion": true
+  },
+  "PAYX": {
+   "status": "watch",
+   "cik": "0000723531",
+   "name": "PAYCHEX INC",
+   "city": "ROCHESTER",
+   "state": "NY",
+   "zip": "14625",
+   "region": "roc",
+   "inRegion": true
+  },
+  "KODK": {
+   "status": "watch",
+   "cik": "0000031235",
+   "name": "EASTMAN KODAK CO",
+   "city": "ROCHESTER",
+   "state": "NY",
+   "zip": "14650",
+   "region": "roc",
+   "inRegion": true
+  },
+  "GLW": {
+   "status": "watch",
+   "cik": "0000024741",
+   "name": "CORNING INC /NY",
+   "city": "CORNING",
+   "state": "NY",
+   "zip": "14831",
+   "region": "roc",
+   "inRegion": true
+  },
+  "PLUG": {
+   "status": "watch",
+   "cik": "0001093691",
+   "name": "PLUG POWER INC",
+   "city": "SLINGERLANDS",
+   "state": "NY",
+   "zip": "12159",
+   "region": "alb",
+   "inRegion": true
+  },
+  "GFS": {
+   "status": "watch",
+   "cik": "0001709048",
+   "name": "GLOBALFOUNDRIES Inc.",
+   "city": "MALTA",
+   "state": "NY",
+   "zip": "12020",
+   "region": "alb",
+   "inRegion": true
+  },
+  "ROCK": {
+   "status": "candidate",
+   "cik": "0000912562",
+   "name": "GIBRALTAR INDUSTRIES, INC.",
+   "city": "BUFFALO",
+   "state": "NY",
+   "zip": "14219",
+   "region": "buf",
+   "inRegion": true
+  },
+  "GHM": {
+   "status": "candidate",
+   "cik": "0000716314",
+   "name": "GRAHAM CORP",
+   "city": "BATAVIA",
+   "state": "NY",
+   "zip": "14020",
+   "region": "buf",
+   "inRegion": true
+  },
+  "TRNS": {
+   "status": "candidate",
+   "cik": "0000099302",
+   "name": "TRANSCAT INC",
+   "city": "ROCHESTER",
+   "state": "NY",
+   "zip": "14624",
+   "region": "roc",
+   "inRegion": true
+  },
+  "MNRO": {
+   "status": "candidate",
+   "cik": "0000876427",
+   "name": "MONRO, INC.",
+   "city": "FAIRPORT",
+   "state": "NY",
+   "zip": "14450",
+   "region": "roc",
+   "inRegion": true
+  },
+  "VUZI": {
+   "status": "candidate",
+   "cik": "0001463972",
+   "name": "Vuzix Corp",
+   "city": "WEST HENRIETTA",
+   "state": "NY",
+   "zip": "14586",
+   "region": "roc",
+   "inRegion": true
+  },
+  "SENEA": {
+   "status": "candidate",
+   "cik": "0000088948",
+   "name": "Seneca Foods Corp",
+   "city": "MARION",
+   "state": "NY",
+   "zip": "14505",
+   "region": "roc",
+   "inRegion": true
+  },
+  "FISI": {
+   "status": "candidate",
+   "cik": "0000862831",
+   "name": "FINANCIAL INSTITUTIONS INC",
+   "city": "WARSAW",
+   "state": "NY",
+   "zip": "14569",
+   "region": "roc",
+   "inRegion": true
+  },
+  "CBU": {
+   "status": "candidate",
+   "cik": "0000723188",
+   "name": "COMMUNITY FINANCIAL SYSTEM, INC.",
+   "city": "SYRACUSE",
+   "state": "NY",
+   "zip": "13214",
+   "region": "cny",
+   "inRegion": true
+  },
+  "NBTB": {
+   "status": "candidate",
+   "cik": "0000790359",
+   "name": "NBT BANCORP INC",
+   "city": "NORWICH",
+   "state": "NY",
+   "zip": "13815",
+   "region": "cny",
+   "inRegion": true
+  },
+  "TRST": {
+   "status": "candidate",
+   "cik": "0000357301",
+   "name": "TRUSTCO BANK CORP N Y",
+   "city": "ALBANY",
+   "state": "NY",
+   "zip": "12205",
+   "region": "alb",
+   "inRegion": true
+  },
+  "AROW": {
+   "status": "candidate",
+   "cik": "0000717538",
+   "name": "ARROW FINANCIAL CORP",
+   "city": "GLENS FALLS",
+   "state": "NY",
+   "zip": "12801",
+   "region": "alb",
+   "inRegion": true
+  },
+  "CHMG": {
+   "status": "candidate",
+   "cik": "0000763563",
+   "name": "CHEMUNG FINANCIAL CORP",
+   "city": "ELMIRA",
+   "state": "NY",
+   "zip": "14902",
+   "region": "cny",
+   "inRegion": true
+  }
+ },
+ "filings": [
+  {
+   "d": "2026-11-13",
+   "tk": "VUZI",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1463972/000110465926127106/tm2629748d1_8k.htm"
+  },
+  {
+   "d": "2026-11-12",
+   "tk": "VUZI",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/1463972/000110465926126205/vuzi-20260930x10q.htm"
+  },
+  {
+   "d": "2026-11-09",
+   "tk": "PLUG",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/1093691/000110465926124578/plug-20260930x10q.htm"
+  },
+  {
+   "d": "2026-11-09",
+   "tk": "PLUG",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1093691/000110465926124487/tm2629363d1_8k.htm"
+  },
+  {
+   "d": "2026-11-09",
+   "tk": "FISI",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/862831/000119312526453561/fisi-20260930.htm"
+  },
+  {
+   "d": "2026-11-09",
+   "tk": "AROW",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/717538/000071753826000138/arow-20260930.htm"
+  },
+  {
+   "d": "2026-11-06",
+   "tk": "TRST",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126042445/ef20080637_10q.htm"
+  },
+  {
+   "d": "2026-11-06",
+   "tk": "NBTB",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/790359/000114036126042473/ef20080579_10q.htm"
+  },
+  {
+   "d": "2026-11-06",
+   "tk": "CBU",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/723188/000110465926123882/cbu-20260930x10q.htm"
+  },
+  {
+   "d": "2026-11-05",
+   "tk": "ROCK",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/912562/000091256226000173/rock-20260930.htm"
+  },
+  {
+   "d": "2026-11-05",
+   "tk": "ROCK",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/912562/000091256226000171/rock-20261105.htm"
+  },
+  {
+   "d": "2026-11-05",
+   "tk": "ROCK",
+   "form": "8-K",
+   "items": [
+    "5.02 Officer/director change",
+    "7.01 Reg FD",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/912562/000091256226000170/rock-20261105.htm"
+  },
+  {
+   "d": "2026-11-05",
+   "tk": "NFG",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/70145/000007014526000037/nfg-20261104.htm"
+  },
+  {
+   "d": "2026-11-05",
+   "tk": "MTB",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/36270/000003627026000060/mtb-20260930.htm"
+  },
+  {
+   "d": "2026-11-05",
+   "tk": "KODK",
+   "form": "8-K",
+   "items": [
+    "5.02 Officer/director change"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/31235/000119312526450091/kodk-20261030.htm"
+  },
+  {
+   "d": "2026-11-05",
+   "tk": "GHM",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/716314/000119312526448595/ghm-20260930.htm"
+  },
+  {
+   "d": "2026-11-05",
+   "tk": "GHM",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "7.01 Reg FD",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/716314/000119312526448436/d893234d8k.htm"
+  },
+  {
+   "d": "2026-11-05",
+   "tk": "CHMG",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/763563/000162828026070818/chmg-20260930.htm"
+  },
+  {
+   "d": "2026-11-04",
+   "tk": "SENEA",
+   "form": "8-K",
+   "items": [
+    "5.07 Shareholder vote",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/88948/000143774926034956/senea20261103_8k.htm"
+  },
+  {
+   "d": "2026-11-04",
+   "tk": "SENEA",
+   "form": "10-Q",
+   "items": [],
+   "desc": "FORM 10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/88948/000143774926034938/senea20261003_10q.htm"
+  },
+  {
+   "d": "2026-11-04",
+   "tk": "MNRO",
+   "form": "8-K",
+   "items": [
+    "1.01 Material agreement",
+    "3.03",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/876427/000119312526447246/d459293d8k.htm"
+  },
+  {
+   "d": "2026-11-03",
+   "tk": "TRNS",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/99302/000162828026069462/trns-20260926.htm"
+  },
+  {
+   "d": "2026-11-03",
+   "tk": "TRNS",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/99302/000162828026069453/trns-20261103.htm"
+  },
+  {
+   "d": "2026-11-03",
+   "tk": "KODK",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/31235/000119312526445409/kodk-20261103.htm"
+  },
+  {
+   "d": "2026-11-03",
+   "tk": "KODK",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/31235/000119312526445403/kodk-20260930.htm"
+  },
+  {
+   "d": "2026-10-29",
+   "tk": "MNRO",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/876427/000087642726000012/mnro-20260926x10q.htm"
+  },
+  {
+   "d": "2026-10-29",
+   "tk": "MNRO",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/876427/000119312526437009/d12848d8k.htm"
+  },
+  {
+   "d": "2026-10-29",
+   "tk": "GLW",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000279/glw-20260930.htm"
+  },
+  {
+   "d": "2026-10-29",
+   "tk": "FISI",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "7.01 Reg FD",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/862831/000119312526437786/fisi-20260930.htm"
+  },
+  {
+   "d": "2026-10-29",
+   "tk": "AROW",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "7.01 Reg FD",
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/717538/000071753826000134/arow-20261028.htm"
+  },
+  {
+   "d": "2026-10-27",
+   "tk": "NBTB",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/790359/000114036126040897/ef20084356_8k.htm"
+  },
+  {
+   "d": "2026-10-27",
+   "tk": "GLW",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000273/glw-20261027.htm"
+  },
+  {
+   "d": "2026-10-27",
+   "tk": "CBU",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/723188/000110465926119002/tm2628320d1_8k.htm"
+  },
+  {
+   "d": "2026-10-22",
+   "tk": "CHMG",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/763563/000117184326006779/f8k_102226.htm"
+  },
+  {
+   "d": "2026-10-21",
+   "tk": "TRST",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126040403/ef20084125_8k.htm"
+  },
+  {
+   "d": "2026-10-16",
+   "tk": "PAYX",
+   "form": "8-K",
+   "items": [
+    "5.07 Shareholder vote"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/723531/000072353126000008/payx-20261015.htm"
+  },
+  {
+   "d": "2026-10-16",
+   "tk": "MTB",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "7.01 Reg FD",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/36270/000003627026000057/mbt-20261016.htm"
+  },
+  {
+   "d": "2026-10-15",
+   "tk": "ROCK",
+   "form": "8-K",
+   "items": [
+    "1.01 Material agreement",
+    "7.01 Reg FD",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/912562/000091256226000164/rock-20261015.htm"
+  },
+  {
+   "d": "2026-10-15",
+   "tk": "PLUG",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1093691/000110465926115964/tm2627628d1_8k.htm"
+  },
+  {
+   "d": "2026-10-14",
+   "tk": "NFG",
+   "form": "8-K",
+   "items": [
+    "7.01 Reg FD",
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/70145/000119312526420980/d100431d8k.htm"
+  },
+  {
+   "d": "2026-10-13",
+   "tk": "TRST",
+   "form": "8-K",
+   "items": [
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126039425/ef20083678_8k.htm"
+  },
+  {
+   "d": "2026-10-07",
+   "tk": "STZ",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/16918/000001691826000040/stz-20260831.htm"
+  },
+  {
+   "d": "2026-10-07",
+   "tk": "SENEA",
+   "form": "DEFA14A",
+   "items": [],
+   "desc": "FORM DEFA14A",
+   "url": "https://www.sec.gov/Archives/edgar/data/88948/000143774926032322/senea20261007_defa14a.htm"
+  },
+  {
+   "d": "2026-10-06",
+   "tk": "STZ",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "7.01 Reg FD",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/16918/000001691826000039/stz-20261006.htm"
+  },
+  {
+   "d": "2026-10-05",
+   "tk": "SENEA",
+   "form": "DEF 14A",
+   "items": [],
+   "desc": "FORM DEF 14A",
+   "url": "https://www.sec.gov/Archives/edgar/data/88948/000143774926031991/senea20260922_def14a.htm"
+  },
+  {
+   "d": "2026-10-01",
+   "tk": "NFG",
+   "form": "8-K",
+   "items": [
+    "1.01 Material agreement",
+    "2.01 Acquisition/disposition completed",
+    "2.03 New debt",
+    "7.01 Reg FD",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/70145/000119312526409787/d132008d8k.htm"
+  },
+  {
+   "d": "2026-10-01",
+   "tk": "CHMG",
+   "form": "8-K",
+   "items": [
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/763563/000117184326006331/f8k_100126.htm"
+  },
+  {
+   "d": "2026-09-24",
+   "tk": "PAYX",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/723531/000072353126000006/payx-20260831.htm"
+  },
+  {
+   "d": "2026-09-23",
+   "tk": "PLUG",
+   "form": "8-K",
+   "items": [
+    "5.02 Officer/director change"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1093691/000110465926110021/tm2626024d1_8k.htm"
+  },
+  {
+   "d": "2026-09-23",
+   "tk": "PAYX",
+   "form": "8-K",
+   "items": [
+    "2.02 Results"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/723531/000072353126000004/payx-20260923.htm"
+  },
+  {
+   "d": "2026-09-22",
+   "tk": "MTB",
+   "form": "8-K",
+   "items": [
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/36270/000119312526398138/d181022d8k.htm"
+  },
+  {
+   "d": "2026-09-21",
+   "tk": "SENEA",
+   "form": "8-K",
+   "items": [
+    "5.03 Bylaws/charter change",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/88948/000143774926030826/senea20260921_8k.htm"
+  },
+  {
+   "d": "2026-09-21",
+   "tk": "SENEA",
+   "form": "PRE 14A",
+   "items": [],
+   "desc": "FORM PRE 14A",
+   "url": "https://www.sec.gov/Archives/edgar/data/88948/000143774926030824/senea20260914_pre14a.htm"
+  },
+  {
+   "d": "2026-09-21",
+   "tk": "NBTB",
+   "form": "8-K",
+   "items": [
+    "5.02 Officer/director change",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/790359/000114036126037240/ef20082455_8k.htm"
+  },
+  {
+   "d": "2026-09-18",
+   "tk": "STZ",
+   "form": "8-K",
+   "items": [
+    "1.01 Material agreement",
+    "2.03 New debt",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/16918/000119312526395558/d104366d8k.htm"
+  },
+  {
+   "d": "2026-09-16",
+   "tk": "TRST",
+   "form": "8-K",
+   "items": [
+    "5.02 Officer/director change",
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126036784/ef20082117_8k.htm"
+  },
+  {
+   "d": "2026-09-11",
+   "tk": "GLW",
+   "form": "8-K",
+   "items": [
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/24741/000119312526389321/d154232d8k.htm"
+  },
+  {
+   "d": "2026-09-10",
+   "tk": "TRNS",
+   "form": "8-K",
+   "items": [
+    "5.07 Shareholder vote"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/99302/000162828026061346/trns-20260909.htm"
+  },
+  {
+   "d": "2026-09-10",
+   "tk": "AROW",
+   "form": "8-K",
+   "items": [
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/717538/000071753826000123/arow-20260910.htm"
+  },
+  {
+   "d": "2026-09-08",
+   "tk": "FISI",
+   "form": "8-K",
+   "items": [
+    "5.02 Officer/director change"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/862831/000119312526385193/fisi-20260908.htm"
+  },
+  {
+   "d": "2026-09-04",
+   "tk": "PAYX",
+   "form": "DEFA14A",
+   "items": [],
+   "desc": "DEFA14A",
+   "url": "https://www.sec.gov/Archives/edgar/data/723531/000119312526382807/d112120ddefa14a.htm"
+  },
+  {
+   "d": "2026-09-04",
+   "tk": "PAYX",
+   "form": "DEF 14A",
+   "items": [],
+   "desc": "DEF 14A",
+   "url": "https://www.sec.gov/Archives/edgar/data/723531/000119312526382805/d111983ddef14a.htm"
+  },
+  {
+   "d": "2026-08-27",
+   "tk": "GHM",
+   "form": "8-K",
+   "items": [
+    "5.07 Shareholder vote"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/716314/000119312526369611/d131891d8k.htm"
+  },
+  {
+   "d": "2026-08-19",
+   "tk": "CHMG",
+   "form": "8-K",
+   "items": [
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/763563/000117184326005651/f8k_081926.htm"
+  },
+  {
+   "d": "2026-08-18",
+   "tk": "TRST",
+   "form": "8-K",
+   "items": [
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126033567/ef20080589_8k.htm"
+  },
+  {
+   "d": "2026-08-17",
+   "tk": "VUZI",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1463972/000110465926097887/tm2623396d1_8k.htm"
+  },
+  {
+   "d": "2026-08-14",
+   "tk": "VUZI",
+   "form": "8-K",
+   "items": [
+    "1.01 Material agreement",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1463972/000110465926097141/tm2623284d1_8k.htm"
+  },
+  {
+   "d": "2026-08-13",
+   "tk": "VUZI",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/1463972/000110465926095889/vuzi-20260630x10q.htm"
+  },
+  {
+   "d": "2026-08-13",
+   "tk": "MNRO",
+   "form": "8-K",
+   "items": [
+    "5.07 Shareholder vote",
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/876427/000119312526347931/d143308d8k.htm"
+  },
+  {
+   "d": "2026-08-11",
+   "tk": "SENEA",
+   "form": "8-K",
+   "items": [
+    "5.07 Shareholder vote",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/88948/000143774926027008/senea20260806_8k.htm"
+  },
+  {
+   "d": "2026-08-11",
+   "tk": "NFG",
+   "form": "8-K",
+   "items": [
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/70145/000119312526345004/d175989d8k.htm"
+  },
+  {
+   "d": "2026-08-10",
+   "tk": "TRST",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126031982/ef20075475_10q.htm"
+  },
+  {
+   "d": "2026-08-10",
+   "tk": "PLUG",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/1093691/000110465926093454/plug-20260630x10q.htm"
+  },
+  {
+   "d": "2026-08-10",
+   "tk": "PLUG",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1093691/000110465926093339/tm2622713d1_8k.htm"
+  },
+  {
+   "d": "2026-08-07",
+   "tk": "NBTB",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/790359/000114036126031820/ef20075500_10q.htm"
+  },
+  {
+   "d": "2026-08-07",
+   "tk": "CBU",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/723188/000110465926092717/cbu-20260630x10q.htm"
+  },
+  {
+   "d": "2026-08-06",
+   "tk": "SENEA",
+   "form": "10-Q",
+   "items": [],
+   "desc": "FORM 10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/88948/000143774926026264/senea20260627_10q.htm"
+  },
+  {
+   "d": "2026-08-06",
+   "tk": "GHM",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/716314/000119312526336752/ghm-20260630.htm"
+  },
+  {
+   "d": "2026-08-06",
+   "tk": "GHM",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "7.01 Reg FD",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/716314/000119312526336614/d28324d8k.htm"
+  },
+  {
+   "d": "2026-08-06",
+   "tk": "CHMG",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/763563/000162828026054168/chmg-20260630.htm"
+  },
+  {
+   "d": "2026-08-06",
+   "tk": "AROW",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/717538/000071753826000117/arow-20260630.htm"
+  },
+  {
+   "d": "2026-08-05",
+   "tk": "ROCK",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/912562/000091256226000147/rock-20260630.htm"
+  },
+  {
+   "d": "2026-08-05",
+   "tk": "ROCK",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/912562/000091256226000145/rock-20260805.htm"
+  },
+  {
+   "d": "2026-08-04",
+   "tk": "TRNS",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/99302/000162828026052738/trns-20260627.htm"
+  },
+  {
+   "d": "2026-08-04",
+   "tk": "TRNS",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/99302/000162828026052553/trns-20260804.htm"
+  },
+  {
+   "d": "2026-08-04",
+   "tk": "MTB",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/36270/000003627026000050/mtb-20260630.htm"
+  },
+  {
+   "d": "2026-08-04",
+   "tk": "KODK",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/31235/000119312526332861/kodk-20260804.htm"
+  },
+  {
+   "d": "2026-08-04",
+   "tk": "KODK",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/31235/000119312526332850/kodk-20260630.htm"
+  },
+  {
+   "d": "2026-08-03",
+   "tk": "FISI",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/862831/000119312526330542/fisi-20260630.htm"
+  },
+  {
+   "d": "2026-07-31",
+   "tk": "MOG.A",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/67887/000162828026051294/mog-20260627.htm"
+  },
+  {
+   "d": "2026-07-31",
+   "tk": "MOG.A",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/67887/000162828026051250/mog-20260731.htm"
+  },
+  {
+   "d": "2026-07-30",
+   "tk": "NFG",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/70145/000007014526000033/nfg-20260630.htm"
+  },
+  {
+   "d": "2026-07-30",
+   "tk": "NFG",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/70145/000007014526000030/nfg-20260729.htm"
+  },
+  {
+   "d": "2026-07-29",
+   "tk": "MNRO",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/876427/000087642726000010/mnro-20260627x10q.htm"
+  },
+  {
+   "d": "2026-07-29",
+   "tk": "MNRO",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/876427/000119312526322170/d66984d8k.htm"
+  },
+  {
+   "d": "2026-07-29",
+   "tk": "GLW",
+   "form": "10-Q",
+   "items": [],
+   "desc": "10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000255/glw-20260630.htm"
+  },
+  {
+   "d": "2026-07-28",
+   "tk": "GLW",
+   "form": "8-K",
+   "items": [
+    "2.02 Results"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000253/glw-20260728.htm"
+  },
+  {
+   "d": "2026-07-28",
+   "tk": "CBU",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/723188/000110465926087355/tm2621422d1_8k.htm"
+  },
+  {
+   "d": "2026-07-27",
+   "tk": "NBTB",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/790359/000114036126029754/ef20078819_8k.htm"
+  },
+  {
+   "d": "2026-07-24",
+   "tk": "STZ",
+   "form": "8-K",
+   "items": [
+    "5.02 Officer/director change",
+    "5.07 Shareholder vote",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/16918/000001691826000032/stz-20260722.htm"
+  },
+  {
+   "d": "2026-07-23",
+   "tk": "TRNS",
+   "form": "DEFA14A",
+   "items": [],
+   "desc": "DEFA 14A",
+   "url": "https://www.sec.gov/Archives/edgar/data/99302/000114036126029372/edge20075511x2_defa14a.htm"
+  },
+  {
+   "d": "2026-07-23",
+   "tk": "TRNS",
+   "form": "DEF 14A",
+   "items": [],
+   "desc": "DEF 14A",
+   "url": "https://www.sec.gov/Archives/edgar/data/99302/000114036126029371/edge20075511x1_def14a.htm"
+  },
+  {
+   "d": "2026-07-23",
+   "tk": "FISI",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "7.01 Reg FD",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/862831/000119312526314084/fisi-20260630.htm"
+  },
+  {
+   "d": "2026-07-23",
+   "tk": "AROW",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "7.01 Reg FD",
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/717538/000071753826000110/arow-20260722.htm"
+  },
+  {
+   "d": "2026-07-22",
+   "tk": "CHMG",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/763563/000117184326004834/f8k_072226.htm"
+  },
+  {
+   "d": "2026-07-21",
+   "tk": "TRST",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126029118/ef20078312_8k.htm"
+  },
+  {
+   "d": "2026-07-21",
+   "tk": "PAYX",
+   "form": "8-K",
+   "items": [
+    "5.02 Officer/director change",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/723531/000119312526310277/payx-20260716.htm"
+  },
+  {
+   "d": "2026-07-21",
+   "tk": "MTB",
+   "form": "8-K",
+   "items": [
+    "3.03",
+    "5.03 Bylaws/charter change",
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/36270/000119312526310413/d127076d8k.htm"
+  },
+  {
+   "d": "2026-07-17",
+   "tk": "PAYX",
+   "form": "10-K",
+   "items": [],
+   "desc": "10-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/723531/000119312526307785/payx-20260531.htm"
+  }
+ ]
+}
