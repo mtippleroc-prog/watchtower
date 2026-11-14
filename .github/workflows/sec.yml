@@ -29,6 +29,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: Check SEC EDGAR
+        env:
+          SEC_UA: "WatchTower Research Matt Tipple m.tipple.roc@gmail.com"
         run: python3 tools/sec_watch.py > tools/sec_last_run.log 2>&1 || true; cat tools/sec_last_run.log
       - name: Commit feed
         run: |
