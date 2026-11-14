@@ -22,7 +22,11 @@ Search each region separately; a combined query returns thin results.
 - Watchlist = public companies headquartered in the four regions (`pubcos`: `n`, `tk`, `ex`, `hq`, `r`, `ind`, `src` = a recent filing
   showing the HQ address). Add a company only after a filing or release confirms the HQ is in-region; drop one that moves out
   (e.g. Columbus McKinnon moved to Charlotte in 2022). Candidates waiting for confirmation are listed in `nextUp`.
-- For each watchlist company, search `"<company> 8-K <month year>"` and open the sec.gov filing (or the company's IR release).
+- **Start from `tools/sec_feed.json`**, refreshed every weekday evening by the GitHub Action `.github/workflows/sec.yml`
+  (SEC EDGAR data for every watchlist ticker and any candidates in `tools/sec_candidates.txt`). It lists each filing since
+  the last 120 days with date, form, 8-K item codes and the sec.gov link. Open the filings dated after `asOf` that look
+  material and write them up; skip the rest. If the feed's `updated` date is more than 3 days old, say so in the report and
+  fall back to searching `"<company> 8-K <month year>"`. Candidates the feed shows as `inRegion` can be added to `pubcos`.
   Add a `filings` entry for material items only: quarterly/annual results (`k: "results"`, two or three key numbers),
   acquisitions, sales, spin-offs, big financings (`deal`), CEO/CFO/COO/director changes (`people`), major plants or
   capital plans (`capital`), and proxy statements (`gov`: annual meeting date, director changes, and directors' local

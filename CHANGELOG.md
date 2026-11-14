@@ -1,5 +1,15 @@
 # WatchTower changelog
 
+
+## 2026-11-13: Daily SEC check; watchlist grows to 21
+
+- GitHub Action `.github/workflows/sec.yml` checks SEC EDGAR every weekday evening for the watchlist and writes
+  `tools/sec_feed.json` (company HQs plus material filings from the last 120 days). Runs on GitHub, never on Matt's
+  computer. Per the SEC's fair-access policy, its requests identify a contact (Matt's email, with his OK).
+- Added 12 companies whose Upstate HQs the SEC data confirms: Gibraltar, Graham, Transcat, Monro, Vuzix, Seneca Foods,
+  Financial Institutions, Community Financial System, NBT, TrustCo, Arrow, Chemung.
+- The Mon/Thu refresh now starts from the feed instead of searching for filings.
+
 ## 2026-11-12 — Culture backers, family fortunes
 - Culture: "Backers" lines on the BPO (Kleinhans $18M campaign and its $1M+ funders), Buffalo AKG (Gundlach $42.5M, 2016),
   RPO (RPO 100, $50M goal), Everson (Phillips and Sullivan $4.8M) and SPAC (Four Seasons $17.5M, Dake family $1M lead).

@@ -1192,7 +1192,19 @@ const DATA = {
     { n: "Eastman Kodak", tk: "KODK", ex: "NYSE", hq: "Rochester", r: ["roc"], ind: "Print, advanced materials & chemicals", src: "https://www.sec.gov/Archives/edgar/data/0000031235/000119312526445409/kodk-20261103.htm" },
     { n: "Corning Incorporated", tk: "GLW", ex: "NYSE", hq: "Corning", r: ["roc"], ind: "Glass, optical fiber & materials", src: "https://www.sec.gov/Archives/edgar/data/0000024741/000002474126000273/glw-20261027.htm" },
     { n: "Plug Power", tk: "PLUG", ex: "Nasdaq", hq: "Slingerlands", r: ["alb"], ind: "Hydrogen & fuel cells", src: "https://www.sec.gov/Archives/edgar/data/0001093691/000110465926124487/tm2629363d1_8k.htm" },
-    { n: "GlobalFoundries", tk: "GFS", ex: "Nasdaq", hq: "Malta", r: ["alb"], ind: "Semiconductors", src: "https://investors.gf.com/news-releases/news-release-details/globalfoundries-reports-third-quarter-2026-financial-results" }
+    { n: "GlobalFoundries", tk: "GFS", ex: "Nasdaq", hq: "Malta", r: ["alb"], ind: "Semiconductors", src: "https://investors.gf.com/news-releases/news-release-details/globalfoundries-reports-third-quarter-2026-financial-results" },
+    { n: "Gibraltar Industries", tk: "ROCK", ex: "Nasdaq", hq: "Buffalo", r: ["buf"], ind: "Building products", src: "https://www.sec.gov/Archives/edgar/data/912562/000091256226000173/rock-20260930.htm" },
+    { n: "Graham Corp", tk: "GHM", ex: "NYSE", hq: "Batavia", r: ["buf"], ind: "Vacuum, heat-transfer and defense equipment", src: "https://www.sec.gov/Archives/edgar/data/716314/000119312526448595/ghm-20260930.htm" },
+    { n: "Transcat", tk: "TRNS", ex: "Nasdaq", hq: "Rochester", r: ["roc"], ind: "Calibration services and test equipment", src: "https://www.sec.gov/Archives/edgar/data/99302/000162828026069462/trns-20260926.htm" },
+    { n: "Monro, Inc.", tk: "MNRO", ex: "Nasdaq", hq: "Fairport", r: ["roc"], ind: "Automotive service", src: "https://www.sec.gov/Archives/edgar/data/876427/000087642726000012/mnro-20260926x10q.htm" },
+    { n: "Vuzix", tk: "VUZI", ex: "Nasdaq", hq: "West Henrietta", r: ["roc"], ind: "Smart glasses", src: "https://www.sec.gov/Archives/edgar/data/1463972/000110465926126205/vuzi-20260930x10q.htm" },
+    { n: "Seneca Foods", tk: "SENEA", ex: "Nasdaq", hq: "Marion", r: ["roc"], ind: "Packaged fruits and vegetables", src: "https://www.sec.gov/Archives/edgar/data/88948/000143774926034938/senea20261003_10q.htm" },
+    { n: "Financial Institutions (Five Star Bank)", tk: "FISI", ex: "Nasdaq", hq: "Warsaw", r: ["roc"], ind: "Banking", src: "https://www.sec.gov/Archives/edgar/data/862831/000119312526453561/fisi-20260930.htm" },
+    { n: "Community Financial System", tk: "CBU", ex: "NYSE", hq: "Syracuse", r: ["cny"], ind: "Banking, benefits and insurance", src: "https://www.sec.gov/Archives/edgar/data/723188/000110465926123882/cbu-20260930x10q.htm" },
+    { n: "NBT Bancorp", tk: "NBTB", ex: "Nasdaq", hq: "Norwich", r: ["cny"], ind: "Banking", src: "https://www.sec.gov/Archives/edgar/data/790359/000114036126042473/ef20080579_10q.htm" },
+    { n: "TrustCo Bank Corp NY", tk: "TRST", ex: "Nasdaq", hq: "Albany", r: ["alb"], ind: "Banking", src: "https://www.sec.gov/Archives/edgar/data/357301/000114036126042445/ef20080637_10q.htm" },
+    { n: "Arrow Financial", tk: "AROW", ex: "Nasdaq", hq: "Glens Falls", r: ["alb"], ind: "Banking", src: "https://www.sec.gov/Archives/edgar/data/717538/000071753826000138/arow-20260930.htm" },
+    { n: "Chemung Financial", tk: "CHMG", ex: "Nasdaq", hq: "Elmira", r: ["cny"], ind: "Banking", src: "https://www.sec.gov/Archives/edgar/data/763563/000162828026070818/chmg-20260930.htm" }
   ],
   // Material SEC filings and releases from the companies above. k: results | deal | people | capital | gov (governance/proxy).
   filings: [
@@ -1221,7 +1233,6 @@ const DATA = {
     { d: "2026-07", t: "honor", r: ["buf","roc","cny","alb"], h: "City & State: 2026 Upstate Power 100", s: "Annual list of the most influential people from Western New York to the North Country.", src: "https://www.cityandstateny.com/power-lists/2026/07/2026-upstate-power-100/414939/" }
   ],
   nextUp: [
-    "Public companies: confirm HQ and add Gibraltar Industries, Graham Corp, Transcat, Monro, Vuzix, Seneca Foods, Financial Institutions, Community Financial System, NBT Bancorp, Trustco, Arrow Financial and Chemung Financial to the watchlist",
     "Service Providers: Albany and Syracuse Best Lawyers M&A Lawyers of the Year; managing partners at Lumsden McCormick, MMB+CO, Grossman St. Amour, Teal Becker and Whiteman Osterman & Hanna; Dannible & McKee and BST nonprofit client counts",
     "Rochester-area and Capital Region Assembly results (2026) and Monroe County Legislature",
     "Pending calls: SD-43, AD-126, AD-143, Erie County Clerk, Webster supervisor",
