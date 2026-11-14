@@ -93,7 +93,7 @@
    "inRegion": true
   },
   "ROCK": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000912562",
    "name": "GIBRALTAR INDUSTRIES, INC.",
    "city": "BUFFALO",
@@ -103,7 +103,7 @@
    "inRegion": true
   },
   "GHM": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000716314",
    "name": "GRAHAM CORP",
    "city": "BATAVIA",
@@ -113,7 +113,7 @@
    "inRegion": true
   },
   "TRNS": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000099302",
    "name": "TRANSCAT INC",
    "city": "ROCHESTER",
@@ -123,7 +123,7 @@
    "inRegion": true
   },
   "MNRO": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000876427",
    "name": "MONRO, INC.",
    "city": "FAIRPORT",
@@ -133,7 +133,7 @@
    "inRegion": true
   },
   "VUZI": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0001463972",
    "name": "Vuzix Corp",
    "city": "WEST HENRIETTA",
@@ -143,7 +143,7 @@
    "inRegion": true
   },
   "SENEA": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000088948",
    "name": "Seneca Foods Corp",
    "city": "MARION",
@@ -153,7 +153,7 @@
    "inRegion": true
   },
   "FISI": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000862831",
    "name": "FINANCIAL INSTITUTIONS INC",
    "city": "WARSAW",
@@ -163,7 +163,7 @@
    "inRegion": true
   },
   "CBU": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000723188",
    "name": "COMMUNITY FINANCIAL SYSTEM, INC.",
    "city": "SYRACUSE",
@@ -173,7 +173,7 @@
    "inRegion": true
   },
   "NBTB": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000790359",
    "name": "NBT BANCORP INC",
    "city": "NORWICH",
@@ -183,7 +183,7 @@
    "inRegion": true
   },
   "TRST": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000357301",
    "name": "TRUSTCO BANK CORP N Y",
    "city": "ALBANY",
@@ -193,7 +193,7 @@
    "inRegion": true
   },
   "AROW": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000717538",
    "name": "ARROW FINANCIAL CORP",
    "city": "GLENS FALLS",
@@ -203,7 +203,7 @@
    "inRegion": true
   },
   "CHMG": {
-   "status": "candidate",
+   "status": "watch",
    "cik": "0000763563",
    "name": "CHEMUNG FINANCIAL CORP",
    "city": "ELMIRA",
