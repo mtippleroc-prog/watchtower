@@ -1,6 +1,22 @@
 # WatchTower changelog
 
 
+## 2026-11-16: Refresh (Mon)
+
+- Money in Motion: 10 new deals. Largest: Continuum Partners picked for the $400M ShoppingTown redevelopment (seller: Onondaga
+  County); MetLife's $288M North Greenbush data center upgrade ($22M Rensselaer County IDA breaks); TE Connectivity's $62M
+  Henrietta optical plant (860+ jobs). M&A: Creative Planning buys Syracuse's Rockbridge ($2.2B AUM; principals Patrick Rohe and
+  David Carroll); Coakley Home & Hardware sold by Bill Coakley to a worker co-op. Also Cady Hill listing ($9.3M), Plattsburgh YMCA,
+  DePaul Utica housing, Voelkers site ($4.1M), Foundation 214's $1M to Buffalo State.
+- Briefing: 25 new items; 18 items older than 120 days removed.
+- Races: AD-143 to Ryan Taughrin (D), Erie County Clerk to Steven Meyer (D), Webster supervisor Alex Scialdone (D) re-elected;
+  SD-43 heading to a hand recount (Lander +~335) and AD-126 still pending (Phillips leads). Onondaga Legislature: Dapson (D) wins
+  District 14; caucus picks Watts (chair) and Chad Ryan (majority leader).
+- Filings: Vuzix, Gibraltar (results; CFO Lovechio resigns), Graham, Transcat. sec.gov pages could not be opened this pass, so
+  these cite company IR or financial-news copies of the releases. SEC feed last updated 2026-11-14.
+- Signals: Rensselaer County IDA / MetLife. No in-region WARN notices dated after Nov 10 were found.
+- Not confirmed: RBJ, Buffalo News, Albany Business Review and Times Union pages could not be opened; their items are listed in nextUp.
+
 ## 2026-11-13: Daily SEC check; watchlist grows to 21
 
 - GitHub Action `.github/workflows/sec.yml` checks SEC EDGAR every weekday evening for the watchlist and writes
