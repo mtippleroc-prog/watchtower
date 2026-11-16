@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-14",
- "since": "2026-07-17",
+ "updated": "2026-11-16",
+ "since": "2026-07-19",
  "companies": {
   "MTB": {
    "status": "watch",
@@ -1288,14 +1288,6 @@
    ],
    "desc": "8-K",
    "url": "https://www.sec.gov/Archives/edgar/data/36270/000119312526310413/d127076d8k.htm"
-  },
-  {
-   "d": "2026-07-17",
-   "tk": "PAYX",
-   "form": "10-K",
-   "items": [],
-   "desc": "10-K",
-   "url": "https://www.sec.gov/Archives/edgar/data/723531/000119312526307785/payx-20260531.htm"
   }
  ]
 }
