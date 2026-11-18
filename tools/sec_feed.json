@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17",
- "since": "2026-07-20",
+ "updated": "2026-11-18",
+ "since": "2026-07-21",
  "companies": {
   "MTB": {
    "status": "watch",
@@ -214,6 +214,17 @@
   }
  },
  "filings": [
+  {
+   "d": "2026-11-18",
+   "tk": "TRST",
+   "form": "8-K",
+   "items": [
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126044724/ef20085941_8k.htm"
+  },
   {
    "d": "2026-11-17",
    "tk": "SENEA",
