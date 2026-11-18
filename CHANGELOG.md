@@ -1,6 +1,22 @@
 # WatchTower changelog
 
 
+## 2026-11-18: Refresh (Wed)
+
+- Money in Motion: 3 new deals. $59.95M state POWER UP grant to RED Rochester for Eastman Business Park sites (plus $2.17M for
+  Lackawanna's Renaissance Commerce Park); Edwards Vacuum (Atlas Copco) completes its $319M STAMP dry-pump plant (Oct. 29, missed
+  earlier); $1M Syracuse Rescue Mission hospitality center (public and opioid-settlement funds). No new private M&A with named
+  sellers was found for Nov. 16–18.
+- Briefing: 9 new items (SD-43 recount date, Albany tax override, state nuclear plan, Buffalo school closures, Twin Trees grant,
+  Canalside Next Wave, The Post Apartments, Buffalo Diocese $327M settlement vote, St. Mary's Cattaraugus sale); High Falls
+  State Park item updated. No items aged past 120 days.
+- Races: SD-43 still pending (Lander 61,018 to Ashby 60,680; hand recount from Nov. 23). AD-126: no update found since Nov. 12.
+- Culture: Syracuse Orchestra music director confirmed as Austin Chanu (from July 2026).
+- Filings/signals: SEC feed updated 2026-11-17; new filings were a Seneca Foods bylaws 8-K (routine, skipped) and a Chemung
+  Financial 8-K item 8.01 that could not be opened. No in-region WARN notices dated Nov. 1 or later on warnact.io or kadoa.com.
+- Not confirmed: CNYBJ and Times Union pages are blocked to automated reading (Utica engineering-firm and Cooley Group deals,
+  Omni Plaza $10.1M sale); listed in nextUp.
+
 ## 2026-11-16: Refresh (Mon)
 
 - Money in Motion: 10 new deals. Largest: Continuum Partners picked for the $400M ShoppingTown redevelopment (seller: Onondaga
