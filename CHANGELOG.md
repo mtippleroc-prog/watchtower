@@ -1,6 +1,17 @@
 # WatchTower changelog
 
 
+## 2026-11-19: Refresh (Thu)
+
+- Money in Motion: 3 new deals, all capital projects (no new private M&A with named sellers found for Nov. 18-19). $160M in HCR
+  housing funds for Parkside Commons Phase I, Syracuse (BFC Partners, SAA|EVI) and $98.3M for Liberty at Saratoga (both from the
+  Oct. 30 round, missed earlier); ESL's 70,000 sq ft, 150-employee Farmington corporate office (cost not disclosed).
+- Briefing: 4 new items (Buffalo school board rejects closure plan 5-3-1; judge orders Buffalo Diocese parish-payment detail before
+  a Dec. 8 confirmation hearing; Saratoga barn-fire panel's final recommendations; Round Lake write-in mayor). High Falls item updated.
+- Races: no change. SD-43 hand recount starts Nov. 23 (WAMC: Lander +336); AD-126 still no final count found.
+- Filings: SEC feed updated 2026-11-18. TrustCo (Nov. 18) and Chemung (Nov. 17) 8-Ks, item 8.01, could not be opened; in nextUp.
+- Not confirmed: RBJ article pages could not be opened.
+
 ## 2026-11-18: Refresh (Wed)
 
 - Money in Motion: 3 new deals. $59.95M state POWER UP grant to RED Rochester for Eastman Business Park sites (plus $2.17M for
