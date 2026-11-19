@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18",
- "since": "2026-07-21",
+ "updated": "2026-11-19",
+ "since": "2026-07-22",
  "companies": {
   "MTB": {
    "status": "watch",
@@ -214,6 +214,17 @@
   }
  },
  "filings": [
+  {
+   "d": "2026-11-19",
+   "tk": "CHMG",
+   "form": "8-K",
+   "items": [
+    "5.02 Officer/director change",
+    "9.01 Exhibits"
+   ],
+   "desc": "FORM 8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/763563/000117184326007595/f8k_111926.htm"
+  },
   {
    "d": "2026-11-18",
    "tk": "TRST",
@@ -1286,41 +1297,6 @@
    ],
    "desc": "FORM 8-K",
    "url": "https://www.sec.gov/Archives/edgar/data/763563/000117184326004834/f8k_072226.htm"
-  },
-  {
-   "d": "2026-07-21",
-   "tk": "TRST",
-   "form": "8-K",
-   "items": [
-    "2.02 Results",
-    "9.01 Exhibits"
-   ],
-   "desc": "8-K",
-   "url": "https://www.sec.gov/Archives/edgar/data/357301/000114036126029118/ef20078312_8k.htm"
-  },
-  {
-   "d": "2026-07-21",
-   "tk": "PAYX",
-   "form": "8-K",
-   "items": [
-    "5.02 Officer/director change",
-    "9.01 Exhibits"
-   ],
-   "desc": "8-K",
-   "url": "https://www.sec.gov/Archives/edgar/data/723531/000119312526310277/payx-20260716.htm"
-  },
-  {
-   "d": "2026-07-21",
-   "tk": "MTB",
-   "form": "8-K",
-   "items": [
-    "3.03",
-    "5.03 Bylaws/charter change",
-    "8.01 Other events",
-    "9.01 Exhibits"
-   ],
-   "desc": "8-K",
-   "url": "https://www.sec.gov/Archives/edgar/data/36270/000119312526310413/d127076d8k.htm"
   }
  ]
 }
