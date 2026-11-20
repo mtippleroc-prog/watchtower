@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19",
- "since": "2026-07-22",
+ "updated": "2026-11-20",
+ "since": "2026-07-23",
  "companies": {
   "MTB": {
    "status": "watch",
@@ -214,6 +214,34 @@
   }
  },
  "filings": [
+  {
+   "d": "2026-11-20",
+   "tk": "NFG",
+   "form": "10-K",
+   "items": [],
+   "desc": "10-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/70145/000007014526000042/nfg-20260930.htm"
+  },
+  {
+   "d": "2026-11-20",
+   "tk": "MOG.A",
+   "form": "10-K",
+   "items": [],
+   "desc": "10-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/67887/000162828026075202/mog-20261003.htm"
+  },
+  {
+   "d": "2026-11-20",
+   "tk": "MOG.A",
+   "form": "8-K",
+   "items": [
+    "2.02 Results",
+    "8.01 Other events",
+    "9.01 Exhibits"
+   ],
+   "desc": "8-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/67887/000162828026075170/mog-20261120.htm"
+  },
   {
    "d": "2026-11-19",
    "tk": "CHMG",
@@ -1286,17 +1314,6 @@
    ],
    "desc": "8-K",
    "url": "https://www.sec.gov/Archives/edgar/data/717538/000071753826000110/arow-20260722.htm"
-  },
-  {
-   "d": "2026-07-22",
-   "tk": "CHMG",
-   "form": "8-K",
-   "items": [
-    "2.02 Results",
-    "9.01 Exhibits"
-   ],
-   "desc": "FORM 8-K",
-   "url": "https://www.sec.gov/Archives/edgar/data/763563/000117184326004834/f8k_072226.htm"
   }
  ]
 }
