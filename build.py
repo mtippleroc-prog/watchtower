@@ -6,6 +6,12 @@ data = (root/'app'/'data.js').read_text()
 tpl = (root/'app'/'app_template.html').read_text()
 assert '/*DATA*/' in tpl, 'template is missing the /*DATA*/ placeholder'
 html = tpl.replace('/*DATA*/', data)
+# inline the SEC EDGAR feed (tools/sec_feed.json, refreshed by .github/workflows/sec.yml) for the SEC Filings tab
+import json
+feed_path = root/'tools'/'sec_feed.json'
+feed = json.dumps(json.loads(feed_path.read_text()), ensure_ascii=False).replace('</', '<\\/') if feed_path.exists() else 'null'
+assert '/*SECFEED*/null' in html, 'template is missing the /*SECFEED*/ placeholder'
+html = html.replace('/*SECFEED*/null', feed)
 out = root/'dist'/'watchtower.html'
 out.parent.mkdir(exist_ok=True)
 out.write_text(html)

@@ -1,6 +1,14 @@
 # WatchTower changelog
 
 
+## 2026-11-21: New SEC Filings tab
+
+- New tab between Business and Service Providers: company tiles for the 21-company watchlist (HQ, industry, filing count, latest
+  filing; click one to narrow the page), the written-up material filings (`DATA.filings`), and every filing from the last 120 days
+  in `tools/sec_feed.json` with 8-K item codes and sec.gov links, filterable by form.
+- `build.py` now inlines `tools/sec_feed.json`, so each rebuild picks up the latest weekday EDGAR check.
+- General Briefings keeps Early signals and links to the new tab instead of listing filings.
+
 ## 2026-11-19: Refresh (Thu)
 
 - Money in Motion: 3 new deals, all capital projects (no new private M&A with named sellers found for Nov. 18-19). $160M in HCR

@@ -41,14 +41,14 @@ SeaRover's regions.
 - **Regions (by ZIP3, same as SeaRover):** `buf` Buffalo/Niagara & West 140–143,147 · `roc` Rochester & Area 144–146,148
   (incl. Ithaca, Elmira, Corning) · `cny` Central NY 130–139,149 (incl. Seneca Falls, Auburn, Utica, Binghamton, Watertown) ·
   `alb` Albany & North 120–123,128,129. Everything else (Hudson Valley, NYC, ZIP3 127) is out.
-- Tabs, left to right: Money in Motion, General Briefings (default view), Business, Service Providers, Faith, Culture, History, Politics, Officials, Sources.
+- Tabs, left to right: Money in Motion, General Briefings (default view), Business, SEC Filings, Service Providers, Faith, Culture, History, Politics, Officials, Sources.
 
 ## Where things live
 | What | Where |
 |---|---|
 | All content (news, deals, officials, donors, business, service providers, faith, culture, history, research queue) | `app/data.js` |
 | Layout, styles, logic | `app/app_template.html` |
-| Build | `build.py` → `dist/watchtower.html` (not committed) |
+| Build | `build.py` → `dist/watchtower.html` (not committed); also inlines `tools/sec_feed.json` for the SEC Filings tab |
 | Logo | `assets/logo.svg`, `assets/logo.png` |
 | Refresh procedure | `REFRESH_INSTRUCTIONS.md`, run by the scheduled task "WatchTower refresh" (Mon + Thu, about 3:42 am ET, cloud only) |
 | Laptop backups | `C:\New Files\Upstate`: repo files, `WatchTower_offline.html`, and `_backups\` (8 rotating zip slots, `BACKUPS.md`), made by `tools/make_local_backup.py` via the task "WatchTower laptop backup" (Mon + Thu evenings) |

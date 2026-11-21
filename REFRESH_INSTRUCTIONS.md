@@ -18,7 +18,7 @@ Search each region separately; a combined query returns thin results.
 - For every deal fill `who` (sellers or donors by name, or say they're not named), and where they are named add `bg`:
   public professional background (companies, roles, boards, prior gifts) with a source. Never add personal contact details. Amounts in $ millions; `null` if undisclosed.
 
-**Public companies (`DATA.pubcos`, `DATA.filings`) — shown in General Briefings.**
+**Public companies (`DATA.pubcos`, `DATA.filings`) — shown in the SEC Filings tab** (which also lists every filing in `tools/sec_feed.json`, inlined by the build).
 - Watchlist = public companies headquartered in the four regions (`pubcos`: `n`, `tk`, `ex`, `hq`, `r`, `ind`, `src` = a recent filing
   showing the HQ address). Add a company only after a filing or release confirms the HQ is in-region; drop one that moves out
   (e.g. Columbus McKinnon moved to Charlotte in 2022). Candidates waiting for confirmation are listed in `nextUp`.

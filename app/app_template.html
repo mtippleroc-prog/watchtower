@@ -142,16 +142,17 @@ section+.regionblock{margin-top:36px;padding-top:24px;border-top:1px solid var(-
 
 <script>
 /*DATA*/
+const SECFEED = /*SECFEED*/null;
 </script>
 <script>
 (function(){
 const R = DATA.regions, RK = Object.keys(R);
-const TABS = [["money","Money in Motion"],["briefing","General Briefings"],["business","Business"],["providers","Service Providers"],["faith","Faith"],["culture","Culture"],["history","History"],["politics","Politics"],["officials","Officials"],["about","Sources"]];
+const TABS = [["money","Money in Motion"],["briefing","General Briefings"],["business","Business"],["sec","SEC Filings"],["providers","Service Providers"],["faith","Faith"],["culture","Culture"],["history","History"],["politics","Politics"],["officials","Officials"],["about","Sources"]];
 const LEVELS = ["Federal","Statewide","State Senate","Assembly","County","City","Town","Judiciary"];
 let region = "all";
 try { region = localStorage.getItem("uni-region") || "all"; } catch(e) {}
 if (region !== "all" && !R[region]) region = "all";
-const st = { newsCat: "all", lv: "all", party: "all", q: "", dealT: "all", fk: "all", sk: "all" };
+const st = { newsCat: "all", lv: "all", party: "all", q: "", dealT: "all", fk: "all", sk: "all", tk: "all", ff: "all" };
 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const fmtDate = d => { if(d.length===7){ const x=new Date(d+"-15T12:00:00"); return x.toLocaleDateString("en-US",{month:"short",year:"numeric"}); } const x = new Date(d+"T12:00:00"); return x.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); };
@@ -243,19 +244,40 @@ function vOfficials(){
 const FK = {results:"Results",deal:"Deals",people:"People",capital:"Capital",gov:"Proxy & governance"};
 const SK = {warn:"WARN notices",ida:"IDA incentives",honor:"Honors & lists"};
 function vPublic(){
-  const cos = (DATA.pubcos||[]).filter(c=>inR(c.r));
-  const fl = (DATA.filings||[]).filter(f=>inR(f.r) && (st.fk==="all"||f.k===st.fk)).sort((a,b)=>b.d.localeCompare(a.d));
-  const tkName = Object.fromEntries((DATA.pubcos||[]).map(c=>[c.tk,c.n]));
   const sg = (DATA.signals||[]).filter(x=>inR(x.r) && (st.sk==="all"||x.t===st.sk)).sort((a,b)=>b.d.localeCompare(a.d));
-  return `<section><div class="sechead"><div><span class="eyebrow">Public companies · ${esc(scopeLabel())}</span><h2>SEC filings</h2></div></div>
-  <p class="lede">SEC filings and releases from public companies headquartered here: results, deals, executive changes and proxy statements. Newest first.</p>
-  ${cos.length?`<ul class="tags" style="margin:0 0 12px">${cos.map(c=>`<li title="${esc(c.ind)} · HQ ${esc(c.hq)}"><b>${esc(c.tk)}</b> ${esc(c.n)} <span class="fine">· ${esc(c.hq)}</span></li>`).join("")}</ul>`:""}
-  ${filterBtns("fk",[["all","All filings"]].concat(Object.entries(FK)),st.fk)}
-  ${fl.length?`<div class="feed">${fl.map(f=>`<article class="item"><time datetime="${f.d}">${fmtDate(f.d)}</time><div class="body"><h3>${esc(f.h)}</h3><p>${esc(f.s)}</p><div class="meta"><span class="cat">${esc(f.form)}</span><span class="cat">${esc(FK[f.k]||f.k)}</span><span class="kv">${esc(f.tk)}${tkName[f.tk]?" · "+esc(tkName[f.tk]):""}</span>${dots(f.r)}${srcLink(f.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No filings recorded for this region yet.</p>`}</section>
+  const nf = (DATA.filings||[]).filter(f=>inR(f.r)).length;
+  return `<section><div class="sechead"><div><span class="eyebrow">Public companies · ${esc(scopeLabel())}</span><h2>SEC filings</h2></div><a href="#sec">SEC Filings tab →</a></div>
+  <p class="lede" style="margin-bottom:0">${nf} written-up filings for this view, plus every recent EDGAR filing, are on the SEC Filings tab.</p></section>
   <section><div class="sechead"><div><span class="eyebrow">Ahead of the news</span><h2>Early signals</h2></div></div>
   <p class="lede">State WARN notices (layoffs and closures, filed 90 days ahead), IDA incentive approvals (projects before groundbreaking), and the major honors lists.</p>
   ${filterBtns("sk",[["all","All signals"]].concat(Object.entries(SK)),st.sk)}
   ${sg.length?`<div class="feed">${sg.map(x=>`<article class="item"><time datetime="${x.d}">${fmtDate(x.d)}</time><div class="body"><h3>${esc(x.h)}</h3><p>${esc(x.s)}</p><div class="meta"><span class="cat">${esc(SK[x.t]||x.t)}</span>${dots(x.r)}${srcLink(x.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No signals recorded for this region yet.</p>`}</section>`;
+}
+const FF = {"8-K":"8-K current reports",periodic:"10-Q & 10-K",proxy:"Proxy statements"};
+const ffOf = f => f==="8-K"||f==="8-K/A" ? "8-K" : /^10-[QK]/.test(f) ? "periodic" : /14A/.test(f) ? "proxy" : "other";
+function vSec(){
+  const cos = (DATA.pubcos||[]).filter(c=>inR(c.r));
+  const tkR = Object.fromEntries((DATA.pubcos||[]).map(c=>[c.tk,c.r]));
+  const tkName = Object.fromEntries((DATA.pubcos||[]).map(c=>[c.tk,c.n]));
+  const feed = (SECFEED&&SECFEED.filings||[]).filter(f=>inR(tkR[f.tk]||[(SECFEED.companies[f.tk]||{}).region]));
+  const okTk = t => st.tk==="all" || t===st.tk;
+  const fl = (DATA.filings||[]).filter(f=>inR(f.r) && okTk(f.tk) && (st.fk==="all"||f.k===st.fk)).sort((a,b)=>b.d.localeCompare(a.d));
+  const fd = feed.filter(f=>okTk(f.tk) && (st.ff==="all"||ffOf(f.form)===st.ff)).sort((a,b)=>b.d.localeCompare(a.d));
+  const last = t => feed.filter(f=>f.tk===t).map(f=>f.d).sort().pop();
+  const cnt = t => feed.filter(f=>f.tk===t).length;
+  const pick = st.tk!=="all" ? `<p class="fine" style="margin-top:0">Showing ${esc(tkName[st.tk]||st.tk)} only · <button class="fbtn" data-g="tk" data-v="all">Show all companies</button></p>` : "";
+  return `<section><div class="sechead"><div><span class="eyebrow">Public companies · ${esc(scopeLabel())}</span><h2>SEC Filings</h2></div>${SECFEED?`<span class="asof">EDGAR feed updated ${esc(fmtDate(SECFEED.updated))}</span>`:""}</div>
+  <p class="lede">Public companies headquartered in the four regions: the material filings written up in plain English, then every filing from the last 120 days straight from SEC EDGAR. Pick a company to narrow both lists.</p>
+  ${cos.length?`<div class="cards">${cos.map(c=>`<button class="tile" data-g="tk" data-v="${esc(c.tk)}" aria-pressed="${st.tk===c.tk}"><span class="eyebrow">${esc(c.tk)} · ${esc(c.ex)}</span><span style="font-weight:600">${esc(c.n)}</span><span class="tsum">${esc(c.hq)} · ${esc(c.ind)}</span><span class="tsum">${cnt(c.tk)} filings${last(c.tk)?` · latest ${esc(fmtDate(last(c.tk)))}`:""}</span></button>`).join("")}</div>`:`<p class="empty">No public companies tracked for this region.</p>`}</section>
+  <section><div class="sechead"><div><span class="eyebrow">Written up</span><h2>Material filings</h2></div></div>
+  ${pick}
+  ${filterBtns("fk",[["all","All kinds"]].concat(Object.entries(FK)),st.fk)}
+  ${fl.length?`<div class="feed">${fl.map(f=>`<article class="item"><time datetime="${f.d}">${fmtDate(f.d)}</time><div class="body"><h3>${esc(f.h)}</h3><p>${esc(f.s)}</p><div class="meta"><span class="cat">${esc(f.form)}</span><span class="cat">${esc(FK[f.k]||f.k)}</span><span class="kv">${esc(f.tk)}${tkName[f.tk]?" · "+esc(tkName[f.tk]):""}</span>${dots(f.r)}${srcLink(f.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No written-up filings match.</p>`}</section>
+  <section><div class="sechead"><div><span class="eyebrow">Straight from EDGAR</span><h2>All recent filings</h2></div><span class="kv">${fd.length} shown</span></div>
+  <p class="lede">Every 8-K, 10-Q, 10-K and proxy filed since ${SECFEED?esc(fmtDate(SECFEED.since)):"the last check"}, refreshed each weekday evening. 8-K item codes show what the report covers.</p>
+  ${pick}
+  ${filterBtns("ff",[["all","All forms"]].concat(Object.entries(FF)),st.ff)}
+  ${fd.length?`<div class="feed">${fd.map(f=>`<article class="item"><time datetime="${f.d}">${fmtDate(f.d)}</time><div class="body"><h3>${esc(tkName[f.tk]||(SECFEED.companies[f.tk]||{}).name||f.tk)} · ${esc(f.form)}</h3>${f.items&&f.items.length?`<p>${f.items.map(esc).join(" · ")}</p>`:""}<div class="meta"><span class="kv">${esc(f.tk)}</span>${dots(tkR[f.tk]||[])}<a class="src" href="${esc(f.url)}" target="_blank" rel="noopener">View on sec.gov ↗</a></div></div></article>`).join("")}</div>`:`<p class="empty">No EDGAR filings match.</p>`}</section>`;
 }
 function vBusiness(){
   return regionsShown().map(k=>{
@@ -346,7 +368,7 @@ function vAbout(){
 function render(){
   renderTabs();
   const v = view();
-  const fn = {money:vMoney,briefing:vBriefing,politics:vPolitics,officials:vOfficials,business:vBusiness,providers:vProviders,faith:vFaith,culture:vCulture,history:vHistory,about:vAbout}[v];
+  const fn = {money:vMoney,briefing:vBriefing,politics:vPolitics,officials:vOfficials,business:vBusiness,sec:vSec,providers:vProviders,faith:vFaith,culture:vCulture,history:vHistory,about:vAbout}[v];
   document.getElementById("main").innerHTML = fn();
   bindFilters();
   const q = document.getElementById("q");
