@@ -245,10 +245,7 @@ const FK = {results:"Results",deal:"Deals",people:"People",capital:"Capital",gov
 const SK = {warn:"WARN notices",ida:"IDA incentives",honor:"Honors & lists"};
 function vPublic(){
   const sg = (DATA.signals||[]).filter(x=>inR(x.r) && (st.sk==="all"||x.t===st.sk)).sort((a,b)=>b.d.localeCompare(a.d));
-  const nf = (DATA.filings||[]).filter(f=>inR(f.r)).length;
-  return `<section><div class="sechead"><div><span class="eyebrow">Public companies · ${esc(scopeLabel())}</span><h2>SEC filings</h2></div><a href="#sec">SEC Filings tab →</a></div>
-  <p class="lede" style="margin-bottom:0">${nf} written-up filings for this view, plus every recent EDGAR filing, are on the SEC Filings tab.</p></section>
-  <section><div class="sechead"><div><span class="eyebrow">Ahead of the news</span><h2>Early signals</h2></div></div>
+  return `<section><div class="sechead"><div><span class="eyebrow">Ahead of the news</span><h2>Early signals</h2></div></div>
   <p class="lede">State WARN notices (layoffs and closures, filed 90 days ahead), IDA incentive approvals (projects before groundbreaking), and the major honors lists.</p>
   ${filterBtns("sk",[["all","All signals"]].concat(Object.entries(SK)),st.sk)}
   ${sg.length?`<div class="feed">${sg.map(x=>`<article class="item"><time datetime="${x.d}">${fmtDate(x.d)}</time><div class="body"><h3>${esc(x.h)}</h3><p>${esc(x.s)}</p><div class="meta"><span class="cat">${esc(SK[x.t]||x.t)}</span>${dots(x.r)}${srcLink(x.src)}</div></div></article>`).join("")}</div>`:`<p class="empty">No signals recorded for this region yet.</p>`}</section>`;
