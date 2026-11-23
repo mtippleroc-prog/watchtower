@@ -1,6 +1,19 @@
 # WatchTower changelog
 
 
+## 2026-11-23: Refresh (since Nov. 19)
+
+- Money in Motion: 12 new deals. Biggest: ICE's $1.5B Batavia detention construction contract (federal, per Rep. Kennedy's office),
+  $194.8M in state port awards for Coeymans and Albany, $156.1M Copper Village housing in Rome, and FeedMore WNY's $115M Hamburg HQ.
+  Named sellers/donors: Quicklee's affiliates (Pemm LLC) on Mirabito's $22.66M two-store purchase; Diana Newell, Stewart's/Susan Dake and
+  Adirondack Trust in Saratoga Center for the Family's $2.3M campaign. Ioxus (GE Vernova) and Destiny USA debt (Namdar): sellers not named.
+- Briefing: 29 new news items across all four regions; one item older than 120 days dropped.
+- Early signals: 3 IDA items (Niagara County x2, Oneida County) and 1 WARN (Watermark, Rochester).
+- SEC filings: Moog fiscal 2026 results (Nov. 20); National Fuel fiscal 2026 results and spin-off timing (Nov. 4, missed earlier).
+- Officials: SD-43 and AD-126 still pending (SD-43 hand recount scheduled from Nov. 23; no AD-126 concession found).
+- Not confirmed: Chemung Financial Nov. 19 5.02 and Moog 8.01 (sec.gov filing pages could not be opened); several RBJ, Times Union
+  and Buffalo News items behind paywalls (listed in nextUp). SEC feed last updated Nov. 20.
+
 ## 2026-11-21: New SEC Filings tab
 
 - New tab between Business and Service Providers: company tiles for the 21-company watchlist (HQ, industry, filing count, latest
