@@ -1,6 +1,14 @@
 # WatchTower changelog
 
 
+## 2026-11-23 (later): Follow-up pass
+
+- SEC filings now opened: Chemung director Robert H. Dalrymple retiring Dec. 31 (Nov. 19 8-K); Monro dividend suspension (Nov. 23 8-K).
+  Moog's Nov. 20 item 8.01 was a routine $0.30 dividend (not written up).
+- SD-43: hand recount began Nov. 23 in Albany County (news item; officials entry updated). AD-126 still pending.
+- Early signals: ECIDA Nov. 18 agenda, $7.1M Buffalo Solar project in Alden (outcome not confirmed).
+- Still blocked: RBJ (COMIDA approvals, $15.6M hotel sale), Times Union (Saratoga BOCES building), Auburn Citizen (AD-126 projection).
+
 ## 2026-11-23: Refresh (since Nov. 19)
 
 - Money in Motion: 12 new deals. Biggest: ICE's $1.5B Batavia detention construction contract (federal, per Rep. Kennedy's office),
