@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-24",
- "since": "2026-07-27",
+ "updated": "2026-11-25",
+ "since": "2026-07-28",
  "companies": {
   "MTB": {
    "status": "watch",
@@ -1261,17 +1261,6 @@
    ],
    "desc": "FORM 8-K",
    "url": "https://www.sec.gov/Archives/edgar/data/723188/000110465926087355/tm2621422d1_8k.htm"
-  },
-  {
-   "d": "2026-07-27",
-   "tk": "NBTB",
-   "form": "8-K",
-   "items": [
-    "2.02 Results",
-    "9.01 Exhibits"
-   ],
-   "desc": "8-K",
-   "url": "https://www.sec.gov/Archives/edgar/data/790359/000114036126029754/ef20078819_8k.htm"
   }
  ]
 }
