@@ -1,6 +1,21 @@
 # WatchTower changelog
 
 
+## 2026-11-26: Refresh (Thanksgiving week, since Nov. 23)
+
+- Money in Motion: 2 new deals, both capital projects. Roswell Park's Scott Bieler Orchard Park Center in the former Orchard Fresh
+  (donors: Scott Bieler Family Foundation, gift amount not disclosed; property seller not named); Buffalo DPW's $12.4M leased
+  Ship Canal Parkway facility (landlord not named). No private M&A, $1M+ gifts with amounts, or $5M+ property sales confirmed.
+- Briefing: 18 new news items across all four regions (Scene One cinema Chapter 11, Court of Appeals rulings on Section 8 and 5/14
+  social media suits, Eastview Mall TRO, RMSC names Jon-Paul Dyson CEO, Saratoga Springs 18% tax plan, Erie County budget).
+  No news items aged past 120 days.
+- Officials: SD-43 updated (Albany County recount done Nov. 24, Lander still ahead; Rensselaer and Washington counties from Nov. 30).
+  AD-126 still pending (no certification or concession found). New pending entry: Chili supervisor hand recount (Dunning +62).
+- SEC filings: feed updated Nov. 25; no new material filings since the Nov. 23 Monro 8-K.
+- Signals: no in-region WARN notices or IDA approvals dated Nov. 23-26 found.
+- Not confirmed (in nextUp): Glenora Wine Cellars sale (undated), Gouverneur IDA roof break, Rich Products Buffalo job cuts,
+  Watertown property sales; Auburn Citizen, NNY360, RBJ and Buffalo News pages blocked.
+
 ## 2026-11-23 (later): Follow-up pass
 
 - SEC filings now opened: Chemung director Robert H. Dalrymple retiring Dec. 31 (Nov. 19 8-K); Monro dividend suspension (Nov. 23 8-K).
