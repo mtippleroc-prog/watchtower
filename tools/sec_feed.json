@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-25",
- "since": "2026-07-28",
+ "updated": "2026-11-26",
+ "since": "2026-07-29",
  "companies": {
   "MTB": {
    "status": "watch",
@@ -1240,27 +1240,6 @@
    "items": [],
    "desc": "10-Q",
    "url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000255/glw-20260630.htm"
-  },
-  {
-   "d": "2026-07-28",
-   "tk": "GLW",
-   "form": "8-K",
-   "items": [
-    "2.02 Results"
-   ],
-   "desc": "8-K",
-   "url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000253/glw-20260728.htm"
-  },
-  {
-   "d": "2026-07-28",
-   "tk": "CBU",
-   "form": "8-K",
-   "items": [
-    "2.02 Results",
-    "9.01 Exhibits"
-   ],
-   "desc": "FORM 8-K",
-   "url": "https://www.sec.gov/Archives/edgar/data/723188/000110465926087355/tm2621422d1_8k.htm"
   }
  ]
 }
