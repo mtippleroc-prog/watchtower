@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26",
- "since": "2026-07-29",
+ "updated": "2026-11-27",
+ "since": "2026-07-30",
  "companies": {
   "MTB": {
    "status": "watch",
@@ -1213,33 +1213,6 @@
    ],
    "desc": "8-K",
    "url": "https://www.sec.gov/Archives/edgar/data/70145/000007014526000030/nfg-20260729.htm"
-  },
-  {
-   "d": "2026-07-29",
-   "tk": "MNRO",
-   "form": "10-Q",
-   "items": [],
-   "desc": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/876427/000087642726000010/mnro-20260627x10q.htm"
-  },
-  {
-   "d": "2026-07-29",
-   "tk": "MNRO",
-   "form": "8-K",
-   "items": [
-    "2.02 Results",
-    "9.01 Exhibits"
-   ],
-   "desc": "8-K",
-   "url": "https://www.sec.gov/Archives/edgar/data/876427/000119312526322170/d66984d8k.htm"
-  },
-  {
-   "d": "2026-07-29",
-   "tk": "GLW",
-   "form": "10-Q",
-   "items": [],
-   "desc": "10-Q",
-   "url": "https://www.sec.gov/Archives/edgar/data/24741/000002474126000255/glw-20260630.htm"
   }
  ]
 }
