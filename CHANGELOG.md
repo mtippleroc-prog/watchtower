@@ -1,6 +1,17 @@
 # WatchTower changelog
 
 
+## 2026-11-28: Briefing re-weighted toward business, donations and leadership
+
+- General Briefings now opens with "Business, donations & leadership" (filters: Business, Donations, Leadership, Faith, Culture).
+  Donations pull in Money in Motion philanthropy deals from the last 120 days; Leadership pulls in news tagged `k: "lead"` plus
+  SEC `people` filings. Eight existing items tagged as leadership changes.
+- Government & politics shrinks to a 5-headline strip at the bottom of General Briefings; the Politics tab now carries all
+  government news plus the "Seats changing hands" cards (moved from General Briefings).
+- REFRESH_INSTRUCTIONS: refreshes now prioritize business, gifts and leadership turnover, tag items with `k`, and keep `gov`
+  items to what moves money or institutions (about 3 per region per refresh).
+
+
 ## 2026-11-26: Refresh (Thanksgiving week, since Nov. 23)
 
 - Money in Motion: 2 new deals, both capital projects. Roswell Park's Scott Bieler Orchard Park Center in the former Orchard Fresh

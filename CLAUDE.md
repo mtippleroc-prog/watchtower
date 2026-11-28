@@ -42,6 +42,7 @@ SeaRover's regions.
   (incl. Ithaca, Elmira, Corning) · `cny` Central NY 130–139,149 (incl. Seneca Falls, Auburn, Utica, Binghamton, Watertown) ·
   `alb` Albany & North 120–123,128,129. Everything else (Hudson Valley, NYC, ZIP3 127) is out.
 - Tabs, left to right: Money in Motion, General Briefings (default view), Business, SEC Filings, Service Providers, Faith, Culture, History, Politics, Officials, Sources.
+- General Briefings emphasizes business, donations and leadership turnover; politics is a short strip there (full coverage on the Politics tab).
 
 ## Where things live
 | What | Where |

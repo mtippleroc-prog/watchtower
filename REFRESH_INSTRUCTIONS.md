@@ -45,7 +45,22 @@ Search each region separately; a combined query returns thin results.
   Power 100, Albany Business Review and CNY Business Journal equivalents). One item per list, not every honoree.
 - Fields: `d`, `t`, `r`, `h`, `s`, `src`. Keep about 6 months.
 
-**Briefing (`DATA.news`)**: government/political (`gov`), business (`biz`), faith (`faith`) and culture (`culture`) items worth knowing.
+**Briefing (`DATA.news`) — emphasis: business, donations and leadership turnover. Politics is de-emphasized (Matt, Nov. 28, 2026).**
+- Spend most of the Briefing effort, region by region, on:
+  - Business (`biz`): company news that matters (expansions, closings, bankruptcies, ownership changes, big contracts, results of in-region companies, major lawsuits).
+  - Donations (`"k": "gift"`): gifts, pledges, campaigns and foundation grant rounds. $1M+ gifts go in Money in Motion as `phil` deals (they show in the
+    Briefing's Donations filter automatically); smaller but notable gifts and campaign launches go here as news items with `"k": "gift"`
+    (and `"amt"` in $ millions if disclosed). Name the donors when reported.
+  - Leadership turnover (`"k": "lead"`): new, departing or retiring CEOs, presidents, executive directors, heads of school, bishops, hospital
+    and university leaders, foundation and United Way heads, managing partners, public-agency directors. Search each region for
+    "named CEO", "named president", "executive director", "to retire", "steps down", "successor". Public-company CEO/CFO/director changes
+    go in `filings` (`k: "people"`), which also feed the Leadership filter.
+  - Tag with `k` on top of the normal `cat` (e.g. `"cat": "culture", "k": "lead"`).
+- Government/politics (`gov`) is now a short headline strip on General Briefings (latest 5) with full coverage on the Politics tab. Keep it to
+  what moves money or institutions: certified/close election results, county and city budgets and tax levels, major policy or court rulings
+  affecting business, development or nonprofits. Skip routine council votes, campaign announcements, partisan back-and-forth and
+  procedural updates (e.g. each recount step; one item when a race resolves). Aim for no more than about 3 `gov` items per region per refresh.
+- Faith (`faith`) and culture (`culture`) items as before.
 
 **Officials (`DATA.officials`)**: resolve pending races (`"p": "?"`), record resignations, appointments, new judges,
 leadership changes. Update `res`/`note`, never delete history silently.
@@ -92,7 +107,7 @@ leadership or ownership changes (sales, mergers). Sourced facts only.
 
 ## 4. Build, save, publish
 1. `python3 build.py` — stop and fix if it fails.
-2. Add a dated entry to `CHANGELOG.md` (counts of new deals/news, races resolved, anything notable).
+2. Add a dated entry to `CHANGELOG.md` (counts of new deals, business/donation/leadership/government news, races resolved, anything notable).
 3. `git add -A && git commit -m "Refresh YYYY-MM-DD" && git push origin main`.
 4. Publish `dist/watchtower.html` to the live app URL with the Artifact tool (`url` set; no `icon`).
-5. Report in two or three sentences: what's new, the biggest deals, and anything that couldn't be confirmed.
+5. Report in two or three sentences: what's new, the biggest deals, gifts and leadership changes, and anything that couldn't be confirmed.

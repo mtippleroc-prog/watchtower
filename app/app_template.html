@@ -161,7 +161,7 @@ const rc = k => `var(--${k})`;
 const dots = arr => (arr||[]).map(k => `<span class="dot" style="--c:${rc(k)}">${esc(R[k].short)}</span>`).join("");
 const srcLink = u => u ? `<a class="src" href="${esc(u)}" target="_blank" rel="noopener">Source</a>` : "";
 const regionsShown = () => region === "all" ? RK : [region];
-const catName = {gov:"Government",biz:"Business",faith:"Faith",culture:"Culture"};
+const catName = {gov:"Government",biz:"Business",faith:"Faith",culture:"Culture",lead:"Leadership",gift:"Donation"};
 
 document.getElementById("asof").textContent = "Research as of " + fmtDate(DATA.asOf);
 
@@ -179,7 +179,7 @@ function renderTabs(){
 
 function newsList(items){
   if(!items.length) return `<p class="empty">No items for this region yet.</p>`;
-  return `<div class="feed">` + items.map(n => `<article class="item"><time datetime="${n.d}">${fmtDate(n.d)}</time><div class="body"><h3>${esc(n.h)}</h3><p>${esc(n.s)}</p><div class="meta"><span class="cat">${catName[n.cat]}</span>${dots(n.r)}${srcLink(n.src)}</div></div></article>`).join("") + `</div>`;
+  return `<div class="feed">` + items.map(n => `<article class="item"><time datetime="${n.d}">${fmtDate(n.d)}</time><div class="body"><h3>${esc(n.h)}</h3><p>${esc(n.s)}</p><div class="meta"><span class="cat">${n.k?catName[n.k]:catName[n.cat]}</span>${n.k&&n.cat!=="biz"?`<span class="cat">${catName[n.cat]}</span>`:""}${n.amt!=null&&n.k==="gift"?`<span class="kv">${fmtAmt(n.amt)}</span>`:""}${n.via?`<a class="src" href="${n.via}">${esc(n.viaName)}</a>`:""}${dots(n.r)}${srcLink(n.src)}</div></div></article>`).join("") + `</div>`;
 }
 function filterBtns(group, opts, cur){
   return `<div class="filters" role="group">` + opts.map(([k,n]) => `<button class="fbtn" id="f-${group}-${k.replace(/\W/g,'')}" data-g="${group}" data-v="${esc(k)}" aria-pressed="${cur===k}">${esc(n)}</button>`).join("") + `</div>`;
@@ -189,16 +189,31 @@ function bindFilters(){
 }
 function scopeLabel(){ return region==="all" ? "all four regions" : R[region].name; }
 
+// Briefing leads with business, donations and leadership turnover; politics gets a short headline strip (full coverage on the Politics tab).
+const BRIEF_DAYS = 120;
+function briefCut(){ const t = new Date(DATA.asOf); t.setDate(t.getDate()-BRIEF_DAYS); return t.toISOString().slice(0,10); }
+function briefItems(){
+  const cut = briefCut();
+  const news = DATA.news.filter(n => inR(n.r) && (n.cat!=="gov" || n.k));
+  const gifts = DATA.deals.filter(x => x.t==="phil" && inR(x.r) && x.d>=cut).map(x => ({d:x.d, cat:"biz", k:"gift", r:x.r, amt:x.amt,
+    h:x.h, s:(x.who&&x.who.t ? x.who.l+": "+x.who.t+" " : "")+(x.s||""), src:x.src, via:"#money", viaName:"Money in Motion →"}));
+  const people = (DATA.filings||[]).filter(f => f.k==="people" && inR(f.r) && f.d>=cut).map(f => ({d:f.d, cat:"biz", k:"lead", r:f.r,
+    h:f.h, s:f.s+(f.tk?" ("+f.tk+" "+(f.form||"")+")":""), src:f.src, via:"#sec", viaName:"SEC Filings →"}));
+  return news.concat(gifts, people);
+}
 function vBriefing(){
-  const items = DATA.news.filter(n => inR(n.r) && (st.newsCat==="all" || n.cat===st.newsCat)).sort((a,b)=>b.d.localeCompare(a.d));
-  const fresh = DATA.officials.filter(o => inR(o.r) && /\(elect\)|Too close|leads|Flipped|flip/i.test((o.o||"")+" "+(o.res||"")));
-  return `<section><div class="sechead"><div><span class="eyebrow">Briefing · ${esc(scopeLabel())}</span></div></div>
-  <p class="lede">Government, business, faith and culture news from the last few months, newest first. Every item links to its source.</p>
-  ${filterBtns("newsCat",[["all","All"],["gov","Government"],["biz","Business"],["faith","Faith"],["culture","Culture"]],st.newsCat)}
+  const f = st.newsCat;
+  const all = briefItems();
+  const items = all.filter(n => f==="all" || (f==="lead"||f==="gift" ? n.k===f : n.cat===f && !(f==="biz" && n.k==="gift"))).sort((a,b)=>b.d.localeCompare(a.d));
+  const cnt = k => all.filter(n=>n.k===k).length;
+  const gov = DATA.news.filter(n => n.cat==="gov" && !n.k && inR(n.r)).sort((a,b)=>b.d.localeCompare(a.d));
+  return `<section><div class="sechead"><div><span class="eyebrow">Briefing · ${esc(scopeLabel())}</span><h2>Business, donations & leadership</h2></div></div>
+  <p class="lede">Company news, major gifts (${cnt("gift")} in the last ${BRIEF_DAYS} days) and leadership changes (${cnt("lead")}) at companies, nonprofits, schools and cultural institutions, plus faith and culture news. Newest first; every item links to its source.</p>
+  ${filterBtns("newsCat",[["all","All"],["biz","Business"],["gift","Donations"],["lead","Leadership"],["faith","Faith"],["culture","Culture"]],f)}
   ${newsList(items)}</section>
   ${vPublic()}
-  <section><div class="sechead"><div><span class="eyebrow">After Nov 3, 2026</span><h2>Seats changing hands or still open</h2></div><a href="#officials">All officials →</a></div>
-  ${fresh.length? `<div class="cards">${fresh.map(card).join("")}</div>` : `<p class="empty">No changes recorded for this region.</p>`}</section>`;
+  <section><div class="sechead"><div><span class="eyebrow">In brief</span><h3>Government & politics</h3></div><a href="#politics">All political news →</a></div>
+  ${newsList(gov.slice(0,5))}</section>`;
 }
 
 function card(o){
@@ -216,13 +231,16 @@ function vPolitics(){
   const fed = offs.filter(o=>o.lv==="Federal" && o.o.startsWith("U.S. House"));
   const sen = offs.filter(o=>o.lv==="State Senate");
   const cnt = (arr,p)=>arr.filter(o=>o.p===p).length;
-  const news = DATA.news.filter(n=>n.cat==="gov" && inR(n.r)).sort((a,b)=>b.d.localeCompare(a.d)).slice(0,6);
+  const news = DATA.news.filter(n=>n.cat==="gov" && inR(n.r)).sort((a,b)=>b.d.localeCompare(a.d));
+  const fresh = DATA.officials.filter(o => inR(o.r) && /\(elect\)|Too close|leads|Flipped|flip/i.test((o.o||"")+" "+(o.res||"")));
   const donors = DATA.donors.filter(d=>inR(d.r));
   return `<section><span class="eyebrow">Politics · ${esc(scopeLabel())}</span><h2>Who holds power</h2>
   <p class="lede">House seats touching ${region==="all"?"upstate":"this region"}: ${cnt(fed,"D")} Democratic, ${cnt(fed,"R")} Republican. State Senate seats tracked: ${cnt(sen,"D")} D, ${cnt(sen,"R")} R${cnt(sen,"?")?`, ${cnt(sen,"?")} uncalled`:""}. Statewide, Democrats regained a two-thirds Senate supermajority on Nov 3.</p>
   <div class="sechead"><h3>Members of Congress</h3><a href="#officials">Full officials directory →</a></div>
   <div class="cards">${fed.map(card).join("")}</div></section>
-  <section><h3 style="margin-bottom:8px">Recent political news</h3>${newsList(news)}</section>
+  <section><div class="sechead"><div><span class="eyebrow">After Nov 3, 2026</span><h3>Seats changing hands or still open</h3></div><a href="#officials">All officials →</a></div>
+  ${fresh.length? `<div class="cards">${fresh.map(card).join("")}</div>` : `<p class="empty">No changes recorded for this region.</p>`}</section>
+  <section><h3 style="margin-bottom:8px">Government & political news</h3>${newsList(news)}</section>
   <section><div class="sechead"><div><span class="eyebrow">Money & influence</span><h3>Politically active donors</h3></div></div>
   <p class="lede">A starting set from public reporting. Filings on the NYS Board of Elections and FEC sites are the next layer.</p>
   ${donors.length?`<div class="entries">${donors.map(d=>`<div class="card"><div class="top"><h3>${esc(d.n)}</h3></div><div class="lead">${esc(d.lean)}</div><p class="note">${esc(d.t)}</p><div class="meta">${dots(d.r)}${srcLink(d.src)}</div></div>`).join("")}</div>`:`<p class="empty">None recorded for this region yet.</p>`}</section>`;
